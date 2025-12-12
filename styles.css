@@ -926,7 +926,7 @@ a:active {
    Custom Styles (from original styles.css)
    ============================================ */
 .hero-bg {
-  background-image: linear-gradient(rgba(10, 25, 47, 0.3), rgba(10, 25, 47, 0.5)), url('images/bg-2.jpg');
+  background-image: linear-gradient(rgba(10, 25, 47, 0.3), rgba(10, 25, 47, 0.5)), url('images/bg-3.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
