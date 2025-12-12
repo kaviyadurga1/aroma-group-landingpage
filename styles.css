@@ -1,0 +1,1214 @@
+/* ============================================
+   CSS Reset & Base Styles
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #1f2937;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Remove underlines from all links */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+/* ============================================
+   Color Variables
+   ============================================ */
+:root {
+  --ihc-dark: #0a192f;
+  --ihc-primary: #1e3a8a;
+  --ihc-accent: #E31F26;
+  --ihc-gray: #f3f4f6;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+.font-sans {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-base {
+  font-size: 1rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
+}
+
+.text-\[0\.55rem\] {
+  font-size: 0.55rem;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.tracking-tighter {
+  letter-spacing: -0.05em;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+
+.leading-tight {
+  line-height: 1.25;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* ============================================
+   Colors
+   ============================================ */
+.text-white {
+  color: #ffffff;
+}
+
+.text-ihc-dark {
+  color: var(--ihc-dark);
+}
+
+.text-ihc-accent {
+  color: var(--ihc-accent);
+}
+
+.text-gray-300 {
+  color: var(--gray-300);
+}
+
+.text-gray-400 {
+  color: var(--gray-400);
+}
+
+.text-gray-500 {
+  color: var(--gray-500);
+}
+
+.text-gray-600 {
+  color: var(--gray-600);
+}
+
+.text-gray-800 {
+  color: var(--gray-800);
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.bg-ihc-dark {
+  background-color: var(--ihc-dark);
+}
+
+.bg-ihc-accent {
+  background-color: var(--ihc-accent);
+}
+
+.bg-gray-50 {
+  background-color: var(--gray-50);
+}
+
+.bg-gray-100 {
+  background-color: var(--gray-100);
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+/* ============================================
+   Layout & Spacing
+   ============================================ */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Padding */
+.p-0 {
+  padding: 0;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.pt-24 {
+  padding-top: 6rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+/* Margin */
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
+}
+
+.mt-24 {
+  margin-top: 6rem;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+/* ============================================
+   Display & Flexbox
+   ============================================ */
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.items-center {
+  align-items: flex-end;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-12 {
+  gap: 3rem;
+}
+
+.space-x-4>*+* {
+  margin-left: 1rem;
+}
+
+.space-x-5>*+* {
+  margin-left: 1.25rem;
+}
+
+.space-x-6>*+* {
+  margin-left: 1.5rem;
+}
+
+.space-x-8>*+* {
+  margin-left: 2rem;
+}
+
+.space-y-3>*+* {
+  margin-top: 0.75rem;
+}
+
+.space-y-4>*+* {
+  margin-top: 1rem;
+}
+
+.space-y-6>*+* {
+  margin-top: 1.5rem;
+}
+
+.space-y-8>*+* {
+  margin-top: 2rem;
+}
+
+.space-y-24>*+* {
+  margin-top: 6rem;
+}
+
+/* ============================================
+   Grid
+   ============================================ */
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+  }
+
+  .md\:mt-0 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+  }
+
+  .lg\:text-7xl {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+}
+
+/* ============================================
+   Positioning
+   ============================================ */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.top-6 {
+  top: 1.5rem;
+}
+
+.top-8 {
+  top: 2rem;
+}
+
+.right-6 {
+  right: 1.5rem;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.bottom-10 {
+  bottom: 2.5rem;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.left-1\/2 {
+  left: 50%;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-40 {
+  z-index: 40;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+/* ============================================
+   Sizing
+   ============================================ */
+.w-full {
+  width: 100%;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
+.h-96 {
+  height: 24rem;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.max-w-3xl {
+  max-width: 48rem;
+}
+
+.max-w-4xl {
+  max-width: 56rem;
+}
+
+.max-w-5xl {
+  max-width: 64rem;
+}
+
+/* ============================================
+   Borders & Shadows
+   ============================================ */
+.border {
+  border-width: 1px;
+}
+
+.border-t {
+  border-top-width: 1px;
+}
+
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-white {
+  color:#ffffff;
+  border: 1px solid #ffffff;
+}
+
+.border-gray-200 {
+  border-color: var(--gray-200);
+}
+
+.border-gray-300 {
+  border-color: var(--gray-300);
+}
+
+.border-gray-700 {
+  border-color: var(--gray-700);
+}
+
+.border-gray-800 {
+  border-color: var(--gray-800);
+}
+
+.border-none {
+  border: none;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* ============================================
+   Overflow
+   ============================================ */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+/* ============================================
+   Object Fit
+   ============================================ */
+.object-contain {
+  object-fit: contain;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+/* ============================================
+   Transforms & Transitions
+   ============================================ */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-x-1\/2 {
+  transform: translateX(-50%);
+}
+
+.translate-x-full {
+  transform: translateX(100%);
+}
+
+.translate-y-4 {
+  transform: translateY(1rem);
+}
+
+.scale-110 {
+  transform: scale(1.1);
+}
+
+/* ============================================
+   Opacity
+   ============================================ */
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-70 {
+  opacity: 0.7;
+}
+
+.opacity-90 {
+  opacity: 0.9;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+/* ============================================
+   Background Gradients
+   ============================================ */
+/* Hero gradient overlay */
+[class*="bg-gradient-to-b"][class*="from-black"] {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(10, 25, 47, 0.6));
+}
+
+/* Card overlay gradients */
+[class*="bg-gradient-to-t"][class*="from-ihc-dark"][class*="via-ihc-dark"] {
+  background-image: linear-gradient(to top, var(--ihc-dark), rgba(10, 25, 47, 0.6), transparent);
+}
+
+/* ============================================
+   Hover States
+   ============================================ */
+.hover\:bg-white:hover {
+  color:#E31F26;
+  background-color: #ffffff;
+}
+
+.hover\:text-white:hover {
+  color: #ffffff;
+}
+
+.hover\:text-ihc-accent:hover {
+  color: var(--ihc-accent);
+}
+
+.hover\:opacity-100:hover {
+  opacity: 1;
+}
+
+.hover\:shadow-2xl:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* ============================================
+   Focus States
+   ============================================ */
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   Group Hover (for parent-child interactions)
+   ============================================ */
+.group:hover .group-hover\:scale-110 {
+  transform: scale(1.1);
+}
+
+.group:hover .group-hover\:opacity-90 {
+  opacity: 0.9;
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+
+.group:hover .group-hover\:translate-y-0 {
+  transform: translateY(0);
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+/* ============================================
+   Custom Styles (from original styles.css)
+   ============================================ */
+.hero-bg {
+  background-image: linear-gradient(rgba(10, 25, 47, 0.3), rgba(10, 25, 47, 0.5)), url('images/bg-2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(-20px);
+  margin-bottom: 80px;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-scrolled {
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.nav-transparent {
+  background-color: transparent;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #be4444;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-icon {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  cursor: pointer;
+}
+
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  background-color: #0a192f;
+  color: white;
+  white-space: nowrap;
+}
+
+.ticker {
+  display: inline-block;
+  padding-left: 100%;
+  animation: ticker 35s linear infinite;
+}
+
+.ticker__item {
+  display: inline-block;
+  padding: 0 2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.awards-scroll-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.awards-scroll-row {
+  display: flex;
+  gap: 1.5rem;
+  width: fit-content;
+}
+
+.awards-scroll-row-left {
+  animation: scroll-left 30s linear infinite;
+}
+
+.awards-scroll-row-right {
+  animation: scroll-right 30s linear infinite;
+}
+
+.awards-scroll-container:hover .awards-scroll-row {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.award-card {
+  flex-shrink: 0;
+  width: 280px;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.award-card:hover {
+  border-color: #E31F26;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.award-card i {
+  color: #E31F26;
+}
+
+.award-card h3 {
+  color: #1f2937;
+}
+
+/* Footer links - always white */
+footer a {
+  color: var(--gray-400) !important;
+}
+
+footer a:link {
+  color: var(--gray-400) !important;
+}
+
+footer a:visited {
+  color: var(--gray-400) !important;
+}
+
+footer a:hover {
+  color: #ffffff !important;
+}
+
+footer a:active {
+  color: var(--gray-400) !important;
+}
+
+/* Remove bullet points from footer lists */
+footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer li {
+  list-style: none;
+}
+
+/* Equal spacing between footer columns */
+footer .grid {
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  footer .grid {
+    gap: 4rem;
+  }
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;               /* Line thickness */
+    background-color: #E31F26; /* Color of the animation line */
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+/* Put this after Tailwind so it takes precedence */
+nav#navbar .nav-link {
+  position: relative;       /* required for ::after to position correctly */
+  display: inline-block;    /* ensures the pseudo element aligns with the text */
+  padding-bottom: 6px;      /* space for the underline */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Use transform scaleX for smooth hardware-accelerated animation */
+nav#navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;                       /* thickness */
+  width: 100%;                       /* full width but scaled down */
+  background-color: #E31F26;         /* underline color */
+  transform: scaleX(0);              /* start hidden */
+  transform-origin: left center;     /* animate from left -> right */
+  transition: transform 260ms ease;  /* smooth animation */
+  will-change: transform;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Hover or active state */
+nav#navbar .nav-link:hover::after,
+nav#navbar .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Optional: animate from center */
+nav#navbar .nav-link.center-underline::after {
+  transform-origin: center;
+}
+
+/* Make sure a light/dark nav still shows the line: */
+nav#navbar .nav-link::after {
+  background-color: #E31F26 !important;
+}
+
+/* Three Decades of Legacy pair wrapper */
+.three-decades-pair {
+  /* Can add styles here if needed */
+}
+
+/* Leading Across Sectors pair - add 100px margin-top */
+.leading-across-pair {
+  margin-top: 50px;
+}
+
+/* Future-Focused Growth pair wrapper - move down by 30px */
+.future-growth-pair {
+  margin-top: 50px;
+}
+
+/* Statistics section - add margin-top */
+.statistics-section {
+  margin-top: 150px;
+}

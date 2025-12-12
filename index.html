@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma Group of Companies - Global Construction & Hospitality</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="font-sans text-gray-800 antialiased overflow-x-hidden">
+
+    <!-- News Ticker (Replaces Stock Ticker) -->
+    <div class="ticker-wrap border-b border-gray-700">
+        <div class="ticker">
+            <div class="ticker__item"><span class="font-bold text-ihc-accent">GLOBAL REACH</span> Dubai • London • Kochi</div>
+            <div class="ticker__item"><span class="font-bold text-ihc-accent">PROJECT UPDATE</span> New Luxury Resort Development Initiated in Kerala</div>
+            <div class="ticker__item"><span class="font-bold text-ihc-accent">MILESTONE</span> Celebrating 25+ Years of Excellence in Construction</div>
+            <div class="ticker__item"><span class="font-bold text-ihc-accent">AWARD</span> Best Sustainable Developer 2024 Nominee</div>
+            <div class="ticker__item"><span class="font-bold text-ihc-accent">FILMS</span> Fragrant Nature Films Releases New Production</div>
+            <div class="ticker__item"><span class="font-bold text-ihc-accent">GLOBAL REACH</span> Dubai • London • Kochi</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 nav-transparent top-8">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <!-- Aroma Logo -->
+                <img src="aroma-logo.svg" alt="Aroma Group Logo" class="h-10 w-auto object-contain">
+                <div class="flex flex-col">
+                    <span id="logo-text" class="text-2xl font-bold tracking-tighter text-white transition-colors">AROMA</span>
+                    <span id="logo-sub" class="text-[0.55rem] uppercase tracking-widest text-gray-300 transition-colors">Aroma Group Companies</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="#" class="nav-link text-white text-sm font-medium uppercase tracking-wide">Home</a>
+                <a href="#about" class="nav-link text-white text-sm font-medium uppercase tracking-wide">About</a>
+                <a href="#verticals" class="nav-link text-white text-sm font-medium uppercase tracking-wide">Divisions</a>
+                <!-- <a href="#projects" class="nav-link text-white text-sm font-medium uppercase tracking-wide">Projects</a> -->
+                <a href="#media" class="nav-link text-white text-sm font-medium uppercase tracking-wide">Awards</a>
+                <a href="#contact" class="nav-link text-white text-sm font-medium uppercase tracking-wide">Contact</a>
+            </div>
+
+            <!-- Utility Icons -->
+            <div class="hidden lg:flex items-center space-x-5">
+                <button class="text-white hover:text-ihc-accent transition-colors nav-icon bg-transparent border-none p-0"><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-ihc-dark z-40 transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col pt-24 px-8">
+            <button id="close-menu" class="absolute top-6 right-6 text-white text-3xl">&times;</button>
+            <a href="#" class="text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent">Home</a>
+            <a href="#about" class="text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent">About</a>
+            <a href="#verticals" class="text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent">Verticals</a>
+            <a href="#projects" class="text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent">Projects</a>
+            <a href="#media" class="text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent">Media</a>
+            <a href="#contact" class="text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center hero-bg text-center px-4">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-ihc-dark/60"></div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto space-y-4">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight font-serif fade-in-up" style="animation-delay: 0.2s;">
+                Building Beyond <br> <span class="text-ihc-accent">Storeys</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto fade-in-up" style="animation-delay: 0.4s;">
+                A diversified global group with companies located in the UAE, India, London, and beyond. Backed by over 30 years of experience across Construction, Hotels & Resorts, Real Estate Development, Film Production, and additional sectors.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in-up" style="animation-delay: 0.6s;">
+                <a href="#verticals" class="px-8 py-4 bg-ihc-accent text-ihc-dark font-bold uppercase tracking-widest hover:bg-white hover:text-ihc-dark transition-all duration-300">
+                    Our Divisions
+                </a>
+                <a href="#about" class="px-8 py-4 border border-white text-white font-bold uppercase tracking-widest hover:bg-white hover:text-ihc-dark transition-all duration-300">
+                    Our Journey
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-white opacity-70 hover:opacity-100">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+     <!-- About / Stats -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <!-- Title Section -->
+            <div class="mb-12">
+                <span class="text-ihc-accent font-bold uppercase tracking-widest text-sm mb-2 block">Roots of Excellence</span>
+                <h2 class="text-5xl font-serif font-bold text-ihc-dark">A Tradition of Trust & Innovation</h2>
+            </div>
+            <!-- Two Column Layout -->
+            <div class="space-y-8 mb-16">
+                <!-- First Pair: Three Decades of Legacy -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 three-decades-pair content-pair-1">
+                    <!-- Left: Image -->
+                    <div class="rounded-xl overflow-hidden">
+                        <img src="images/Three_Decades_of_Legacy.jpg" alt="Three Decades of Legacy" class="w-full h-64 object-cover rounded-xl">
+                    </div>
+                    <!-- Right: Text -->
+                    <div class="flex items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold text-ihc-dark mb-4">Three Decades of Legacy</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Founded in 1998, AROMA Group has grown from a Middle East building contracting specialist into a global powerhouse with three decades of presence across the UAE, India, and the UK.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Pair: Leading Across Sectors -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 leading-across-pair">
+                    <!-- Left: Text -->
+                    <div class="flex items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold text-ihc-dark mb-4">Leading Across Sectors</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Today, Aroma is a trusted multi-industry group spanning Construction, Hospitality, Investment Management, Real Estate, Film Production, Dining, and Organic Farming—powered by visionary leadership, innovation, and expert talent.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Right: Image -->
+                    <div class="rounded-xl overflow-hidden">
+                        <img src="images/Leading_Across_Sectors.jpg" alt="Leading Across Sectors" class="w-full h-64 object-cover rounded-xl">
+                    </div>
+                </div>
+
+                <!-- Third Pair: Future-Focused Growth -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 future-growth-pair content-pair-3">
+                    <!-- Left: Image -->
+                    <div class="rounded-xl overflow-hidden">
+                        <img src="images/Future_Focused_Growth.jpg" alt="Future-Focused Growth" class="w-full h-64 object-cover rounded-xl">
+                    </div>
+                    <!-- Right: Text -->
+                    <div class="flex items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold text-ihc-dark mb-4">Future-Focused Growth</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                AROMA is dedicated to driving sustainable growth, fostering continuous innovation, and exploring new horizons that expand its global impact.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- Statistics Row -->
+            <div class="statistics-section grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-gray-200 pt-8">
+
+                <div class="text-center">
+                    <h3 class="text-5xl font-bold text-ihc-dark mb-2 counter" data-target="3">0</h3>
+                    <p class="text-sm text-gray-600 uppercase tracking-wide">Countries</p>
+                </div>
+
+                <div class="text-center">
+                    <h3 class="text-5xl font-bold text-ihc-dark mb-2">8</h3>
+                    <p class="text-sm text-gray-600 uppercase tracking-wide">Business Divisions</p>
+                </div>
+                
+                <div class="text-center">
+                    <h3 class="text-5xl font-bold text-ihc-dark mb-2 counter" data-target="30">0</h3>
+                    <p class="text-sm text-gray-600 uppercase tracking-wide">Years of Legacy</p>
+                </div>
+                
+                <div class="text-center">
+                    <h3 class="text-5xl font-bold text-ihc-dark mb-2 counter" data-target="9400">0</h3>
+                    <p class="text-sm text-gray-600 uppercase tracking-wide">Employees</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-ihc-accent font-bold uppercase tracking-widest text-sm mb-2 block">Blossoming Vision</span>
+                <h2 class="text-4xl font-serif font-bold text-ihc-dark">Our Mission & Vision</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div class="bg-white p-10 shadow-lg rounded-lg">
+                    <div class="flex items-center gap-4 mb-6">
+                        <i class="fas fa-eye text-ihc-accent text-4xl"></i>
+                        <h3 class="text-2xl font-serif font-bold text-ihc-dark">Vision</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        To continue being a globally recognized leader in providing innovative and sustainable solutions across diverse industries, enhancing the quality of life, and contributing to the prosperity of communities worldwide.
+                    </p>
+                </div>
+                <div class="bg-white p-10 shadow-lg rounded-lg">
+                    <div class="flex items-center gap-4 mb-6">
+                        <i class="fas fa-bullseye text-ihc-accent text-4xl"></i>
+                        <h3 class="text-2xl font-serif font-bold text-ihc-dark">Mission</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        To consistently deliver excellence in every sector they operate, driven by their established reputation for innovation, integrity, and quality. They are committed to sustainable practices, strategic development, and promoting a culture of continuous improvement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership -->
+    <!--
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-ihc-accent font-bold uppercase tracking-widest text-sm mb-2 block">Pioneers of Progress</span>
+                <h2 class="text-4xl font-serif font-bold text-ihc-dark">Company Leadership</h2>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gray-50 p-10 rounded-lg shadow-lg">
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        In the realm of business, few stories captivate as profoundly as that of the Founder and CEO of the AROMA Group. The journey began in the Gulf region 25 years ago, laying the foundation for what is now the esteemed Aroma International Building Contracting LLC.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        With over 30 years of experience in the construction industry spanning the UAE and India, a robust legacy of expertise and innovation has been forged. Initially a civil engineer, this visionary leader ventured into the business arena with a transformative vision that elevated a modest enterprise into a multinational conglomerate, establishing strong footholds in the UK, UAE, and India.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        This narrative has been marked by a profound partnership in leadership with his life partner.
+                    </p>
+                    <div class="border-t border-gray-300 pt-8">
+                        <h3 class="text-2xl font-serif font-bold text-ihc-dark mb-2">SAJEEV P.K.</h3>
+                        <p class="text-ihc-accent font-semibold text-lg">Founder & CEO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- Business Verticals -->
+    <section id="verticals" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-ihc-accent font-bold uppercase tracking-widest text-sm mb-2 block">Branches of Innovation</span>
+                <h2 class="text-4xl font-serif font-bold text-ihc-dark">Business Divisions</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 1. Aroma International Building Contracting LLC -->
+                <div class="group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
+                    <img src="images/Aroma_International_Building_Contracting_LLC.jpg" alt="Construction" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <i class="fas fa-hard-hat text-ihc-accent text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Aroma International Building Contracting LLC</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Delivering large-scale infrastructure, commercial, and residential projects with precision and quality since 1998.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2. Fragrant Nature Hotels & Resorts -->
+                <div class="group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
+                    <img src="images/Fragrant_Nature_Hotels_Resorts.jpg" alt="Hospitality" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <i class="fas fa-concierge-bell text-ihc-accent text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Fragrant Nature Hotels & Resorts</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Luxury 5-star experiences and boutique resorts that offer a perfect blend of nature and comfort.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. Fragrant Nature Film Creations -->
+                <div class="group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
+                    <img src="images/Fragrant_Nature_Film_Creations.jpg" alt="Films" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <i class="fas fa-film text-ihc-accent text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Fragrant Nature Film Creations</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Producing cinematic masterpieces that tell compelling stories to a global audience.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 4. Aroma Kitchen -->
+                <div class="group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
+                    <img src="images/Aroma_Kitchen.jpg" alt="Aroma Kitchen" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <i class="fas fa-utensils text-ihc-accent text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Aroma Kitchen</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Culinary excellence delivering authentic flavors and premium dining experiences.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 5. East India Street Café -->
+                <div class="group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
+                    <img src="images/East_India_Street_Café.jpg" alt="East India Street Café" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <i class="fas fa-coffee text-ihc-accent text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">East India Street Café</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            A premium café experience offering specialty coffee and authentic flavors in a welcoming atmosphere.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 6. MitonOptimal -->
+                <div class="group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
+                    <img src="images/MitonOptimal.jpg" alt="MitonOptimal" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <i class="fas fa-chart-line text-ihc-accent text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">MitonOptimal</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Strategic financial solutions and investment management services for optimal growth.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 7. Aroma Developers -->
+                <div class="group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
+                    <img src="images/Aroma_Developers.jpg" alt="Aroma Developers" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <i class="fas fa-city text-ihc-accent text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Aroma Developers</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Creating sustainable communities and premium properties across the UAE markets.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 8. LondonTyne (UK) Limited -->
+                <div class="group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
+                    <img src="images/LondonTyne_UK_Limited.jpg" alt="LondonTyne" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <i class="fas fa-building text-ihc-accent text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">LondonTyne (UK) Limited</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Premium property development and real estate solutions across the United Kingdom.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Recognition -->
+    <section id="media" class="py-20 bg-gray-50 relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <div>
+                    <span class="text-ihc-accent font-bold uppercase tracking-widest text-sm mb-2 block">Harvest of Honours</span>
+                    <h2 class="text-4xl font-serif font-bold text-ihc-dark">Awards & Recognitions</h2>
+                </div>
+            </div>
+
+            <!-- Awards Scrolling Rows -->
+            <div class="awards-scroll-container space-y-6">
+                <!-- First Row - Scrolls Left -->
+                <div class="awards-scroll-row awards-scroll-row-left">
+                    <div class="award-card text-center">
+                        <i class="fas fa-trophy text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Outstanding Performance Award</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-award text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Best Contractor Award 2015</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-star text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Appreciation Award 2018</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-medal text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Service Excellence Award 2018</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Taqdeer Award 2016</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Taqdeer Award 2017</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Taqdeer Award 2018</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Taqdeer Award 2020</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Taqdeer Award 2022</h3>
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="award-card text-center">
+                        <i class="fas fa-trophy text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Outstanding Performance Award</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-award text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Best Contractor Award 2015</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-star text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Appreciation Award 2018</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-medal text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Service Excellence Award 2018</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Taqdeer Award 2016</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Taqdeer Award 2017</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Taqdeer Award 2018</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Taqdeer Award 2020</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Taqdeer Award 2022</h3>
+                    </div>
+                </div>
+
+                <!-- Second Row - Scrolls Right -->
+                <div class="awards-scroll-row awards-scroll-row-right">
+                    <div class="award-card text-center">
+                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Taqdeer Award 2022</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Taqdeer Award 2020</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Taqdeer Award 2018</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Taqdeer Award 2017</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Taqdeer Award 2016</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-medal text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Service Excellence Award 2018</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-star text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Appreciation Award 2018</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-award text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Best Contractor Award 2015</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-trophy text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Outstanding Performance Award</h3>
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="award-card text-center">
+                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Taqdeer Award 2022</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Taqdeer Award 2020</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Taqdeer Award 2018</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Taqdeer Award 2017</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Taqdeer Award 2016</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-medal text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Service Excellence Award 2018</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-star text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Appreciation Award 2018</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-award text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Best Contractor Award 2015</h3>
+                    </div>
+                    <div class="award-card text-center">
+                        <i class="fas fa-trophy text-3xl text-ihc-accent mb-4"></i>
+                        <h3 class="text-sm font-bold">Outstanding Performance Award</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ihc-dark text-white border-t border-gray-800">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <img src="aroma-logo.svg" alt="Aroma Logo" class="w-8 h-8 object-contain">
+                        <span class="text-xl font-bold">AROMA</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        A diverse conglomerate committed to delivering quality and innovation across construction, hospitality, and beyond.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-ihc-accent transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-ihc-accent transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-ihc-accent transition-colors"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-ihc-accent">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#verticals" class="hover:text-white transition-colors">Our Divisions</a></li>
+                        <li><a href="#media" class="hover:text-white transition-colors">Media Center</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Divisions -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-ihc-accent">Our Businesses</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="https://www.aromacontracting.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Aroma International Building Contracting LLC</a></li>
+                        <li><a href="https://www.fragrantnature.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Fragrant Nature Hotels & Resorts</a></li>
+                        <li><a href="https://www.fragrantnaturefilmcreations.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Fragrant Nature Film Creations</a></li>
+                        <li><a href="https://www.aromakitchentastes.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Aroma Kitchen</a></li>
+                        <li><a href="https://www.eastindiastreetcafe.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">East India Street Café</a></li>
+                        <li><a href="https://www.mitonoptimal.co.za/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">MitonOptimal</a></li>
+                        <li><a href="https://www.aromadevelopers.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Aroma Developers</a></li>
+                        <li><a href="https://www.londontyne.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">LondonTyne (UK) Limited</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div id="contact">
+                    <h4 class="text-lg font-bold mb-6 text-ihc-accent">Get in touch</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-ihc-accent"></i>
+                            <span>Headquarters<br>Dubai, UAE</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone text-ihc-accent"></i>
+                            <span>+971 4 297 4558</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-ihc-accent"></i>
+                            <span>aroma1@eim.ae</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-globe text-ihc-accent"></i>
+                            <span>www.aromagroup.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2025 Aroma Group of Companies. All Rights Reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        const logoText = document.getElementById('logo-text');
+        const logoSub = document.getElementById('logo-sub');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const navIcons = document.querySelectorAll('.nav-icon');
+        const navDivider = document.querySelector('.nav-divider');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.remove('nav-transparent', 'top-8');
+                navbar.classList.add('nav-scrolled', 'top-0');
+                
+                logoText.classList.remove('text-white');
+                logoText.classList.add('text-ihc-dark');
+                
+                logoSub.classList.remove('text-gray-300');
+                logoSub.classList.add('text-gray-500');
+
+                navLinks.forEach(link => {
+                    link.classList.remove('text-white');
+                    link.classList.add('text-ihc-dark');
+                });
+                
+                navIcons.forEach(icon => {
+                    icon.classList.remove('text-white');
+                    icon.classList.add('text-ihc-dark');
+                });
+
+                if(navDivider) {
+                    navDivider.classList.remove('text-gray-400');
+                    navDivider.classList.add('text-gray-300');
+                }
+
+            } else {
+                navbar.classList.add('nav-transparent', 'top-8');
+                navbar.classList.remove('nav-scrolled', 'top-0');
+                
+                logoText.classList.add('text-white');
+                logoText.classList.remove('text-ihc-dark');
+
+                logoSub.classList.add('text-gray-300');
+                logoSub.classList.remove('text-gray-500');
+
+                navLinks.forEach(link => {
+                    link.classList.add('text-white');
+                    link.classList.remove('text-ihc-dark');
+                });
+
+                navIcons.forEach(icon => {
+                    icon.classList.add('text-white');
+                    icon.classList.remove('text-ihc-dark');
+                });
+                
+                if(navDivider) {
+                    navDivider.classList.add('text-gray-400');
+                    navDivider.classList.remove('text-gray-300');
+                }
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+        
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+        });
+
+        // Number Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; 
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        }
+
+        let counted = false;
+        window.addEventListener('scroll', () => {
+            const aboutSection = document.getElementById('about');
+            const rect = aboutSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight && !counted) {
+                animateCounters();
+                counted = true;
+            }
+        });
+    </script>
+</body>
+</html>
