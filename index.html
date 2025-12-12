@@ -114,12 +114,13 @@
                         <img src="images/Three_Decades_of_Legacy.jpg" alt="Three Decades of Legacy" class="w-full h-64 object-cover rounded-xl">
                     </div>
                     <!-- Right: Text -->
-                    <div class="flex items-center">
+                    <div class="journey">
                         <div>
-                            <h3 class="text-2xl font-bold text-ihc-dark mb-4">Three Decades of Legacy</h3>
-                            <p class="text-gray-600 leading-relaxed">
+                            <h3 class="journey-title">Three Decades of Legacy</h3>
+                            <p class="journey-detail">
                                 Founded in 1998, AROMA Group has grown from a Middle East building contracting specialist into a global powerhouse with three decades of presence across the UAE, India, and the UK.
                             </p>
+                            <p class="line">____________________________________________________________________________</p>
                         </div>
                     </div>
                 </div>
@@ -127,12 +128,13 @@
                 <!-- Second Pair: Leading Across Sectors -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 leading-across-pair">
                     <!-- Left: Text -->
-                    <div class="flex items-center">
+                    <div class="journey">
                         <div>
-                            <h3 class="text-2xl font-bold text-ihc-dark mb-4">Leading Across Sectors</h3>
-                            <p class="text-gray-600 leading-relaxed">
+                            <h3 class="journey-title">Leading Across Sectors</h3>
+                            <p class="journey-detail">
                                 Today, Aroma is a trusted multi-industry group spanning Construction, Hospitality, Investment Management, Real Estate, Film Production, Dining, and Organic Farming—powered by visionary leadership, innovation, and expert talent.
                             </p>
+                             <p class="line">____________________________________________________________________________</p>
                         </div>
                     </div>
                     <!-- Right: Image -->
@@ -148,12 +150,13 @@
                         <img src="images/Future_Focused_Growth.jpg" alt="Future-Focused Growth" class="w-full h-64 object-cover rounded-xl">
                     </div>
                     <!-- Right: Text -->
-                    <div class="flex items-center">
+                    <div class="journey">
                         <div>
-                            <h3 class="text-2xl font-bold text-ihc-dark mb-4">Future-Focused Growth</h3>
-                            <p class="text-gray-600 leading-relaxed">
+                            <h3 class="journey-title">Future-Focused Growth</h3>
+                            <p class="journey-detail">
                                 AROMA is dedicated to driving sustainable growth, fostering continuous innovation, and exploring new horizons that expand its global impact.
                             </p>
+                             <p class="line">____________________________________________________________________________</p>
                         </div>
                     </div>
                 </div>
@@ -164,22 +167,22 @@
             <div class="statistics-section grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-gray-200 pt-8">
 
                 <div class="text-center">
-                    <h3 class="text-5xl font-bold text-ihc-dark mb-2 counter" data-target="3">0</h3>
+                    <h3 class="text-5xl font-bold text-ihc-dark mb-2 counter" data-target="3" data-speed="8000">0</h3>
                     <p class="text-sm text-gray-600 uppercase tracking-wide">Countries</p>
                 </div>
 
                 <div class="text-center">
-                    <h3 class="text-5xl font-bold text-ihc-dark mb-2">8</h3>
+                    <h3 class="text-5xl font-bold text-ihc-dark mb-2 counter" data-target="8" data-speed="5000">0</h3>
                     <p class="text-sm text-gray-600 uppercase tracking-wide">Business Divisions</p>
                 </div>
                 
                 <div class="text-center">
-                    <h3 class="text-5xl font-bold text-ihc-dark mb-2 counter" data-target="30">0</h3>
+                    <h3 class="text-5xl font-bold text-ihc-dark mb-2 counter" data-target="30" data-speed="2000">0</h3>
                     <p class="text-sm text-gray-600 uppercase tracking-wide">Years of Legacy</p>
                 </div>
                 
                 <div class="text-center">
-                    <h3 class="text-5xl font-bold text-ihc-dark mb-2 counter" data-target="9400">0</h3>
+                    <h3 class="text-5xl font-bold text-ihc-dark mb-2 counter" data-target="9400" data-speed="200">0</h3>
                     <p class="text-sm text-gray-600 uppercase tracking-wide">Employees</p>
                 </div>
             </div>
@@ -696,24 +699,30 @@
         const counters = document.querySelectorAll('.counter');
         const speed = 200; 
 
-        const animateCounters = () => {
-            counters.forEach(counter => {
-                const updateCount = () => {
-                    const target = +counter.getAttribute('data-target');
-                    const count = +counter.innerText;
-                    const inc = target / speed;
-
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + inc);
-                        setTimeout(updateCount, 20);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-                updateCount();
-            });
-        }
-
+        // Number Counter Animation with custom speeds
+const animateCounters = () => {
+    const counters = document.querySelectorAll('.counter');
+    
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const speed = +counter.getAttribute('data-speed') || 200;
+            const inc = target / speed;
+            
+            // Adjust timeout based on speed for smoother animation
+            const delay = Math.max(20, speed / 25); // Minimum 20ms, but scales with speed
+            
+            if (count < target) {
+                counter.innerText = Math.ceil(count + inc);
+                setTimeout(updateCount, delay);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        updateCount();
+    });
+}
         let counted = false;
         window.addEventListener('scroll', () => {
             const aboutSection = document.getElementById('about');

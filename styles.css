@@ -361,6 +361,8 @@ a:active {
 }
 
 .mb-16 {
+  margin-left: 8rem;
+  margin-right: 8rem;
   margin-bottom: 4rem;
 }
 
@@ -1211,4 +1213,24 @@ nav#navbar .nav-link::after {
 /* Statistics section - add margin-top */
 .statistics-section {
   margin-top: 150px;
+}
+
+.line{
+  margin-top: 20px;
+  margin-left:30px;
+}
+
+.journey-title{
+    font-weight: 700;
+    color: var(--ihc-dark);
+    font-size: 1.5rem;
+    margin-top: 35px;
+    margin-left: 100px;
+    margin-bottom: 1rem;
+}
+.journey-detail{
+  margin-top: 35px;
+  margin-left: 100px;
+  color: var(--gray-600);
+  line-height: 1.625;
 }
