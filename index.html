@@ -173,7 +173,7 @@
 
             
             <!-- Statistics Row -->
-            <div class="statistics-section grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-gray-200 pt-8">
+            <div id="statistics-section" class="statistics-section grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-gray-200 pt-8">
 
                 <div class="text-center">
                     <h3 class="text-5xl font-bold text-ihc-dark mb-2 counter" data-target="3" data-speed="8000">0</h3>
@@ -704,43 +704,52 @@
             });
         });
 
-        // Number Counter Animation
-        const counters = document.querySelectorAll('.counter');
-        const speed = 200; 
-
         // Number Counter Animation with custom speeds
-const animateCounters = () => {
-    const counters = document.querySelectorAll('.counter');
-    
-    counters.forEach(counter => {
-        const updateCount = () => {
-            const target = +counter.getAttribute('data-target');
-            const count = +counter.innerText;
-            const speed = +counter.getAttribute('data-speed') || 200;
-            const inc = target / speed;
+        const animateCounters = () => {
+            const counters = document.querySelectorAll('.counter');
             
-            // Adjust timeout based on speed for smoother animation
-            const delay = Math.max(20, speed / 25); // Minimum 20ms, but scales with speed
-            
-            if (count < target) {
-                counter.innerText = Math.ceil(count + inc);
-                setTimeout(updateCount, delay);
-            } else {
-                counter.innerText = target;
-            }
-        };
-        updateCount();
-    });
-}
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const speed = +counter.getAttribute('data-speed') || 200;
+                    const inc = target / speed;
+                    
+                    // Adjust timeout based on speed for smoother animation
+                    const delay = Math.max(20, speed / 25); // Minimum 20ms, but scales with speed
+                    
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, delay);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        }
+
+        // Use Intersection Observer to trigger animation when statistics section is visible
         let counted = false;
-        window.addEventListener('scroll', () => {
-            const aboutSection = document.getElementById('about');
-            const rect = aboutSection.getBoundingClientRect();
-            if (rect.top < window.innerHeight && !counted) {
-                animateCounters();
-                counted = true;
-            }
-        });
+        const statisticsSection = document.getElementById('statistics-section');
+        
+        if (statisticsSection) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    // When the statistics section enters the viewport and hasn't been counted yet
+                    if (entry.isIntersecting && !counted) {
+                        animateCounters();
+                        counted = true;
+                        // Stop observing once animation has started
+                        observer.unobserve(statisticsSection);
+                    }
+                });
+            }, {
+                threshold: 0.3 // Trigger when 30% of the section is visible
+            });
+            
+            observer.observe(statisticsSection);
+        }
     </script>
 </body>
 </html>
