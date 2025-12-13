@@ -1215,6 +1215,37 @@ nav#navbar .nav-link::after {
   margin-top: 150px;
 }
 
+.journey-content-wrapper {
+  position: relative;
+  padding-left: 60px;
+}
+
+.vertical-line {
+  margin-left: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: calc(100% + 30px);
+  background-color: #777474;
+  z-index: 1;
+}
+
+.journey-content {
+  position: relative;
+  z-index: 2;
+}
+
+.horizontal-line {
+  width: calc(100% + 60px);
+  height: 2px;
+  background-color: #777474;
+  margin-top: 20px;
+  margin-left: -60px;
+  position: relative;
+  z-index: 1;
+}
+
 .line{
   margin-top: 20px;
   margin-left:30px;
@@ -1225,12 +1256,12 @@ nav#navbar .nav-link::after {
     color: var(--ihc-dark);
     font-size: 1.5rem;
     margin-top: 35px;
-    margin-left: 100px;
+    margin-left: 0;
     margin-bottom: 1rem;
 }
 .journey-detail{
   margin-top: 35px;
-  margin-left: 100px;
+  margin-left: 0;
   color: var(--gray-600);
   line-height: 1.625;
 }
