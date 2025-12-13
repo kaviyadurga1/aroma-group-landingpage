@@ -77,7 +77,7 @@
                 Building Beyond <br> <span class="text-ihc-accent">Storeys</span>
             </h1>
             <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto fade-in-up" style="animation-delay: 0.4s;">
-                A diversified global group with companies located in the UAE, India, London, and beyond. Backed by over 30 years of experience across Construction, Hotels & Resorts, Real Estate Development, Film Production, and additional sectors.
+                A global group with 30+ years’ experience across construction, hospitality, real estate, and film—operating in India, the UAE, and London.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in-up" style="animation-delay: 0.6s;">
                 <a href="#verticals" class="px-8 py-4 bg-ihc-accent text-ihc-dark font-bold uppercase tracking-widest hover:bg-white hover:text-ihc-dark transition-all duration-300">
@@ -199,30 +199,45 @@
     </section>
 
     <!-- Mission & Vision -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <span class="text-ihc-accent font-bold uppercase tracking-widest text-sm mb-2 block">Blossoming Vision</span>
                 <h2 class="text-4xl font-serif font-bold text-ihc-dark">Our Mission & Vision</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-                <div class="bg-white p-10 shadow-lg rounded-lg">
-                    <div class="flex items-center gap-4 mb-6">
-                        <i class="fas fa-eye text-ihc-accent text-4xl"></i>
-                        <h3 class="text-2xl font-serif font-bold text-ihc-dark">Vision</h3>
-                    </div>
-                    <p class="text-gray-600 leading-relaxed">
-                        To continue being a globally recognized leader in providing innovative and sustainable solutions across diverse industries, enhancing the quality of life, and contributing to the prosperity of communities worldwide.
-                    </p>
+            <div class="vision-mission-layout">
+                <!-- Left Side - Image -->
+                <div class="vision-mission-image">
+                    <img id="vision-img" src="images/vision.png" alt="Vision" class="vision-mission-img">
+                    <img id="mission-img" src="images/mission.png" alt="Mission" class="vision-mission-img">
                 </div>
-                <div class="bg-white p-10 shadow-lg rounded-lg">
-                    <div class="flex items-center gap-4 mb-6">
-                        <i class="fas fa-bullseye text-ihc-accent text-4xl"></i>
-                        <h3 class="text-2xl font-serif font-bold text-ihc-dark">Mission</h3>
+
+                <!-- Right Side - Text Content -->
+                <div class="vision-mission-content">
+                    <!-- Vision Section -->
+                    <div class="vision-mission-item" id="vision-item">
+                        <h3 class="vision-mission-title" id="vision-title">Vision</h3>
+                        <p class="vision-mission-description" id="vision-description">
+                            To continue being a globally recognized leader in providing innovative and sustainable solutions across diverse industries, enhancing the quality of life, and contributing to the prosperity of communities worldwide.
+                        </p>
+                        <div class="vision-mission-progress-bar">
+                            <div class="vision-mission-progress-fill" id="vision-progress"></div>
+                        </div>
                     </div>
-                    <p class="text-gray-600 leading-relaxed">
-                        To consistently deliver excellence in every sector they operate, driven by their established reputation for innovation, integrity, and quality. They are committed to sustainable practices, strategic development, and promoting a culture of continuous improvement.
-                    </p>
+
+                    <!-- Separator Line -->
+                    <div class="vision-mission-separator"></div>
+
+                    <!-- Mission Section -->
+                    <div class="vision-mission-item" id="mission-item">
+                        <h3 class="vision-mission-title" id="mission-title">Mission</h3>
+                        <p class="vision-mission-description" id="mission-description">
+                            To consistently deliver excellence in every sector they operate, driven by their established reputation for innovation, integrity, and quality. They are committed to sustainable practices, strategic development, and promoting a culture of continuous improvement.
+                        </p>
+                        <div class="vision-mission-progress-bar">
+                            <div class="vision-mission-progress-fill" id="mission-progress"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -373,169 +388,158 @@
         </div>
     </section>
 
-    <!-- Awards & Recognition -->
-    <section id="media" class="py-20 bg-gray-50 relative">
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="text-center mb-16">
-                <div>
-                    <span class="text-ihc-accent font-bold uppercase tracking-widest text-sm mb-2 block">Harvest of Honours</span>
-                    <h2 class="text-4xl font-serif font-bold text-ihc-dark">Awards & Recognitions</h2>
+    <!-- Logo Carousel Section -->
+    <section class="py-12 bg-white overflow-hidden">
+        <div class="logo-carousel-container">
+            <div class="logo-carousel-track">
+                <!-- First set of logos -->
+                <div class="logo-item">
+                    <img src="logo/aroma-logo.svg" alt="Aroma Logo" class="logo-img">
+                </div>
+                <div class="logo-item">
+                    <img src="logo/aroma-developers.svg" alt="Aroma Developers" class="logo-img">
+                </div>
+                <div class="logo-item">
+                    <img src="logo/aroma_kitchen.svg" alt="Aroma Kitchen" class="logo-img">
+                </div>
+                <div class="logo-item">
+                    <img src="logo/east_india_cafe.svg" alt="East India Street Café" class="logo-img">
+                </div>
+                <div class="logo-item">
+                    <img src="logo/fragrant_nature.svg" alt="Fragrant Nature" class="logo-img">
+                </div>
+                <div class="logo-item">
+                    <img src="logo/flim.svg" alt="Fragrant Nature Films" class="logo-img">
+                </div>
+                <div class="logo-item">
+                    <img src="logo/london-tyne.svg" alt="LondonTyne" class="logo-img">
+                </div>
+                <div class="logo-item">
+                    <img src="logo/miton_optimal.svg" alt="MitonOptimal" class="logo-img">
+                </div>
+                <!-- Duplicate set for seamless loop -->
+                <div class="logo-item">
+                    <img src="logo/aroma-logo.svg" alt="Aroma Logo" class="logo-img">
+                </div>
+                <div class="logo-item">
+                    <img src="logo/aroma-developers.svg" alt="Aroma Developers" class="logo-img">
+                </div>
+                <div class="logo-item">
+                    <img src="logo/aroma_kitchen.svg" alt="Aroma Kitchen" class="logo-img">
+                </div>
+                <div class="logo-item">
+                    <img src="logo/east_india_cafe.svg" alt="East India Street Café" class="logo-img">
+                </div>
+                <div class="logo-item">
+                    <img src="logo/fragrant_nature.svg" alt="Fragrant Nature" class="logo-img">
+                </div>
+                <div class="logo-item">
+                    <img src="logo/flim.svg" alt="Fragrant Nature Films" class="logo-img">
+                </div>
+                <div class="logo-item">
+                    <img src="logo/london-tyne.svg" alt="LondonTyne" class="logo-img">
+                </div>
+                <div class="logo-item">
+                    <img src="logo/miton_optimal.svg" alt="MitonOptimal" class="logo-img">
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Awards Scrolling Rows -->
-            <div class="awards-scroll-container space-y-6">
-                <!-- First Row - Scrolls Left -->
-                <div class="awards-scroll-row awards-scroll-row-left">
-                    <div class="award-card text-center">
-                        <i class="fas fa-trophy text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Outstanding Performance Award</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-award text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Best Contractor Award 2015</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-star text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Appreciation Award 2018</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-medal text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Service Excellence Award 2018</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Taqdeer Award 2016</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Taqdeer Award 2017</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Taqdeer Award 2018</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Taqdeer Award 2020</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Taqdeer Award 2022</h3>
-                    </div>
-                    <!-- Duplicate for seamless loop -->
-                    <div class="award-card text-center">
-                        <i class="fas fa-trophy text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Outstanding Performance Award</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-award text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Best Contractor Award 2015</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-star text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Appreciation Award 2018</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-medal text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Service Excellence Award 2018</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Taqdeer Award 2016</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Taqdeer Award 2017</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Taqdeer Award 2018</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Taqdeer Award 2020</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Taqdeer Award 2022</h3>
+    <!-- Awards & Recognition -->
+    <section id="media" class="awards-section py-20 bg-white relative">
+        <div class="container mx-auto px-6">
+            <div class="awards-layout">
+                <!-- Left Side - Static -->
+                <div class="awards-left">
+                    <h2 class="awards-main-title">Awards & Recognitions</h2>
+                    <p class="awards-description">
+                        Over the years, our companies have been honored with awards that acknowledge our expertise, vision, and contribution across sectors.
+                    </p>
+                    <div class="awards-tags">
+                        <span class="award-tag">Quality</span>
+                        <span class="award-tag">Integrity</span>
+                        <span class="award-tag">Performance</span>
                     </div>
                 </div>
 
-                <!-- Second Row - Scrolls Right -->
-                <div class="awards-scroll-row awards-scroll-row-right">
-                    <div class="award-card text-center">
-                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Taqdeer Award 2022</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Taqdeer Award 2020</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Taqdeer Award 2018</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Taqdeer Award 2017</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Taqdeer Award 2016</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-medal text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Service Excellence Award 2018</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-star text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Appreciation Award 2018</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-award text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Best Contractor Award 2015</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-trophy text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Outstanding Performance Award</h3>
-                    </div>
-                    <!-- Duplicate for seamless loop -->
-                    <div class="award-card text-center">
-                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Taqdeer Award 2022</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Taqdeer Award 2020</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Taqdeer Award 2018</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Taqdeer Award 2017</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-certificate text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Taqdeer Award 2016</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-medal text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Service Excellence Award 2018</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-star text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Appreciation Award 2018</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-award text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Best Contractor Award 2015</h3>
-                    </div>
-                    <div class="award-card text-center">
-                        <i class="fas fa-trophy text-3xl text-ihc-accent mb-4"></i>
-                        <h3 class="text-sm font-bold">Outstanding Performance Award</h3>
+                <!-- Right Side - Scrollable -->
+                <div class="awards-right">
+                    <div class="awards-scroll-wrapper" id="awards-scroll-wrapper">
+                        <div class="awards-list">
+                            <div class="award-item">
+                                <div class="award-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <div class="award-content">
+                                    <h3 class="award-name">Outstanding Performance Award</h3>
+                                </div>
+                            </div>
+                            <div class="award-item">
+                                <div class="award-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="award-content">
+                                    <h3 class="award-name">Best Contractor Award 2015</h3>
+                                </div>
+                            </div>
+                            <div class="award-item">
+                                <div class="award-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="award-content">
+                                    <h3 class="award-name">Appreciation Award 2018</h3>
+                                </div>
+                            </div>
+                            <div class="award-item">
+                                <div class="award-icon">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                                <div class="award-content">
+                                    <h3 class="award-name">Service Excellence Award 2018</h3>
+                                </div>
+                            </div>
+                            <div class="award-item">
+                                <div class="award-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <div class="award-content">
+                                    <h3 class="award-name">Taqdeer Award 2016</h3>
+                                </div>
+                            </div>
+                            <div class="award-item">
+                                <div class="award-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <div class="award-content">
+                                    <h3 class="award-name">Taqdeer Award 2017</h3>
+                                </div>
+                            </div>
+                            <div class="award-item">
+                                <div class="award-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <div class="award-content">
+                                    <h3 class="award-name">Taqdeer Award 2018</h3>
+                                </div>
+                            </div>
+                            <div class="award-item">
+                                <div class="award-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <div class="award-content">
+                                    <h3 class="award-name">Taqdeer Award 2020</h3>
+                                </div>
+                            </div>
+                            <div class="award-item">
+                                <div class="award-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <div class="award-content">
+                                    <h3 class="award-name">Taqdeer Award 2022</h3>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -749,6 +753,256 @@
             });
             
             observer.observe(statisticsSection);
+        }
+
+        // Animate lines and sections when scrolling into view
+        const journeySections = document.querySelectorAll('.three-decades-pair, .leading-across-pair, .future-growth-pair');
+        
+        const journeyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add visible class for fade-in animation
+                    entry.target.classList.add('visible');
+                    
+                    // Find and animate the lines within this section
+                    const verticalLine = entry.target.querySelector('.vertical-line');
+                    const horizontalLine = entry.target.querySelector('.horizontal-line');
+                    
+                    if (verticalLine && !verticalLine.classList.contains('animate')) {
+                        verticalLine.classList.add('animate');
+                    }
+                    
+                    if (horizontalLine && !horizontalLine.classList.contains('animate')) {
+                        horizontalLine.classList.add('animate');
+                    }
+                    
+                    // Stop observing once animated
+                    journeyObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.2 // Trigger when 20% of the section is visible
+        });
+        
+        journeySections.forEach(section => {
+            journeyObserver.observe(section);
+        });
+
+        // Custom scroll behavior for Awards section
+        const awardsSection = document.getElementById('media');
+        const awardsScrollWrapper = document.getElementById('awards-scroll-wrapper');
+        let isInAwardsSection = false;
+        let awardsScrollComplete = false;
+        let scrollTimeout = null;
+
+        if (awardsSection && awardsScrollWrapper) {
+            // Use Intersection Observer to detect when awards section is in view
+            const awardsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    isInAwardsSection = entry.isIntersecting;
+                    if (!entry.isIntersecting) {
+                        awardsScrollComplete = false;
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            awardsObserver.observe(awardsSection);
+
+            // Handle wheel events for custom scrolling
+            awardsSection.addEventListener('wheel', (e) => {
+                if (!isInAwardsSection) return;
+
+                const scrollWrapper = awardsScrollWrapper;
+                const scrollHeight = scrollWrapper.scrollHeight;
+                const clientHeight = scrollWrapper.clientHeight;
+                const maxScroll = scrollHeight - clientHeight;
+                const currentScroll = scrollWrapper.scrollTop;
+
+                // Check if we can scroll the awards list
+                if (currentScroll < maxScroll - 5 && e.deltaY > 0) {
+                    // Scroll down in awards list
+                    e.preventDefault();
+                    scrollWrapper.scrollTop = Math.min(currentScroll + e.deltaY, maxScroll);
+                    awardsScrollComplete = scrollWrapper.scrollTop >= maxScroll - 5;
+                } else if (currentScroll > 5 && e.deltaY < 0) {
+                    // Scroll up in awards list
+                    e.preventDefault();
+                    scrollWrapper.scrollTop = Math.max(currentScroll + e.deltaY, 0);
+                    awardsScrollComplete = false;
+                } else if (currentScroll >= maxScroll - 5 && e.deltaY > 0) {
+                    // Awards list fully scrolled, allow normal page scroll
+                    awardsScrollComplete = true;
+                }
+            }, { passive: false });
+
+            // Monitor scroll completion
+            awardsScrollWrapper.addEventListener('scroll', () => {
+                const scrollHeight = awardsScrollWrapper.scrollHeight;
+                const clientHeight = awardsScrollWrapper.clientHeight;
+                const scrollTop = awardsScrollWrapper.scrollTop;
+                
+                if (scrollTop >= scrollHeight - clientHeight - 10) {
+                    awardsScrollComplete = true;
+                } else {
+                    awardsScrollComplete = false;
+                }
+            });
+        }
+
+        // Vision & Mission Auto-Switch Animation
+        let currentActive = 'vision'; // Start with Vision
+        const visionItem = document.getElementById('vision-item');
+        const missionItem = document.getElementById('mission-item');
+        const visionProgress = document.getElementById('vision-progress');
+        const missionProgress = document.getElementById('mission-progress');
+        const visionImg = document.getElementById('vision-img');
+        const missionImg = document.getElementById('mission-img');
+        let animationInterval = null;
+        let animationStarted = false;
+
+        // Set initial states - both inactive, no progress
+        if (visionItem && missionItem && visionProgress && missionProgress) {
+            visionItem.classList.add('inactive');
+            missionItem.classList.add('inactive');
+            visionProgress.style.width = '0%';
+            missionProgress.style.width = '0%';
+            if (visionImg) visionImg.style.opacity = '0';
+            if (missionImg) missionImg.style.opacity = '0';
+        }
+
+        function switchToVision() {
+            currentActive = 'vision';
+            
+            // Update classes
+            visionItem.classList.remove('inactive');
+            visionItem.classList.add('active');
+            missionItem.classList.remove('active');
+            missionItem.classList.add('inactive');
+            
+            // Reset progress bars
+            visionProgress.style.width = '0%';
+            missionProgress.style.width = '0%';
+            
+            // Change image opacity
+            visionImg.style.opacity = '1';
+            missionImg.style.opacity = '0';
+            
+            // Trigger progress animation
+            setTimeout(() => {
+                visionProgress.style.width = '100%';
+            }, 100);
+        }
+
+        function switchToMission() {
+            currentActive = 'mission';
+            
+            // Update classes
+            missionItem.classList.remove('inactive');
+            missionItem.classList.add('active');
+            visionItem.classList.remove('active');
+            visionItem.classList.add('inactive');
+            
+            // Reset progress bars
+            visionProgress.style.width = '0%';
+            missionProgress.style.width = '0%';
+            
+            // Change image opacity
+            missionImg.style.opacity = '1';
+            visionImg.style.opacity = '0';
+            
+            // Trigger progress animation
+            setTimeout(() => {
+                missionProgress.style.width = '100%';
+            }, 100);
+        }
+
+        function restartAnimation() {
+            // Clear existing interval
+            if (animationInterval) {
+                clearInterval(animationInterval);
+            }
+            
+            // Set new interval to switch every 3 seconds
+            animationInterval = setInterval(() => {
+                if (currentActive === 'vision') {
+                    switchToMission();
+                } else {
+                    switchToVision();
+                }
+            }, 3000);
+        }
+
+        function startVisionMissionAnimation() {
+            // Ensure Vision image is visible initially
+            if (visionImg) visionImg.style.opacity = '1';
+            if (missionImg) missionImg.style.opacity = '0';
+            
+            // Start with Vision
+            switchToVision();
+            restartAnimation();
+        }
+
+        // Initialize click handlers when page loads
+        window.addEventListener('DOMContentLoaded', () => {
+            if (visionItem && missionItem) {
+                // Add click handlers
+                visionItem.addEventListener('click', () => {
+                    if (!animationStarted) {
+                        startVisionMissionAnimation();
+                        animationStarted = true;
+                    } else {
+                        switchToVision();
+                        restartAnimation();
+                    }
+                });
+                
+                missionItem.addEventListener('click', () => {
+                    if (!animationStarted) {
+                        startVisionMissionAnimation();
+                        animationStarted = true;
+                    } else {
+                        switchToMission();
+                        restartAnimation();
+                    }
+                });
+                
+                // Add cursor pointer to indicate clickability
+                visionItem.style.cursor = 'pointer';
+                missionItem.style.cursor = 'pointer';
+            }
+        });
+
+        // Use Intersection Observer to start animation when section enters viewport
+        const visionMissionSection = document.querySelector('.vision-mission-layout');
+        if (visionMissionSection) {
+            const visionMissionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !animationStarted) {
+                        // Start animation when section is visible
+                        startVisionMissionAnimation();
+                        animationStarted = true;
+                    }
+                });
+            }, {
+                threshold: 0.3 // Trigger when 30% of the section is visible
+            });
+
+            visionMissionObserver.observe(visionMissionSection);
+
+            // Pause animation on hover (optional enhancement)
+            visionMissionSection.addEventListener('mouseenter', () => {
+                if (animationInterval) {
+                    clearInterval(animationInterval);
+                }
+            });
+            
+            visionMissionSection.addEventListener('mouseleave', () => {
+                if (animationStarted) {
+                    restartAnimation();
+                }
+            });
         }
     </script>
 </body>
