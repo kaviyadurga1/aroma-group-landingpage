@@ -26,6 +26,39 @@
   }
 }
 
+/* Ensure mobile menu always has solid background */
+#mobile-menu {
+  background-color: #0a192f !important;
+  background: #0a192f !important;
+  opacity: 1 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  min-height: 100vh !important;
+  z-index: 99999 !important;
+  overflow-y: auto !important;
+}
+
+/* Ensure mobile menu links are always visible */
+#mobile-menu a {
+  color: #ffffff !important;
+  background-color: transparent !important;
+}
+
+/* Ensure mobile menu is not affected by navbar scroll state */
+#navbar.nav-scrolled ~ #mobile-menu,
+#navbar.nav-transparent ~ #mobile-menu,
+#navbar #mobile-menu {
+  background-color: #0a192f !important;
+  background: #0a192f !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -209,6 +242,7 @@ a:active {
 }
 
 .leading-tight {
+  margin-top: 8rem;
   line-height: 1.25;
 }
 
@@ -298,11 +332,22 @@ a:active {
   padding-right: 1rem;
 }
 
+/* Navbar container - fixed padding regardless of screen size */
+#navbar .container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+  
+  #navbar .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -312,6 +357,11 @@ a:active {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+  
+  #navbar .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -319,6 +369,11 @@ a:active {
     max-width: 1024px;
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+  
+  #navbar .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -328,6 +383,11 @@ a:active {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
+  
+  #navbar .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 @media (min-width: 1536px) {
@@ -335,6 +395,11 @@ a:active {
     max-width: 1536px;
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+  
+  #navbar .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -513,6 +578,14 @@ a:active {
   margin-top: 1rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
 .mt-16 {
   margin-top: 4rem;
 }
@@ -558,6 +631,19 @@ a:active {
 
 .items-center {
   align-items: center;
+}
+
+/* Move hero title up on mobile */
+@media (max-width: 1023px) {
+  .hero-content {
+    margin-top: -6rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-content {
+    margin-top: -6.5rem;
+  }
 }
 
 .items-start {
@@ -645,6 +731,70 @@ a:active {
 
 .space-y-6>*+* {
   margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .space-y-6>*+* {
+    margin-top: 2rem;
+  }
+}
+
+/* Margin-top for Our Divisions button */
+.our-divisions-btn {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: 50px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--ihc-accent);
+  color: var(--ihc-dark);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  height: auto;
+  min-height: auto;
+}
+
+.our-divisions-btn:hover {
+  color:#E31F26;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  transition-duration: 300ms;
+}
+
+/* Ensure Our Journey button has same height as Our Divisions */
+.our-journey-btn {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: 1px solid #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: white;
+  background-color: transparent;
+  box-sizing: border-box;
+  height: auto;
+  min-height: auto;
+}
+
+
+.our-journey-btn:hover {
+  color:#E31F26;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  transition-duration: 300ms;
 }
 
 .space-y-8>*+* {
@@ -872,6 +1022,7 @@ a:active {
 }
 
 .max-w-3xl {
+  margin-top:6rem;
   max-width: 48rem;
 }
 
@@ -1208,6 +1359,25 @@ a:active {
   position: relative;
   display: inline-block;
   padding-bottom: 4px;
+}
+
+/* Center navigation menu items better */
+.desktop-menu {
+  margin-right: auto;
+  margin-left: auto;
+  transform: translateX(-3rem);
+}
+
+@media (min-width: 1280px) {
+  .desktop-menu {
+    transform: translateX(-4rem);
+  }
+}
+
+@media (min-width: 1536px) {
+  .desktop-menu {
+    transform: translateX(-5rem);
+  }
 }
 
 .nav-link::after {
@@ -2035,4 +2205,9 @@ nav#navbar .nav-link::after {
 
   .fa-bars:before, .fa-navicon:before{
     color:black;
+  }
+
+
+  .hero-buttons{
+    margin-top:50px;
   }
