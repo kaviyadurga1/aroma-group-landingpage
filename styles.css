@@ -370,8 +370,8 @@ a:active {
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
   
   #navbar .container {
@@ -384,8 +384,8 @@ a:active {
 @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
   
   #navbar .container {
@@ -398,8 +398,8 @@ a:active {
 @media (min-width: 1536px) {
   .container {
     max-width: 1536px;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
   
   #navbar .container {
@@ -415,6 +415,58 @@ a:active {
     padding-left: 1rem;
     padding-right: 1rem;
     max-width: 100%;
+  }
+  
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Reduce side padding for About section on desktop */
+@media (min-width: 1280px) {
+  #about .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  #about .px-6 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Reduce side padding for Business Divisions section on desktop */
+  #verticals .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  #verticals .px-6 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  #about .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  #about .px-6 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Reduce side padding for Business Divisions section on desktop */
+  #verticals .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  #verticals .px-6 {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -444,19 +496,35 @@ a:active {
 .px-6 {
   padding-left: 1rem;
   padding-right: 1rem;
+  margin-top: 1rem;
 }
 
 @media (min-width: 768px) {
   .px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    margin-top: 0;
   }
 }
 
 @media (min-width: 1024px) {
   .px-6 {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 
@@ -693,6 +761,31 @@ a:active {
   gap: 2rem;
 }
 
+/* Reduce gaps in Business Divisions section on desktop */
+@media (min-width: 1280px) {
+  #verticals .gap-8 {
+    gap: 1rem;
+  }
+  
+  .three-decades-pair,
+  .leading-across-pair,
+  .future-growth-pair {
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  #verticals .gap-8 {
+    gap: 1rem;
+  }
+  
+  .three-decades-pair,
+  .leading-across-pair,
+  .future-growth-pair {
+    gap: 4rem;
+  }
+}
+
 .gap-12 {
   gap: 3rem;
 }
@@ -814,6 +907,19 @@ a:active {
 
 .space-y-8>*+* {
   margin-top: 2rem;
+}
+
+/* Increase vertical spacing between pairs on desktop */
+@media (min-width: 1280px) {
+  #about .space-y-8>*+* {
+    margin-top: 4rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  #about .space-y-8>*+* {
+    margin-top: 5rem;
+  }
 }
 
 .space-y-24>*+* {
@@ -1001,6 +1107,31 @@ a:active {
 @media (min-width: 768px) {
   .h-64 {
     height: 16rem;
+  }
+}
+
+/* About section images - rectangular (wider than tall) */
+.about-section-image {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+.about-section-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Increase image size on desktop screens while maintaining aspect ratio */
+@media (min-width: 1280px) {
+  .about-section-image {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (min-width: 1536px) {
+  .about-section-image {
+    aspect-ratio: 16 / 9;
   }
 }
 
@@ -2057,11 +2188,74 @@ nav#navbar .nav-link::after {
     margin-left: 0;
     margin-bottom: 1rem;
 }
+
+@media (min-width: 768px) {
+  .journey-title {
+    font-size: 1.375rem;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .journey-title {
+    font-size: 1.5rem;
+    margin-top: 35px;
+  }
+}
+
+/* Increase title size on desktop */
+@media (min-width: 1280px) {
+  .journey-title {
+    font-size: 2rem;
+    margin-top: 40px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .journey-title {
+    font-size: 2.25rem;
+    margin-top: 45px;
+    margin-bottom: 2rem;
+  }
+}
+
 .journey-detail{
   margin-top: 35px;
   margin-left: 0;
   color: var(--gray-600);
   line-height: 1.625;
+  font-size: 0.9375rem;
+}
+
+@media (min-width: 768px) {
+  .journey-detail {
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .journey-detail {
+    margin-top: 35px;
+  }
+}
+
+/* Increase description size on desktop */
+@media (min-width: 1280px) {
+  .journey-detail {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .journey-detail {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin-top: 45px;
+  }
 }
 
 /* Image hover effects for journey sections */
