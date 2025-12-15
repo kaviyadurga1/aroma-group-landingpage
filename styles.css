@@ -7,6 +7,25 @@
   box-sizing: border-box;
 }
 
+/* Mobile-specific improvements */
+@media (max-width: 767px) {
+  /* Improve touch targets */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Prevent text size adjustment on iOS */
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  /* Improve scrolling on iOS */
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -88,7 +107,13 @@ a:active {
 }
 
 .text-2xl {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .text-2xl {
+    font-size: 1.5rem;
+  }
 }
 
 .text-3xl {
@@ -96,11 +121,35 @@ a:active {
 }
 
 .text-4xl {
-  font-size: 2.25rem;
+  font-size: 1.875rem;
+}
+
+@media (min-width: 640px) {
+  .text-4xl {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-4xl {
+    font-size: 2.25rem;
+  }
 }
 
 .text-5xl {
   font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  .text-5xl {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-5xl {
+    font-size: 3rem;
+  }
 }
 
 .text-6xl {
@@ -327,7 +376,7 @@ a:active {
 @media (min-width: 1024px) {
   .px-6 {
     padding-left: 2rem;
-    padding-right: 9rem;
+    padding-right: 2rem;
   }
 }
 
@@ -342,14 +391,41 @@ a:active {
 }
 
 .py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .py-16 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 }
 
 .py-20 {
-  padding-left: 8rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .py-20 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
 }
 
 .pt-8 {
@@ -382,13 +458,51 @@ a:active {
 }
 
 .mb-12 {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .mb-12 {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .mb-12 {
+    margin-bottom: 3rem;
+  }
 }
 
 .mb-16 {
-  margin-left: 8rem;
-  margin-right: 8rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .mb-16 {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mb-16 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .mb-16 {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .mb-16 {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
 }
 
 .mt-1 {
@@ -443,7 +557,7 @@ a:active {
 }
 
 .items-center {
-  align-items: flex-end;
+  align-items: center;
 }
 
 .items-start {
@@ -480,6 +594,29 @@ a:active {
 
 .gap-12 {
   gap: 3rem;
+}
+
+/* Order utilities for mobile reordering */
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
+@media (min-width: 1024px) {
+  .lg\:order-1 {
+    order: 1;
+  }
+  
+  .lg\:order-2 {
+    order: 2;
+  }
 }
 
 .space-x-4>*+* {
@@ -618,7 +755,13 @@ a:active {
 }
 
 .top-8 {
-  top: 2rem;
+  top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .top-8 {
+    top: 2rem;
+  }
 }
 
 .right-6 {
@@ -681,11 +824,35 @@ a:active {
 }
 
 .h-64 {
-  height: 16rem;
+  height: 12rem;
+}
+
+@media (min-width: 640px) {
+  .h-64 {
+    height: 14rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .h-64 {
+    height: 16rem;
+  }
 }
 
 .h-96 {
-  height: 24rem;
+  height: 18rem;
+}
+
+@media (min-width: 640px) {
+  .h-96 {
+    height: 20rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .h-96 {
+    height: 24rem;
+  }
 }
 
 .h-screen {
@@ -694,6 +861,14 @@ a:active {
 
 .h-full {
   height: 100%;
+}
+
+.min-h-\[44px\] {
+  min-height: 44px;
+}
+
+.min-w-\[44px\] {
+  min-width: 44px;
 }
 
 .max-w-3xl {
@@ -754,6 +929,10 @@ a:active {
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .shadow-md {
@@ -956,14 +1135,38 @@ a:active {
   background-image: linear-gradient(rgba(10, 25, 47, 0.3), rgba(10, 25, 47, 0.5)), url('images/bg-3.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
+}
+
+@media (min-width: 768px) {
+  .hero-bg {
+    background-attachment: fixed;
+  }
 }
 
 .fade-in-up {
   animation: fadeInUp 1s ease-out forwards;
   opacity: 0;
   transform: translateY(-20px);
-  margin-bottom: 80px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 640px) {
+  .fade-in-up {
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .fade-in-up {
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .fade-in-up {
+    margin-bottom: 70px;
+  }
 }
 
 @keyframes fadeInUp {
@@ -977,14 +1180,28 @@ a:active {
   background-color: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .nav-scrolled {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 
 .nav-transparent {
   background-color: transparent;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .nav-transparent {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
 }
 
 .nav-link {
@@ -1117,33 +1334,72 @@ a:active {
 
 /* New Awards & Recognition Section Styles */
 .awards-section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   display: flex;
   align-items: flex-start;
 }
 
+@media (min-width: 768px) {
+  .awards-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .awards-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
 .awards-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  grid-template-columns: 1fr;
+  gap: 40px;
   width: 100%;
   align-items: start;
 }
 
+@media (min-width: 1024px) {
+  .awards-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
 .awards-left {
-  position: sticky;
-  top: 120px;
+  position: static;
   height: fit-content;
 }
 
+@media (min-width: 1024px) {
+  .awards-left {
+    position: sticky;
+    top: 120px;
+  }
+}
+
 .awards-main-title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--ihc-dark);
   line-height: 1.2;
   margin-bottom: 24px;
   font-family: 'Playfair Display', serif;
+}
+
+@media (min-width: 768px) {
+  .awards-main-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .awards-main-title {
+    font-size: 3rem;
+  }
 }
 
 .awards-description {
@@ -1280,21 +1536,46 @@ a:active {
 /* Vision & Mission Section Styles */
 .vision-mission-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 1fr;
+  gap: 30px;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+@media (min-width: 768px) {
+  .vision-mission-layout {
+    gap: 40px;
+  }
+}
+
+@media (min-width: 968px) {
+  .vision-mission-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+}
+
 .vision-mission-image {
   width: 100%;
-  height: 500px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .vision-mission-image {
+    height: 400px;
+  }
+}
+
+@media (min-width: 968px) {
+  .vision-mission-image {
+    height: 500px;
+  }
 }
 
 .vision-mission-image img {
@@ -1529,9 +1810,7 @@ nav#navbar .nav-link::after {
 }
 
 /* Three Decades of Legacy pair wrapper */
-.three-decades-pair {
-  /* Can add styles here if needed */
-}
+/* Styles are handled via responsive classes in HTML */
 
 /* Leading Across Sectors pair - add 100px margin-top */
 .leading-across-pair {
@@ -1751,4 +2030,9 @@ nav#navbar .nav-link::after {
     opacity: 1;
     transform: translateY(0);
   }
-}
+  }
+
+
+  .fa-bars:before, .fa-navicon:before{
+    color:black;
+  }

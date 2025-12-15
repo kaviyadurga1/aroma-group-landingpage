@@ -28,10 +28,10 @@
             <!-- Logo -->
             <a href="#" class="flex items-center gap-2 group">
                 <!-- Aroma Logo -->
-                <img src="aroma-logo.svg" alt="Aroma Group Logo" class="h-10 w-auto object-contain">
+                <img src="aroma-logo.svg" alt="Aroma Group Logo" class="h-8 sm:h-10 w-auto object-contain">
                 <div class="flex flex-col">
-                    <span id="logo-text" class="text-2xl font-bold tracking-tighter text-white transition-colors">AROMA</span>
-                    <span id="logo-sub" class="text-[0.55rem] uppercase tracking-widest text-gray-300 transition-colors">Aroma Group Companies</span>
+                    <span id="logo-text" class="text-xl sm:text-2xl font-bold tracking-tighter text-white transition-colors">AROMA</span>
+                    <span id="logo-sub" class="text-[0.5rem] sm:text-[0.55rem] uppercase tracking-widest text-gray-300 transition-colors">Aroma Group Companies</span>
                 </div>
             </a>
 
@@ -51,20 +51,20 @@
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="lg:hidden text-white focus:outline-none">
+            <button id="mobile-menu-btn" class="lg:hidden text-white focus:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
 
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="fixed inset-0 bg-ihc-dark z-40 transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col pt-24 px-8">
-            <button id="close-menu" class="absolute top-6 right-6 text-white text-3xl">&times;</button>
-            <a href="#" class="text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent">Home</a>
-            <a href="#about" class="text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent">About</a>
-            <a href="#verticals" class="text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent">Verticals</a>
-            <a href="#projects" class="text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent">Projects</a>
-            <a href="#media" class="text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent">Media</a>
-            <a href="#contact" class="text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent">Contact</a>
+        <div id="mobile-menu" class="fixed inset-0 bg-ihc-dark z-40 transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col pt-24 sm:pt-28 px-6 sm:px-8">
+            <button id="close-menu" class="absolute top-2 right-4 sm:top-4 sm:right-6 bg-white text-black text-3xl min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full hover:bg-gray-200 transition-colors">&times;</button>
+            <a href="#" class="text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center mt-2">Home</a>
+            <a href="#about" class="text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">About</a>
+            <a href="#verticals" class="text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">Verticals</a>
+            <a href="#projects" class="text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">Projects</a>
+            <a href="#media" class="text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">Awards</a>
+            <a href="#contact" class="text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">Contact</a>
         </div>
     </nav>
 
@@ -130,8 +130,8 @@
 
                 <!-- Second Pair: Leading Across Sectors -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 leading-across-pair">
-                    <!-- Left: Text -->
-                    <div class="journey">
+                    <!-- Desktop: Left Text, Mobile: Second -->
+                    <div class="journey order-2 lg:order-1">
                         <div class="journey-content-wrapper">
                             <div class="vertical-line"></div>
                             <div class="journey-content">
@@ -143,8 +143,8 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Right: Image -->
-                    <div class="rounded-xl overflow-hidden">
+                    <!-- Desktop: Right Image, Mobile: First -->
+                    <div class="rounded-xl overflow-hidden order-1 lg:order-2">
                         <img src="images/Leading_Across_Sectors.jpg" alt="Leading Across Sectors" class="w-full h-64 object-cover rounded-xl">
                     </div>
                 </div>
