@@ -332,10 +332,11 @@ a:active {
   padding-right: 1rem;
 }
 
-/* Navbar container - fixed padding regardless of screen size */
+/* Navbar container - minimal padding regardless of screen size */
 #navbar .container {
   padding-left: 1rem;
   padding-right: 1rem;
+  max-width: 100%;
 }
 
 @media (min-width: 640px) {
@@ -348,6 +349,7 @@ a:active {
   #navbar .container {
     padding-left: 1rem;
     padding-right: 1rem;
+    max-width: 100%;
   }
 }
 
@@ -361,6 +363,7 @@ a:active {
   #navbar .container {
     padding-left: 1rem;
     padding-right: 1rem;
+    max-width: 100%;
   }
 }
 
@@ -374,6 +377,7 @@ a:active {
   #navbar .container {
     padding-left: 1rem;
     padding-right: 1rem;
+    max-width: 100%;
   }
 }
 
@@ -387,6 +391,7 @@ a:active {
   #navbar .container {
     padding-left: 1rem;
     padding-right: 1rem;
+    max-width: 100%;
   }
 }
 
@@ -400,6 +405,16 @@ a:active {
   #navbar .container {
     padding-left: 1rem;
     padding-right: 1rem;
+    max-width: 100%;
+  }
+}
+
+/* Ensure navbar container doesn't have max-width constraints on very large screens */
+@media (min-width: 1920px) {
+  #navbar .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 100%;
   }
 }
 
@@ -1361,23 +1376,10 @@ a:active {
   padding-bottom: 4px;
 }
 
-/* Center navigation menu items better */
+/* Navigation menu stays at right edge */
 .desktop-menu {
-  margin-right: auto;
   margin-left: auto;
-  transform: translateX(-3rem);
-}
-
-@media (min-width: 1280px) {
-  .desktop-menu {
-    transform: translateX(-4rem);
-  }
-}
-
-@media (min-width: 1536px) {
-  .desktop-menu {
-    transform: translateX(-5rem);
-  }
+  margin-right: 0;
 }
 
 .nav-link::after {
