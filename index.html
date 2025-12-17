@@ -13,12 +13,12 @@
     <!-- News Ticker (Replaces Stock Ticker) -->
     <div class="ticker-wrap border-b border-gray-700">
         <div class="ticker">
-            <div class="ticker__item"><span class="font-bold text-ihc-accent">GLOBAL REACH</span> Dubai • London • Kochi</div>
-            <div class="ticker__item"><span class="font-bold text-ihc-accent">PROJECT UPDATE</span> New Luxury Resort Development Initiated in Kerala</div>
-            <div class="ticker__item"><span class="font-bold text-ihc-accent">MILESTONE</span> Celebrating 25+ Years of Excellence in Construction</div>
-            <div class="ticker__item"><span class="font-bold text-ihc-accent">AWARD</span> Best Sustainable Developer 2024 Nominee</div>
-            <div class="ticker__item"><span class="font-bold text-ihc-accent">FILMS</span> Fragrant Nature Films Releases New Production</div>
-            <div class="ticker__item"><span class="font-bold text-ihc-accent">GLOBAL REACH</span> Dubai • London • Kochi</div>
+            <div class="ticker__item"><span class="ticker-label font-bold text-ihc-accent">GLOBAL REACH</span><span class="ticker-content"> Dubai • London • Kochi</span></div>
+            <div class="ticker__item"><span class="ticker-label font-bold text-ihc-accent">PROJECT UPDATE</span><span class="ticker-content"> New Luxury Resort Development Initiated in Kerala</span></div>
+            <div class="ticker__item"><span class="ticker-label font-bold text-ihc-accent">MILESTONE</span><span class="ticker-content"> Celebrating 25+ Years of Excellence in Construction</span></div>
+            <div class="ticker__item"><span class="ticker-label font-bold text-ihc-accent">AWARD</span><span class="ticker-content"> Best Sustainable Developer 2024 Nominee</span></div>
+            <div class="ticker__item"><span class="ticker-label font-bold text-ihc-accent">FILMS</span><span class="ticker-content"> Fragrant Nature Films Releases New Production</span></div>
+            <div class="ticker__item"><span class="ticker-label font-bold text-ihc-accent">GLOBAL REACH</span><span class="ticker-content"> Dubai • London • Kochi</span></div>
         </div>
     </div>
 
@@ -26,146 +26,146 @@
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 nav-transparent top-8">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <!-- Logo -->
-            <a href="#" class="flex items-center gap-2 group">
+            <a href="#" class="navbar-logo-link flex items-center gap-2 group">
                 <!-- Aroma Logo -->
-                <img src="aroma-logo.svg" alt="Aroma Group Logo" class="h-8 sm:h-10 w-auto object-contain">
-                <div class="flex flex-col">
-                    <span id="logo-text" class="text-xl sm:text-2xl font-bold tracking-tighter text-white transition-colors" style="color: #E31F26;">AROMA</span>
-                    <span id="logo-sub" class="text-[0.5rem] sm:text-[0.55rem] uppercase tracking-widest text-gray-300 transition-colors">Aroma Group Companies</span>
+                <img src="aroma-logo.svg" alt="Aroma Group Logo" class="navbar-logo-img h-8 sm:h-10 w-auto object-contain">
+                <div class="navbar-logo-text-wrapper flex flex-col">
+                    <span id="logo-text" class="logo-text-main text-xl sm:text-2xl font-bold tracking-tighter text-white transition-colors">AROMA</span>
+                    <span id="logo-sub" class="logo-sub-text text-[0.5rem] sm:text-[0.55rem] uppercase tracking-widest text-gray-300 transition-colors">Aroma Group Companies</span>
                 </div>
             </a>
 
             <!-- Desktop Menu and Search -->
-            <div class="hidden lg:flex items-center space-x-8">
+            <div class="navbar-desktop-menu hidden lg:flex items-center space-x-8">
                 <div class="desktop-menu flex items-center space-x-8">
-                    <a href="#" class="nav-link text-white text-sm font-medium uppercase tracking-wide">Home</a>
-                    <a href="#about" class="nav-link text-white text-sm font-medium uppercase tracking-wide">About</a>
-                    <a href="#verticals" class="nav-link text-white text-sm font-medium uppercase tracking-wide">Divisions</a>
-                    <!-- <a href="#projects" class="nav-link text-white text-sm font-medium uppercase tracking-wide">Projects</a> -->
-                    <a href="#media" class="nav-link text-white text-sm font-medium uppercase tracking-wide">Awards</a>
-                    <a href="#contact" class="nav-link text-white text-sm font-medium uppercase tracking-wide">Contact</a>
+                    <a href="#" class="nav-link nav-link-home text-white text-sm font-medium uppercase tracking-wide">Home</a>
+                    <a href="#about" class="nav-link nav-link-about text-white text-sm font-medium uppercase tracking-wide">About</a>
+                    <a href="#verticals" class="nav-link nav-link-divisions text-white text-sm font-medium uppercase tracking-wide">Divisions</a>
+                    <!-- <a href="#projects" class="nav-link nav-link-projects text-white text-sm font-medium uppercase tracking-wide">Projects</a> -->
+                    <a href="#media" class="nav-link nav-link-awards text-white text-sm font-medium uppercase tracking-wide">Awards</a>
+                    <a href="#contact" class="nav-link nav-link-contact text-white text-sm font-medium uppercase tracking-wide">Contact</a>
                 </div>
                 <!-- Utility Icons -->
-                <div class="flex items-center space-x-5">
-                    <button class="text-white hover:text-ihc-accent transition-colors nav-icon bg-transparent border-none p-0"><i class="fas fa-search"></i></button>
+                <div class="navbar-utility-icons flex items-center space-x-5">
+                    <button class="navbar-search-btn text-white hover:text-ihc-accent transition-colors nav-icon bg-transparent border-none p-0"><i class="navbar-search-icon fas fa-search"></i></button>
                 </div>
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="lg:hidden text-white focus:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center">
-                <i class="fas fa-bars text-2xl"></i>
+            <button id="mobile-menu-btn" class="mobile-menu-btn lg:hidden text-white focus:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center">
+                <i class="mobile-menu-icon fas fa-bars text-2xl"></i>
             </button>
         </div>
 
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="fixed inset-0 bg-ihc-dark z-40 transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col pt-24 sm:pt-28 px-6 sm:px-8">
-            <button id="close-menu" class="absolute top-3 right-4 sm:top-5 sm:right-6 bg-white text-black text-3xl min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full hover:bg-gray-200 transition-colors">&times;</button>
-            <a href="#" class="text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center mt-12">Home</a>
-            <a href="#about" class="text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">About</a>
-            <a href="#verticals" class="text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">Divisions</a>
-            <!-- <a href="#projects" class="text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">Projects</a> -->
-            <a href="#media" class="text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">Awards</a>
-            <a href="#contact" class="text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">Contact</a>
+        <div id="mobile-menu" class="mobile-menu-overlay fixed inset-0 bg-ihc-dark z-40 transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col pt-24 sm:pt-28 px-6 sm:px-8">
+            <button id="close-menu" class="mobile-menu-close-btn absolute top-3 right-4 sm:top-5 sm:right-6 bg-white text-black text-3xl min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full hover:bg-gray-200 transition-colors">&times;</button>
+            <a href="#" class="mobile-menu-link mobile-menu-link-home text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center mt-12">Home</a>
+            <a href="#about" class="mobile-menu-link mobile-menu-link-about text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">About</a>
+            <a href="#verticals" class="mobile-menu-link mobile-menu-link-divisions text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">Divisions</a>
+            <!-- <a href="#projects" class="mobile-menu-link mobile-menu-link-projects text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">Projects</a> -->
+            <a href="#media" class="mobile-menu-link mobile-menu-link-awards text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">Awards</a>
+            <a href="#contact" class="mobile-menu-link mobile-menu-link-contact text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">Contact</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center hero-bg text-center px-4">
-        <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-ihc-dark/60"></div>
+    <section class="hero-section relative h-screen flex items-center justify-center hero-bg text-center px-4">
+        <div class="hero-gradient-overlay absolute inset-0 bg-gradient-to-b from-black/20 to-ihc-dark/60"></div>
         
         <div class="hero-content relative z-10 max-w-5xl mx-auto space-y-6">
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight font-serif fade-in-up" style="animation-delay: 0.2s;">
-                Building Beyond <br> <span class="text-ihc-accent">Storeys</span>
+            <h1 class="hero-title text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight font-serif fade-in-up">
+                Building Beyond <br> <span class="hero-title-accent text-ihc-accent">Storeys</span>
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto fade-in-up" style="animation-delay: 0.4s;">
-                A global group with 30+ years’ experience across construction, hospitality, real estate, and film—operating in India, the UAE, and London.
+            <p class="hero-description text-lg md:text-xl text-gray-300 max-w-3xl mx-auto fade-in-up">
+                A global group with 30+ years' experience across construction, hospitality, real estate, and film—operating in India, the UAE, and London.
             </p>
-            <div class="hero-buttons flex flex-col sm:flex-row justify-center gap-4 fade-in-up" style="animation-delay: 0.6s;">
-                <a href="#verticals" class="px-8 py-4 bg-ihc-accent text-ihc-dark font-bold uppercase tracking-widest hover:bg-white hover:text-ihc-dark transition-all duration-300">
+            <div class="hero-buttons flex flex-col sm:flex-row justify-center gap-4 fade-in-up">
+                <a href="#verticals" class="hero-btn-divisions px-8 py-4 bg-ihc-accent text-ihc-dark font-bold uppercase tracking-widest hover:bg-white hover:text-ihc-dark transition-all duration-300">
                     Our Divisions
                 </a>
-                <a href="#about" class="px-8 py-4 border border-white text-white font-bold uppercase tracking-widest hover:bg-white hover:text-ihc-dark transition-all duration-300">
+                <a href="#about" class="hero-btn-journey px-8 py-4 border border-white text-white font-bold uppercase tracking-widest hover:bg-white hover:text-ihc-dark transition-all duration-300">
                     Our Journey
                 </a>
             </div>
         </div>
 
         <!-- Scroll Indicator -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <a href="#about" class="text-white opacity-70 hover:opacity-100">
-                <i class="fas fa-chevron-down text-2xl"></i>
+        <div class="hero-scroll-indicator absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="hero-scroll-link text-white opacity-70 hover:opacity-100">
+                <i class="hero-scroll-icon fas fa-chevron-down text-2xl"></i>
             </a>
         </div>
     </section>
 
      <!-- About / Stats -->
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
+    <section id="about" class="about-section py-20 bg-white">
+        <div class="about-container container mx-auto px-6">
             <!-- Title Section -->
-            <div class="mb-12">
-                <span class="text-ihc-accent font-bold uppercase tracking-widest text-sm mb-2 block">Roots of Excellence</span>
-                <h2 class="text-5xl font-serif font-bold text-ihc-dark">A Tradition of Trust & Innovation</h2>
+            <div class="about-title-wrapper mb-12">
+                <span class="about-section-label text-ihc-accent font-bold uppercase tracking-widest text-sm mb-2 block">Roots of Excellence</span>
+                <h2 class="about-section-title text-5xl font-serif font-bold text-ihc-dark">A Tradition of Trust & Innovation</h2>
             </div>
             <!-- Two Column Layout -->
-            <div class="space-y-8 mb-16">
+            <div class="about-content-layout space-y-8 mb-16">
                 <!-- First Pair: Three Decades of Legacy -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 three-decades-pair content-pair-1">
+                <div class="about-content-pair grid grid-cols-1 lg:grid-cols-2 gap-8 three-decades-pair content-pair-1">
                     <!-- Left: Image -->
-                    <div class="rounded-xl overflow-hidden about-section-image">
-                        <img src="images/Three_Decades_of_Legacy.jpg" alt="Three Decades of Legacy" class="w-full object-cover rounded-xl">
+                    <div class="about-pair-image-wrapper rounded-xl overflow-hidden about-section-image">
+                        <img src="images/Three_Decades_of_Legacy.jpg" alt="Three Decades of Legacy" class="about-pair-image w-full object-cover rounded-xl">
                     </div>
                     <!-- Right: Text -->
-                    <div class="journey">
+                    <div class="about-pair-text journey">
                         <div class="journey-content-wrapper">
-                            <div class="vertical-line"></div>
+                            <div class="journey-vertical-line vertical-line"></div>
                             <div class="journey-content">
-                                <h3 class="journey-title">Three Decades of Legacy</h3>
-                                <p class="journey-detail">
+                                <h3 class="journey-title journey-title-three-decades">Three Decades of Legacy</h3>
+                                <p class="journey-detail journey-detail-three-decades">
                                     Founded in 1998, AROMA Group has grown from a Middle East building contracting specialist into a global powerhouse with three decades of presence across the UAE, India, and the UK.
                                 </p>
-                                <div class="horizontal-line"></div>
+                                <div class="journey-horizontal-line horizontal-line"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Second Pair: Leading Across Sectors -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 leading-across-pair">
+                <div class="about-content-pair grid grid-cols-1 lg:grid-cols-2 gap-8 leading-across-pair">
                     <!-- Desktop: Left Text, Mobile: Second -->
-                    <div class="journey order-2 lg:order-1">
+                    <div class="about-pair-text journey order-2 lg:order-1">
                         <div class="journey-content-wrapper">
-                            <div class="vertical-line"></div>
+                            <div class="journey-vertical-line vertical-line"></div>
                             <div class="journey-content">
-                                <h3 class="journey-title">Leading Across Sectors</h3>
-                                <p class="journey-detail">
+                                <h3 class="journey-title journey-title-leading-across">Leading Across Sectors</h3>
+                                <p class="journey-detail journey-detail-leading-across">
                                     Today, Aroma is a trusted multi-industry group spanning Construction, Hospitality, Investment Management, Real Estate, Film Production, Dining, and Organic Farming—powered by visionary leadership, innovation, and expert talent.
                                 </p>
-                                <div class="horizontal-line"></div>
+                                <div class="journey-horizontal-line horizontal-line"></div>
                             </div>
                         </div>
                     </div>
                     <!-- Desktop: Right Image, Mobile: First -->
-                    <div class="rounded-xl overflow-hidden about-section-image order-1 lg:order-2">
-                        <img src="images/Leading_Across_Sectors.jpg" alt="Leading Across Sectors" class="w-full object-cover rounded-xl">
+                    <div class="about-pair-image-wrapper rounded-xl overflow-hidden about-section-image order-1 lg:order-2">
+                        <img src="images/Leading_Across_Sectors.jpg" alt="Leading Across Sectors" class="about-pair-image w-full object-cover rounded-xl">
                     </div>
                 </div>
 
                 <!-- Third Pair: Future-Focused Growth -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 future-growth-pair content-pair-3">
+                <div class="about-content-pair grid grid-cols-1 lg:grid-cols-2 gap-8 future-growth-pair content-pair-3">
                     <!-- Left: Image -->
-                    <div class="rounded-xl overflow-hidden about-section-image">
-                        <img src="images/Future_Focused_Growth.jpg" alt="Future-Focused Growth" class="w-full object-cover rounded-xl">
+                    <div class="about-pair-image-wrapper rounded-xl overflow-hidden about-section-image">
+                        <img src="images/Future_Focused_Growth.jpg" alt="Future-Focused Growth" class="about-pair-image w-full object-cover rounded-xl">
                     </div>
                     <!-- Right: Text -->
-                    <div class="journey">
+                    <div class="about-pair-text journey">
                         <div class="journey-content-wrapper">
-                            <div class="vertical-line"></div>
+                            <div class="journey-vertical-line vertical-line"></div>
                             <div class="journey-content">
-                                <h3 class="journey-title">Future-Focused Growth</h3>
-                                <p class="journey-detail">
+                                <h3 class="journey-title journey-title-future-growth">Future-Focused Growth</h3>
+                                <p class="journey-detail journey-detail-future-growth">
                                     AROMA is dedicated to driving sustainable growth, fostering continuous innovation, and exploring new horizons that expand its global impact.
                                 </p>
-                                <div class="horizontal-line"></div>
+                                <div class="journey-horizontal-line horizontal-line"></div>
                             </div>
                         </div>
                     </div>
@@ -176,67 +176,67 @@
             <!-- Statistics Row -->
             <div id="statistics-section" class="statistics-section grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-gray-200 pt-8">
 
-                <div class="text-center">
-                    <h3 class="text-5xl font-bold text-ihc-dark mb-2 counter" data-target="3" data-speed="8000">0</h3>
-                    <p class="text-sm text-gray-600 uppercase tracking-wide">Countries</p>
+                <div class="stat-item stat-item-countries text-center">
+                    <h3 class="stat-number stat-number-countries text-5xl font-bold text-ihc-dark mb-2 counter" data-target="3" data-speed="8000">0</h3>
+                    <p class="stat-label stat-label-countries text-sm text-gray-600 uppercase tracking-wide">Countries</p>
                 </div>
 
-                <div class="text-center">
-                    <h3 class="text-5xl font-bold text-ihc-dark mb-2 counter" data-target="8" data-speed="5000">0</h3>
-                    <p class="text-sm text-gray-600 uppercase tracking-wide">Business Divisions</p>
+                <div class="stat-item stat-item-divisions text-center">
+                    <h3 class="stat-number stat-number-divisions text-5xl font-bold text-ihc-dark mb-2 counter" data-target="8" data-speed="5000">0</h3>
+                    <p class="stat-label stat-label-divisions text-sm text-gray-600 uppercase tracking-wide">Business Divisions</p>
                 </div>
                 
-                <div class="text-center">
-                    <h3 class="text-5xl font-bold text-ihc-dark mb-2 counter" data-target="30" data-speed="2000">0</h3>
-                    <p class="text-sm text-gray-600 uppercase tracking-wide">Years of Legacy</p>
+                <div class="stat-item stat-item-years text-center">
+                    <h3 class="stat-number stat-number-years text-5xl font-bold text-ihc-dark mb-2 counter" data-target="30" data-speed="2000">0</h3>
+                    <p class="stat-label stat-label-years text-sm text-gray-600 uppercase tracking-wide">Years of Legacy</p>
                 </div>
                 
-                <div class="text-center">
-                    <h3 class="text-5xl font-bold text-ihc-dark mb-2 counter" data-target="9400" data-speed="200">0</h3>
-                    <p class="text-sm text-gray-600 uppercase tracking-wide">Employees</p>
+                <div class="stat-item stat-item-employees text-center">
+                    <h3 class="stat-number stat-number-employees text-5xl font-bold text-ihc-dark mb-2 counter" data-target="9400" data-speed="200">0</h3>
+                    <p class="stat-label stat-label-employees text-sm text-gray-600 uppercase tracking-wide">Employees</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Mission & Vision -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-ihc-accent font-bold uppercase tracking-widest text-sm mb-2 block">Blossoming Vision</span>
-                <h2 class="text-4xl font-serif font-bold text-ihc-dark">Our Mission & Vision</h2>
+    <section class="mission-vision-section py-20 bg-white">
+        <div class="mission-vision-container container mx-auto px-6">
+            <div class="mission-vision-header text-center mb-16">
+                <span class="mission-vision-label text-ihc-accent font-bold uppercase tracking-widest text-sm mb-2 block">Blossoming Vision</span>
+                <h2 class="mission-vision-title text-4xl font-serif font-bold text-ihc-dark">Our Mission & Vision</h2>
             </div>
             <div class="vision-mission-layout">
                 <!-- Left Side - Image -->
-                <div class="vision-mission-image">
-                    <img id="vision-img" src="images/vision.png" alt="Vision" class="vision-mission-img">
-                    <img id="mission-img" src="images/mission.png" alt="Mission" class="vision-mission-img">
+                <div class="vision-mission-image vision-mission-image-wrapper">
+                    <img id="vision-img" src="images/vision.png" alt="Vision" class="vision-mission-img vision-img">
+                    <img id="mission-img" src="images/mission.png" alt="Mission" class="vision-mission-img mission-img">
                 </div>
 
                 <!-- Right Side - Text Content -->
-                <div class="vision-mission-content">
+                <div class="vision-mission-content vision-mission-content-wrapper">
                     <!-- Vision Section -->
-                    <div class="vision-mission-item" id="vision-item">
-                        <h3 class="vision-mission-title" id="vision-title">Vision</h3>
-                        <p class="vision-mission-description" id="vision-description">
+                    <div class="vision-mission-item vision-item" id="vision-item">
+                        <h3 class="vision-mission-title vision-title" id="vision-title">Vision</h3>
+                        <p class="vision-mission-description vision-description" id="vision-description">
                             To continue being a globally recognized leader in providing innovative and sustainable solutions across diverse industries, enhancing the quality of life, and contributing to the prosperity of communities worldwide.
                         </p>
-                        <div class="vision-mission-progress-bar">
-                            <div class="vision-mission-progress-fill" id="vision-progress"></div>
+                        <div class="vision-mission-progress-bar vision-progress-bar">
+                            <div class="vision-mission-progress-fill vision-progress-fill" id="vision-progress"></div>
                         </div>
                     </div>
 
                     <!-- Separator Line -->
-                    <div class="vision-mission-separator"></div>
+                    <div class="vision-mission-separator vision-mission-separator-line"></div>
 
                     <!-- Mission Section -->
-                    <div class="vision-mission-item" id="mission-item">
-                        <h3 class="vision-mission-title" id="mission-title">Mission</h3>
-                        <p class="vision-mission-description" id="mission-description">
+                    <div class="vision-mission-item mission-item" id="mission-item">
+                        <h3 class="vision-mission-title mission-title" id="mission-title">Mission</h3>
+                        <p class="vision-mission-description mission-description" id="mission-description">
                             To consistently deliver excellence in every sector they operate, driven by their established reputation for innovation, integrity, and quality. They are committed to sustainable practices, strategic development, and promoting a culture of continuous improvement.
                         </p>
-                        <div class="vision-mission-progress-bar">
-                            <div class="vision-mission-progress-fill" id="mission-progress"></div>
+                        <div class="vision-mission-progress-bar mission-progress-bar">
+                            <div class="vision-mission-progress-fill mission-progress-fill" id="mission-progress"></div>
                         </div>
                     </div>
                 </div>
@@ -274,113 +274,113 @@
     -->
 
     <!-- Business Verticals -->
-    <section id="verticals" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-ihc-accent font-bold uppercase tracking-widest text-sm mb-2 block">Branches of Innovation</span>
-                <h2 class="text-4xl font-serif font-bold text-ihc-dark">Business Divisions</h2>
+    <section id="verticals" class="verticals-section py-20 bg-gray-50">
+        <div class="verticals-container container mx-auto px-6">
+            <div class="verticals-header text-center mb-16">
+                <span class="verticals-label text-ihc-accent font-bold uppercase tracking-widest text-sm mb-2 block">Branches of Innovation</span>
+                <h2 class="verticals-title text-4xl font-serif font-bold text-ihc-dark">Business Divisions</h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="verticals-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- 1. Aroma International Building Contracting LLC -->
-                <div class="group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
-                    <img src="images/Aroma_International_Building_Contracting_LLC.jpg" alt="Construction" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 p-8">
-                        <i class="fas fa-hard-hat text-ihc-accent text-3xl mb-4"></i>
-                        <h3 class="text-xl font-bold text-white mb-2">Aroma International Building Contracting LLC</h3>
-                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                <div class="vertical-card vertical-card-1 group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
+                    <img src="images/Aroma_International_Building_Contracting_LLC.jpg" alt="Construction" class="vertical-card-image w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="vertical-card-overlay absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="vertical-card-content absolute bottom-0 left-0 p-8">
+                        <i class="vertical-card-icon vertical-card-icon-1 fas fa-hard-hat text-ihc-accent text-3xl mb-4"></i>
+                        <h3 class="vertical-card-title vertical-card-title-1 text-xl font-bold text-white mb-2">Aroma International Building Contracting LLC</h3>
+                        <p class="vertical-card-description vertical-card-description-1 text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
                             Delivering large-scale infrastructure, commercial, and residential projects with precision and quality since 1998.
                         </p>
                     </div>
                 </div>
 
                 <!-- 2. Fragrant Nature Hotels & Resorts -->
-                <div class="group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
-                    <img src="images/Fragrant_Nature_Hotels_Resorts.jpg" alt="Hospitality" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 p-8">
-                        <i class="fas fa-concierge-bell text-ihc-accent text-3xl mb-4"></i>
-                        <h3 class="text-xl font-bold text-white mb-2">Fragrant Nature Hotels & Resorts</h3>
-                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                <div class="vertical-card vertical-card-2 group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
+                    <img src="images/Fragrant_Nature_Hotels_Resorts.jpg" alt="Hospitality" class="vertical-card-image w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="vertical-card-overlay absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="vertical-card-content absolute bottom-0 left-0 p-8">
+                        <i class="vertical-card-icon vertical-card-icon-2 fas fa-concierge-bell text-ihc-accent text-3xl mb-4"></i>
+                        <h3 class="vertical-card-title vertical-card-title-2 text-xl font-bold text-white mb-2">Fragrant Nature Hotels & Resorts</h3>
+                        <p class="vertical-card-description vertical-card-description-2 text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
                             Luxury 5-star experiences and boutique resorts that offer a perfect blend of nature and comfort.
                         </p>
                     </div>
                 </div>
 
                 <!-- 3. Fragrant Nature Film Creations -->
-                <div class="group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
-                    <img src="images/Fragrant_Nature_Film_Creations.jpg" alt="Films" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 p-8">
-                        <i class="fas fa-film text-ihc-accent text-3xl mb-4"></i>
-                        <h3 class="text-xl font-bold text-white mb-2">Fragrant Nature Film Creations</h3>
-                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                <div class="vertical-card vertical-card-3 group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
+                    <img src="images/Fragrant_Nature_Film_Creations.jpg" alt="Films" class="vertical-card-image w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="vertical-card-overlay absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="vertical-card-content absolute bottom-0 left-0 p-8">
+                        <i class="vertical-card-icon vertical-card-icon-3 fas fa-film text-ihc-accent text-3xl mb-4"></i>
+                        <h3 class="vertical-card-title vertical-card-title-3 text-xl font-bold text-white mb-2">Fragrant Nature Film Creations</h3>
+                        <p class="vertical-card-description vertical-card-description-3 text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
                             Producing cinematic masterpieces that tell compelling stories to a global audience.
                         </p>
                     </div>
                 </div>
 
                 <!-- 4. Aroma Kitchen -->
-                <div class="group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
-                    <img src="images/Aroma_Kitchen.jpg" alt="Aroma Kitchen" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 p-8">
-                        <i class="fas fa-utensils text-ihc-accent text-3xl mb-4"></i>
-                        <h3 class="text-xl font-bold text-white mb-2">Aroma Kitchen</h3>
-                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                <div class="vertical-card vertical-card-4 group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
+                    <img src="images/Aroma_Kitchen.jpg" alt="Aroma Kitchen" class="vertical-card-image w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="vertical-card-overlay absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="vertical-card-content absolute bottom-0 left-0 p-8">
+                        <i class="vertical-card-icon vertical-card-icon-4 fas fa-utensils text-ihc-accent text-3xl mb-4"></i>
+                        <h3 class="vertical-card-title vertical-card-title-4 text-xl font-bold text-white mb-2">Aroma Kitchen</h3>
+                        <p class="vertical-card-description vertical-card-description-4 text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
                             Culinary excellence delivering authentic flavors and premium dining experiences.
                         </p>
                     </div>
                 </div>
 
                 <!-- 5. East India Street Café -->
-                <div class="group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
-                    <img src="images/East_India_Street_Café.jpg" alt="East India Street Café" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 p-8">
-                        <i class="fas fa-coffee text-ihc-accent text-3xl mb-4"></i>
-                        <h3 class="text-xl font-bold text-white mb-2">East India Street Café</h3>
-                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                <div class="vertical-card vertical-card-5 group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
+                    <img src="images/East_India_Street_Café.jpg" alt="East India Street Café" class="vertical-card-image w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="vertical-card-overlay absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="vertical-card-content absolute bottom-0 left-0 p-8">
+                        <i class="vertical-card-icon vertical-card-icon-5 fas fa-coffee text-ihc-accent text-3xl mb-4"></i>
+                        <h3 class="vertical-card-title vertical-card-title-5 text-xl font-bold text-white mb-2">East India Street Café</h3>
+                        <p class="vertical-card-description vertical-card-description-5 text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
                             A premium café experience offering specialty coffee and authentic flavors in a welcoming atmosphere.
                         </p>
                     </div>
                 </div>
 
                 <!-- 6. MitonOptimal -->
-                <div class="group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
-                    <img src="images/MitonOptimal.jpg" alt="MitonOptimal" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 p-8">
-                        <i class="fas fa-chart-line text-ihc-accent text-3xl mb-4"></i>
-                        <h3 class="text-xl font-bold text-white mb-2">MitonOptimal</h3>
-                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                <div class="vertical-card vertical-card-6 group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
+                    <img src="images/MitonOptimal.jpg" alt="MitonOptimal" class="vertical-card-image w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="vertical-card-overlay absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="vertical-card-content absolute bottom-0 left-0 p-8">
+                        <i class="vertical-card-icon vertical-card-icon-6 fas fa-chart-line text-ihc-accent text-3xl mb-4"></i>
+                        <h3 class="vertical-card-title vertical-card-title-6 text-xl font-bold text-white mb-2">MitonOptimal</h3>
+                        <p class="vertical-card-description vertical-card-description-6 text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
                             Strategic financial solutions and investment management services for optimal growth.
                         </p>
                     </div>
                 </div>
 
                 <!-- 7. Aroma Developers -->
-                <div class="group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
-                    <img src="images/Aroma_Developers.jpg" alt="Aroma Developers" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 p-8">
-                        <i class="fas fa-city text-ihc-accent text-3xl mb-4"></i>
-                        <h3 class="text-xl font-bold text-white mb-2">Aroma Developers</h3>
-                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                <div class="vertical-card vertical-card-7 group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
+                    <img src="images/Aroma_Developers.jpg" alt="Aroma Developers" class="vertical-card-image w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="vertical-card-overlay absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="vertical-card-content absolute bottom-0 left-0 p-8">
+                        <i class="vertical-card-icon vertical-card-icon-7 fas fa-city text-ihc-accent text-3xl mb-4"></i>
+                        <h3 class="vertical-card-title vertical-card-title-7 text-xl font-bold text-white mb-2">Aroma Developers</h3>
+                        <p class="vertical-card-description vertical-card-description-7 text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
                             Creating sustainable communities and premium properties across the UAE markets.
                         </p>
                     </div>
                 </div>
 
                 <!-- 8. LondonTyne (UK) Limited -->
-                <div class="group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
-                    <img src="images/LondonTyne_UK_Limited.jpg" alt="LondonTyne" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 p-8">
-                        <i class="fas fa-building text-ihc-accent text-3xl mb-4"></i>
-                        <h3 class="text-xl font-bold text-white mb-2">LondonTyne (UK) Limited</h3>
-                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                <div class="vertical-card vertical-card-8 group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
+                    <img src="images/LondonTyne_UK_Limited.jpg" alt="LondonTyne" class="vertical-card-image w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="vertical-card-overlay absolute inset-0 bg-gradient-to-t from-ihc-dark via-ihc-dark/60 to-transparent opacity-50 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="vertical-card-content absolute bottom-0 left-0 p-8">
+                        <i class="vertical-card-icon vertical-card-icon-8 fas fa-building text-ihc-accent text-3xl mb-4"></i>
+                        <h3 class="vertical-card-title vertical-card-title-8 text-xl font-bold text-white mb-2">LondonTyne (UK) Limited</h3>
+                        <p class="vertical-card-description vertical-card-description-8 text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
                             Premium property development and real estate solutions across the United Kingdom.
                         </p>
                     </div>
@@ -390,7 +390,7 @@
     </section>
 
     <!-- Logo Carousel Section -->
-    <section class="py-12 bg-white overflow-hidden">
+    <section class="logo-carousel-section py-12 bg-white overflow-hidden">
         <div class="logo-carousel-container">
             <div class="logo-carousel-track">
                 <!-- First set of logos -->
@@ -549,81 +549,81 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-ihc-dark text-white border-t border-gray-800">
-        <div class="container mx-auto px-6 py-16">
-            <div class="grid grid-cols-1 md:grid-cols-4">
+    <footer class="footer-section bg-ihc-dark text-white border-t border-gray-800">
+        <div class="footer-container container mx-auto px-6 py-16">
+            <div class="footer-grid grid grid-cols-1 md:grid-cols-4">
                 <!-- Brand -->
-                <div>
-                    <div class="flex items-center gap-2 mb-6">
-                        <img src="aroma-logo.svg" alt="Aroma Logo" class="w-8 h-8 object-contain">
-                        <span class="text-xl font-bold">AROMA</span>
+                <div class="footer-brand footer-column">
+                    <div class="footer-brand-wrapper flex items-center gap-2 mb-6">
+                        <img src="aroma-logo.svg" alt="Aroma Logo" class="footer-logo-img w-8 h-8 object-contain">
+                        <span class="footer-brand-text text-xl font-bold">AROMA</span>
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    <p class="footer-brand-description text-gray-400 text-sm leading-relaxed mb-6">
                         A diverse conglomerate committed to delivering quality and innovation across construction, hospitality, and beyond.
                     </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-ihc-accent transition-colors"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-ihc-accent transition-colors"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-ihc-accent transition-colors"><i class="fab fa-instagram"></i></a>
+                    <div class="footer-social-links flex space-x-4">
+                        <a href="#" class="footer-social-link footer-social-link-linkedin text-gray-400 hover:text-ihc-accent transition-colors"><i class="footer-social-icon fab fa-linkedin-in"></i></a>
+                        <a href="#" class="footer-social-link footer-social-link-facebook text-gray-400 hover:text-ihc-accent transition-colors"><i class="footer-social-icon fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-link footer-social-link-instagram text-gray-400 hover:text-ihc-accent transition-colors"><i class="footer-social-icon fab fa-instagram"></i></a>
                     </div>
                 </div>
 
                 <!-- Quick Links -->
-                <div>
-                    <h4 class="text-lg font-bold mb-6 text-ihc-accent">Quick Links</h4>
-                    <ul class="space-y-3 text-sm text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
-                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="#verticals" class="hover:text-white transition-colors">Our Divisions</a></li>
-                        <li><a href="#media" class="hover:text-white transition-colors">Media Center</a></li>
-                        <li><a href="#contact" class="hover:text-white transition-colors">Careers</a></li>
+                <div class="footer-quick-links footer-column">
+                    <h4 class="footer-column-title text-lg font-bold mb-6 text-ihc-accent">Quick Links</h4>
+                    <ul class="footer-links-list space-y-3 text-sm text-gray-400">
+                        <li class="footer-link-item"><a href="#" class="footer-link footer-link-home hover:text-white transition-colors">Home</a></li>
+                        <li class="footer-link-item"><a href="#about" class="footer-link footer-link-about hover:text-white transition-colors">About Us</a></li>
+                        <li class="footer-link-item"><a href="#verticals" class="footer-link footer-link-divisions hover:text-white transition-colors">Our Divisions</a></li>
+                        <li class="footer-link-item"><a href="#media" class="footer-link footer-link-media hover:text-white transition-colors">Media Center</a></li>
+                        <li class="footer-link-item"><a href="#contact" class="footer-link footer-link-careers hover:text-white transition-colors">Careers</a></li>
                     </ul>
                 </div>
 
                 <!-- Divisions -->
-                <div>
-                    <h4 class="text-lg font-bold mb-6 text-ihc-accent">Our Businesses</h4>
-                    <ul class="space-y-3 text-sm text-gray-400">
-                        <li><a href="https://www.aromacontracting.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Aroma International Building Contracting LLC</a></li>
-                        <li><a href="https://www.fragrantnature.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Fragrant Nature Hotels & Resorts</a></li>
-                        <li><a href="https://www.fragrantnaturefilmcreations.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Fragrant Nature Film Creations</a></li>
-                        <li><a href="https://www.aromakitchentastes.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Aroma Kitchen</a></li>
-                        <li><a href="https://www.eastindiastreetcafe.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">East India Street Café</a></li>
-                        <li><a href="https://www.mitonoptimal.co.za/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">MitonOptimal</a></li>
-                        <li><a href="https://www.aromadevelopers.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Aroma Developers</a></li>
-                        <li><a href="https://www.londontyne.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">LondonTyne (UK) Limited</a></li>
+                <div class="footer-businesses footer-column">
+                    <h4 class="footer-column-title text-lg font-bold mb-6 text-ihc-accent">Our Businesses</h4>
+                    <ul class="footer-links-list space-y-3 text-sm text-gray-400">
+                        <li class="footer-link-item"><a href="https://www.aromacontracting.com/" target="_blank" rel="noopener noreferrer" class="footer-link footer-link-business hover:text-white transition-colors">Aroma International Building Contracting LLC</a></li>
+                        <li class="footer-link-item"><a href="https://www.fragrantnature.com/" target="_blank" rel="noopener noreferrer" class="footer-link footer-link-business hover:text-white transition-colors">Fragrant Nature Hotels & Resorts</a></li>
+                        <li class="footer-link-item"><a href="https://www.fragrantnaturefilmcreations.com/" target="_blank" rel="noopener noreferrer" class="footer-link footer-link-business hover:text-white transition-colors">Fragrant Nature Film Creations</a></li>
+                        <li class="footer-link-item"><a href="https://www.aromakitchentastes.com/" target="_blank" rel="noopener noreferrer" class="footer-link footer-link-business hover:text-white transition-colors">Aroma Kitchen</a></li>
+                        <li class="footer-link-item"><a href="https://www.eastindiastreetcafe.com/" target="_blank" rel="noopener noreferrer" class="footer-link footer-link-business hover:text-white transition-colors">East India Street Café</a></li>
+                        <li class="footer-link-item"><a href="https://www.mitonoptimal.co.za/" target="_blank" rel="noopener noreferrer" class="footer-link footer-link-business hover:text-white transition-colors">MitonOptimal</a></li>
+                        <li class="footer-link-item"><a href="https://www.aromadevelopers.com/" target="_blank" rel="noopener noreferrer" class="footer-link footer-link-business hover:text-white transition-colors">Aroma Developers</a></li>
+                        <li class="footer-link-item"><a href="https://www.londontyne.com/" target="_blank" rel="noopener noreferrer" class="footer-link footer-link-business hover:text-white transition-colors">LondonTyne (UK) Limited</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact -->
-                <div id="contact">
-                    <h4 class="text-lg font-bold mb-6 text-ihc-accent">Get in touch</h4>
-                    <ul class="space-y-4 text-sm text-gray-400">
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-map-marker-alt mt-1 text-ihc-accent"></i>
-                            <span>Headquarters<br>Dubai, UAE</span>
+                <div id="contact" class="footer-contact footer-column">
+                    <h4 class="footer-column-title text-lg font-bold mb-6 text-ihc-accent">Get in touch</h4>
+                    <ul class="footer-contact-list space-y-4 text-sm text-gray-400">
+                        <li class="footer-contact-item flex items-start gap-3">
+                            <i class="footer-contact-icon footer-contact-icon-location fas fa-map-marker-alt mt-1 text-ihc-accent"></i>
+                            <span class="footer-contact-text">Headquarters<br>Dubai, UAE</span>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fas fa-phone text-ihc-accent"></i>
-                            <span>+971 4 297 4558</span>
+                        <li class="footer-contact-item flex items-center gap-3">
+                            <i class="footer-contact-icon footer-contact-icon-phone fas fa-phone text-ihc-accent"></i>
+                            <span class="footer-contact-text">+971 4 297 4558</span>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fas fa-envelope text-ihc-accent"></i>
-                            <span>aroma1@eim.ae</span>
+                        <li class="footer-contact-item flex items-center gap-3">
+                            <i class="footer-contact-icon footer-contact-icon-email fas fa-envelope text-ihc-accent"></i>
+                            <span class="footer-contact-text">aroma1@eim.ae</span>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fas fa-globe text-ihc-accent"></i>
-                            <span>www.aromagroup.com</span>
+                        <li class="footer-contact-item flex items-center gap-3">
+                            <i class="footer-contact-icon footer-contact-icon-globe fas fa-globe text-ihc-accent"></i>
+                            <span class="footer-contact-text">www.aromagroup.com</span>
                         </li>
                     </ul>
                 </div>
             </div>
             
-            <div class="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-                <p>&copy; 2025 Aroma Group of Companies. All Rights Reserved.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-white">Privacy Policy</a>
-                    <a href="#" class="hover:text-white">Terms of Use</a>
+            <div class="footer-bottom border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p class="footer-copyright">&copy; 2025 Aroma Group of Companies. All Rights Reserved.</p>
+                <div class="footer-bottom-links flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="footer-bottom-link footer-bottom-link-privacy hover:text-white">Privacy Policy</a>
+                    <a href="#" class="footer-bottom-link footer-bottom-link-terms hover:text-white">Terms of Use</a>
                 </div>
             </div>
         </div>
