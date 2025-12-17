@@ -244,6 +244,193 @@
         </div>
     </section>
 
+    <!-- Founders Section -->
+    <section class="founders-section py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <!-- Header -->
+            <div class="founders-header text-center mb-12">
+                <div class="founders-label-wrapper mb-6">
+                    <span class="founders-label inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full text-sm font-semibold text-ihc-dark">
+                        <i class="fas fa-crown text-ihc-accent"></i>
+                        FOUNDERS
+                    </span>
+                </div>
+                <h2 class="founders-title text-4xl md:text-5xl font-serif font-bold text-ihc-dark mb-4">
+                    Meet our Leaders
+                </h2>
+            </div>
+
+            <!-- Carousel Container -->
+            <div class="founders-carousel-wrapper relative">
+                <div class="founders-carousel-container overflow-hidden">
+                    <div class="founders-carousel-track flex gap-6" id="founders-carousel-track">
+                        <!-- Founder Card 1 -->
+                        <div class="founder-card flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
+                            <div class="founder-card-inner bg-white rounded-xl overflow-hidden shadow-lg relative h-96">
+                                <div class="founder-image-wrapper rounded-xl overflow-hidden h-full">
+                                    <img src="images/sample-founder_1.jpg" alt="Founder 1" class="founder-image w-full h-full object-cover">
+                                    <div class="founder-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                                    <div class="founder-content absolute bottom-0 left-0 right-0 p-6 text-white">
+                                        <h3 class="founder-name text-xl font-bold mb-1">Founder Name 1</h3>
+                                        <p class="founder-role text-sm text-gray-300 uppercase">Role/Title</p>
+                                    </div>
+                                    <button class="founder-expand-btn absolute bottom-4 right-4 w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors z-10" onclick="toggleFounder(1, event)">
+                                        <i class="fas fa-plus"></i>
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                </div>
+                                <!-- Expanded Content -->
+                                <div class="founder-expanded-content absolute inset-0 bg-white rounded-xl transform translate-y-full transition-transform duration-500 ease-in-out z-20">
+                                    <div class="founder-expanded-inner h-full flex flex-col p-6 relative">
+                                        <button class="founder-close-btn absolute top-4 right-4 w-10 h-10 rounded-lg bg-ihc-dark text-white flex items-center justify-center hover:bg-ihc-accent transition-colors" onclick="toggleFounder(1, event)">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <div class="founder-expanded-image-wrapper mb-4 mt-12">
+                                            <img src="images/sample-founder_1.jpg" alt="Founder 1" class="founder-expanded-image w-24 h-24 rounded-full object-cover mx-auto">
+                                        </div>
+                                        <h3 class="founder-expanded-name text-2xl font-bold text-ihc-dark mb-2 text-center">Founder Name 1</h3>
+                                        <p class="founder-expanded-role text-ihc-accent mb-4 text-center font-semibold uppercase text-sm">Role/Title</p>
+                                        <p class="founder-expanded-description text-gray-600 leading-relaxed mb-4">
+                                            Detailed description about the founder, their background, expertise, and contribution to the company. This section provides comprehensive information about their professional journey and achievements.
+                                        </p>
+                                        <div class="founder-expanded-links flex justify-center gap-4 mt-auto">
+                                            <a href="#" class="founder-social-link w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Founder Card 2 -->
+                        <div class="founder-card flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
+                            <div class="founder-card-inner bg-white rounded-xl overflow-hidden shadow-lg relative h-96">
+                                <div class="founder-image-wrapper rounded-xl overflow-hidden h-full">
+                                    <img src="images/sample-founder_2.jpg" alt="Founder 2" class="founder-image w-full h-full object-cover">
+                                    <div class="founder-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                                    <div class="founder-content absolute bottom-0 left-0 right-0 p-6 text-white">
+                                        <h3 class="founder-name text-xl font-bold mb-1">Founder Name 2</h3>
+                                        <p class="founder-role text-sm text-gray-300 uppercase">Role/Title</p>
+                                    </div>
+                                    <button class="founder-expand-btn absolute bottom-4 right-4 w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors z-10" onclick="toggleFounder(2, event)">
+                                        <i class="fas fa-plus"></i>
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                </div>
+                                <!-- Expanded Content -->
+                                <div class="founder-expanded-content absolute inset-0 bg-white rounded-xl transform translate-y-full transition-transform duration-500 ease-in-out z-20">
+                                    <div class="founder-expanded-inner h-full flex flex-col p-6 relative">
+                                        <button class="founder-close-btn absolute top-4 right-4 w-10 h-10 rounded-lg bg-ihc-dark text-white flex items-center justify-center hover:bg-ihc-accent transition-colors" onclick="toggleFounder(2, event)">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <div class="founder-expanded-image-wrapper mb-4 mt-12">
+                                            <img src="images/sample-founder_2.jpg" alt="Founder 2" class="founder-expanded-image w-24 h-24 rounded-full object-cover mx-auto">
+                                        </div>
+                                        <h3 class="founder-expanded-name text-2xl font-bold text-ihc-dark mb-2 text-center">Founder Name 2</h3>
+                                        <p class="founder-expanded-role text-ihc-accent mb-4 text-center font-semibold uppercase text-sm">Role/Title</p>
+                                        <p class="founder-expanded-description text-gray-600 leading-relaxed mb-4">
+                                            Detailed description about the founder, their background, expertise, and contribution to the company. This section provides comprehensive information about their professional journey and achievements.
+                                        </p>
+                                        <div class="founder-expanded-links flex justify-center gap-4 mt-auto">
+                                            <a href="#" class="founder-social-link w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Founder Card 3 -->
+                        <div class="founder-card flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
+                            <div class="founder-card-inner bg-white rounded-xl overflow-hidden shadow-lg relative h-96">
+                                <div class="founder-image-wrapper rounded-xl overflow-hidden h-full">
+                                    <img src="images/sample-founder_3.jpg" alt="Founder 3" class="founder-image w-full h-full object-cover">
+                                    <div class="founder-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                                    <div class="founder-content absolute bottom-0 left-0 right-0 p-6 text-white">
+                                        <h3 class="founder-name text-xl font-bold mb-1">Founder Name 3</h3>
+                                        <p class="founder-role text-sm text-gray-300 uppercase">Role/Title</p>
+                                    </div>
+                                    <button class="founder-expand-btn absolute bottom-4 right-4 w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors z-10" onclick="toggleFounder(3, event)">
+                                        <i class="fas fa-plus"></i>
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                </div>
+                                <!-- Expanded Content -->
+                                <div class="founder-expanded-content absolute inset-0 bg-white rounded-xl transform translate-y-full transition-transform duration-500 ease-in-out z-20">
+                                    <div class="founder-expanded-inner h-full flex flex-col p-6 relative">
+                                        <button class="founder-close-btn absolute top-4 right-4 w-10 h-10 rounded-lg bg-ihc-dark text-white flex items-center justify-center hover:bg-ihc-accent transition-colors" onclick="toggleFounder(3, event)">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <div class="founder-expanded-image-wrapper mb-4 mt-12">
+                                            <img src="images/sample-founder_3.jpg" alt="Founder 3" class="founder-expanded-image w-24 h-24 rounded-full object-cover mx-auto">
+                                        </div>
+                                        <h3 class="founder-expanded-name text-2xl font-bold text-ihc-dark mb-2 text-center">Founder Name 3</h3>
+                                        <p class="founder-expanded-role text-ihc-accent mb-4 text-center font-semibold uppercase text-sm">Role/Title</p>
+                                        <p class="founder-expanded-description text-gray-600 leading-relaxed mb-4">
+                                            Detailed description about the founder, their background, expertise, and contribution to the company. This section provides comprehensive information about their professional journey and achievements.
+                                        </p>
+                                        <div class="founder-expanded-links flex justify-center gap-4 mt-auto">
+                                            <a href="#" class="founder-social-link w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Founder Card 4 -->
+                        <div class="founder-card flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
+                            <div class="founder-card-inner bg-white rounded-xl overflow-hidden shadow-lg relative h-96">
+                                <div class="founder-image-wrapper rounded-xl overflow-hidden h-full">
+                                    <img src="images/sample-founder_4.avif" alt="Founder 4" class="founder-image w-full h-full object-cover">
+                                    <div class="founder-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                                    <div class="founder-content absolute bottom-0 left-0 right-0 p-6 text-white">
+                                        <h3 class="founder-name text-xl font-bold mb-1">Founder Name 4</h3>
+                                        <p class="founder-role text-sm text-gray-300 uppercase">Role/Title</p>
+                                    </div>
+                                    <button class="founder-expand-btn absolute bottom-4 right-4 w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors z-10" onclick="toggleFounder(4, event)">
+                                        <i class="fas fa-plus"></i>
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                </div>
+                                <!-- Expanded Content -->
+                                <div class="founder-expanded-content absolute inset-0 bg-white rounded-xl transform translate-y-full transition-transform duration-500 ease-in-out z-20">
+                                    <div class="founder-expanded-inner h-full flex flex-col p-6 relative">
+                                        <button class="founder-close-btn absolute top-4 right-4 w-10 h-10 rounded-lg bg-ihc-dark text-white flex items-center justify-center hover:bg-ihc-accent transition-colors" onclick="toggleFounder(4, event)">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <div class="founder-expanded-image-wrapper mb-4 mt-12">
+                                            <img src="images/sample-founder_4.avif" alt="Founder 4" class="founder-expanded-image w-24 h-24 rounded-full object-cover mx-auto">
+                                        </div>
+                                        <h3 class="founder-expanded-name text-2xl font-bold text-ihc-dark mb-2 text-center">Founder Name 4</h3>
+                                        <p class="founder-expanded-role text-ihc-accent mb-4 text-center font-semibold uppercase text-sm">Role/Title</p>
+                                        <p class="founder-expanded-description text-gray-600 leading-relaxed mb-4">
+                                            Detailed description about the founder, their background, expertise, and contribution to the company. This section provides comprehensive information about their professional journey and achievements.
+                                        </p>
+                                        <div class="founder-expanded-links flex justify-center gap-4 mt-auto">
+                                            <a href="#" class="founder-social-link w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button class="founders-nav-btn founders-nav-next absolute right-4 bottom-4 w-12 h-12 rounded-full bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors z-10" onclick="slideFounders('next')">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+    </section>
+
     <!-- Leadership -->
     <!--
     <section class="py-20 bg-white">
@@ -1256,6 +1443,82 @@
             
             // Toggle current FAQ item
             faqItem.classList.toggle('active');
+        }
+
+        // Founders Carousel
+        let currentFounderIndex = 0;
+        const foundersCarouselTrack = document.getElementById('founders-carousel-track');
+        const founderCards = document.querySelectorAll('.founder-card');
+        const totalFounders = founderCards.length;
+
+        function updateCarouselPosition() {
+            if (!foundersCarouselTrack || totalFounders === 0) return;
+
+            // Get the container width
+            const container = foundersCarouselTrack.parentElement;
+            const containerWidth = container.offsetWidth;
+            
+            // Calculate card width based on viewport
+            let cardWidth;
+            if (window.innerWidth >= 1024) {
+                cardWidth = containerWidth / 3; // Show 1/3 of container (1 card)
+            } else if (window.innerWidth >= 768) {
+                cardWidth = containerWidth / 2; // Show 1/2 of container (1 card)
+            } else {
+                cardWidth = containerWidth; // Full width on mobile
+            }
+
+            // Calculate gap (1.5rem = 24px)
+            const gap = 24;
+            
+            // Calculate translateX
+            const translateX = -(currentFounderIndex * (cardWidth + gap));
+
+            foundersCarouselTrack.style.transform = `translateX(${translateX}px)`;
+        }
+
+        function slideFounders(direction) {
+            if (direction === 'next') {
+                currentFounderIndex = (currentFounderIndex + 1) % totalFounders;
+            } else {
+                currentFounderIndex = (currentFounderIndex - 1 + totalFounders) % totalFounders;
+            }
+            updateCarouselPosition();
+        }
+
+        // Initialize carousel position
+        if (foundersCarouselTrack && totalFounders > 0) {
+            updateCarouselPosition();
+        }
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                updateCarouselPosition();
+            }, 250);
+        });
+
+        // Founder Card Expand/Collapse
+        function toggleFounder(index, event) {
+            if (event) {
+                event.stopPropagation();
+            }
+
+            const founderCard = document.querySelector(`.founder-card:nth-child(${index}) .founder-card-inner`);
+            
+            if (!founderCard) return;
+
+            // Close all other founder cards
+            document.querySelectorAll('.founder-card-inner').forEach((card, i) => {
+                if (card !== founderCard) {
+                    card.classList.remove('expanded');
+                }
+            });
+
+            // Toggle current founder card
+            founderCard.classList.toggle('expanded');
         }
     </script>
 </body>
