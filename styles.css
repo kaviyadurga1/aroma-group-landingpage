@@ -4055,6 +4055,8 @@ nav#navbar .nav-link::after {
 }
 
 .founder-expanded-inner {
+  border-radius: 20px;
+  border: 1px solid var(--ihc-accent);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -4087,6 +4089,10 @@ nav#navbar .nav-link::after {
   flex-shrink: 0;
   margin-top: 3rem;
   margin-bottom: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .founder-expanded-image {
@@ -4095,6 +4101,8 @@ nav#navbar .nav-link::after {
   border-radius: 9999px;
   object-fit: cover;
   border: 3px solid var(--ihc-accent);
+  display: block;
+  margin: 0 auto;
 }
 
 .founder-expanded-name {
@@ -4116,6 +4124,8 @@ nav#navbar .nav-link::after {
 }
 
 .founder-expanded-description {
+  padding-left: 20px;
+  padding-right: 20px;
   color: var(--gray-600);
   line-height: 1.625;
   font-size: 0.9375rem;
@@ -4124,8 +4134,8 @@ nav#navbar .nav-link::after {
 }
 
 .founder-expanded-links {
+  transform: translateY(-10px);
   margin-top: auto;
-  padding-top: 1rem;
   display: flex;
   justify-content: center;
   gap: 1rem;
