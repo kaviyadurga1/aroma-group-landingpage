@@ -44,8 +44,14 @@
   width: 100vw !important;
   height: 100vh !important;
   min-height: 100vh !important;
-  z-index: 99999 !important;
+  z-index: 9999 !important;
   overflow-y: auto !important;
+  transform: translateX(100%) !important;
+  transition: transform 300ms ease !important;
+}
+
+#mobile-menu:not(.translate-x-full) {
+  transform: translateX(0) !important;
 }
 
 /* Ensure mobile menu links are always visible */
@@ -1318,6 +1324,15 @@ a:active {
   transform: translateX(100%);
 }
 
+/* Mobile menu - hidden by default, shown when translate-x-full is removed */
+#mobile-menu.mobile-menu-overlay {
+  transform: translateX(100%);
+}
+
+#mobile-menu.mobile-menu-overlay:not(.translate-x-full) {
+  transform: translateX(0) !important;
+}
+
 .translate-y-4 {
   transform: translateY(1rem);
 }
@@ -2575,6 +2590,8 @@ nav#navbar .nav-link::after {
   background: transparent;
   border: none;
   cursor: pointer;
+  position: relative;
+  z-index: 60;
 }
 
 @media (min-width: 1024px) {
@@ -2591,8 +2608,7 @@ nav#navbar .nav-link::after {
   position: fixed;
   inset: 0;
   background-color: var(--ihc-dark);
-  z-index: 40;
-  transform: translateX(100%);
+  z-index: 9999;
   transition-property: transform;
   transition-duration: 300ms;
   display: flex;
