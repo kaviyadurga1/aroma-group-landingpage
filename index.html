@@ -270,7 +270,10 @@
                 <div class="founders-carousel-container overflow-hidden">
                     <div class="founders-carousel-track flex gap-6" id="founders-carousel-track">
                         <!-- Founder Card 1 -->
-                        <div class="founder-card flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
+                        <div class="founder-card flex-shrink-0 w-full md:w-1/2 lg:w-1/3 relative">
+                            <button class="founder-notch-action" onclick="toggleFounder(1, event)" aria-label="Toggle founder details">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
                             <div class="founder-card-inner bg-white rounded-xl overflow-hidden shadow-lg relative h-96">
                                 <div class="founder-image-wrapper rounded-xl overflow-hidden h-full">
                                     <img src="images/sample-founder_1.jpg" alt="Founder 1" class="founder-image w-full h-full object-cover">
@@ -279,17 +282,14 @@
                                         <h3 class="founder-name text-xl font-bold mb-1">Sajeev P K</h3>
                                         <p class="founder-role text-sm text-gray-300 uppercase">Managing Director of Aroma International Building Contracting LLC</p>
                                     </div>
-                                    <button class="founder-expand-btn absolute bottom-4 right-4 w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors z-10" onclick="toggleFounder(1, event)">
-                                        <i class="fas fa-plus"></i>
-                                        <i class="fas fa-minus"></i>
-                                    </button>
+                                    <!--   -->
                                 </div>
                                 <!-- Expanded Content -->
                                 <div class="founder-expanded-content absolute inset-0 bg-white rounded-xl transform translate-y-full transition-transform duration-500 ease-in-out z-20">
                                     <div class="founder-expanded-inner h-full flex flex-col p-6 relative">
-                                        <button class="founder-close-btn absolute top-4 right-4 w-10 h-10 rounded-lg bg-ihc-dark text-white flex items-center justify-center hover:bg-ihc-accent transition-colors" onclick="toggleFounder(1, event)">
+                                        <!-- <button class="founder-close-btn absolute top-4 right-4 w-10 h-10 rounded-lg bg-ihc-dark text-white flex items-center justify-center hover:bg-ihc-accent transition-colors" onclick="toggleFounder(1, event)">
                                             <i class="fas fa-minus"></i>
-                                        </button>
+                                        </button> -->
                                         <div class="founder-expanded-image-wrapper mb-4 mt-12">
                                             <img src="images/sample-founder_1.jpg" alt="Founder 1" class="founder-expanded-image w-24 h-24 rounded-full object-cover mx-auto">
                                         </div>
@@ -299,9 +299,9 @@
                                             Founder & Managing Director of Aroma International Building Contracting LLC, leading since 1998 with a commitment to quality and excellence.
                                         </p>
                                         <div class="founder-expanded-links flex justify-center gap-4 mt-auto">
-                                            <a href="#" class="founder-social-link w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors">
+                                            <!-- <a href="#" class="founder-social-link w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors">
                                                 <i class="fab fa-linkedin-in"></i>
-                                            </a>
+                                            </a> -->
                                         </div>
                                     </div>
                                 </div>
@@ -309,7 +309,10 @@
                         </div>
 
                         <!-- Founder Card 2 -->
-                        <div class="founder-card flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
+                        <div class="founder-card flex-shrink-0 w-full md:w-1/2 lg:w-1/3 relative">
+                            <button class="founder-notch-action" onclick="toggleFounder(2, event)" aria-label="Toggle founder details">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
                             <div class="founder-card-inner bg-white rounded-xl overflow-hidden shadow-lg relative h-96">
                                 <div class="founder-image-wrapper rounded-xl overflow-hidden h-full">
                                     <img src="images/sample-founder_3.jpg" alt="Founder 2" class="founder-image w-full h-full object-cover">
@@ -318,29 +321,29 @@
                                         <h3 class="founder-name text-xl font-bold mb-1">Anne Sajeev Kochumman</h3>
                                         <p class="founder-role text-sm text-gray-300 uppercase">Managing Director of Fragrant Nature</p>
                                     </div>
-                                    <button class="founder-expand-btn absolute bottom-4 right-4 w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors z-10" onclick="toggleFounder(2, event)">
+                                    <!-- <button class="founder-expand-btn absolute bottom-4 right-4 w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors z-10" onclick="toggleFounder(2, event)">
                                         <i class="fas fa-plus"></i>
                                         <i class="fas fa-minus"></i>
-                                    </button>
+                                    </button> -->
                                 </div>
                                 <!-- Expanded Content -->
                                 <div class="founder-expanded-content absolute inset-0 bg-white rounded-xl transform translate-y-full transition-transform duration-500 ease-in-out z-20">
                                     <div class="founder-expanded-inner h-full flex flex-col p-6 relative">
-                                        <button class="founder-close-btn absolute top-4 right-4 w-10 h-10 rounded-lg bg-ihc-dark text-white flex items-center justify-center hover:bg-ihc-accent transition-colors" onclick="toggleFounder(2, event)">
+                                        <!-- <button class="founder-close-btn absolute top-4 right-4 w-10 h-10 rounded-lg bg-ihc-dark text-white flex items-center justify-center hover:bg-ihc-accent transition-colors" onclick="toggleFounder(2, event)">
                                             <i class="fas fa-minus"></i>
-                                        </button>
+                                        </button> -->
                                         <div class="founder-expanded-image-wrapper mb-4 mt-12">
                                             <img src="images/sample-founder_3.jpg" alt="Founder 2" class="founder-expanded-image w-24 h-24 rounded-full object-cover mx-auto">
                                         </div>
                                         <h3 class="founder-expanded-name text-2xl font-bold text-ihc-dark mb-2 text-center">Anne Sajeev Kochumman</h3>
                                         <p class="founder-expanded-role text-ihc-accent mb-4 text-center font-semibold uppercase text-sm">Managing Director</p>
                                         <p class="founder-expanded-description text-gray-600 leading-relaxed mb-4">
-                                            Managing Director of Fragrant Nature Hotels & Resorts and Fragrant Nature Film Creations, leads with a vision for innovation and impactful storytelling.
+                                            Managing Director of Fragrant Nature Hotels & Resorts and Film Creations, leading with innovative vision and impactful storytelling.
                                         </p>
                                         <div class="founder-expanded-links flex justify-center gap-4 mt-auto">
-                                            <a href="#" class="founder-social-link w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors">
+                                            <!-- <a href="#" class="founder-social-link w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors">
                                                 <i class="fab fa-linkedin-in"></i>
-                                            </a>
+                                            </a> -->
                                         </div>
                                     </div>
                                 </div>
@@ -348,7 +351,10 @@
                         </div>
 
                         <!-- Founder Card 3 -->
-                        <div class="founder-card flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
+                        <div class="founder-card flex-shrink-0 w-full md:w-1/2 lg:w-1/3 relative">
+                            <button class="founder-notch-action" onclick="toggleFounder(3, event)" aria-label="Toggle founder details">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
                             <div class="founder-card-inner bg-white rounded-xl overflow-hidden shadow-lg relative h-96">
                                 <div class="founder-image-wrapper rounded-xl overflow-hidden h-full">
                                     <img src="images/sample-founder_2.jpg" alt="Founder 3" class="founder-image w-full h-full object-cover">
@@ -357,29 +363,29 @@
                                         <h3 class="founder-name text-xl font-bold mb-1">George Dell</h3>
                                         <p class="founder-role text-sm text-gray-300 uppercase">Executive Director of MitonOptimal</p>
                                     </div>
-                                    <button class="founder-expand-btn absolute bottom-4 right-4 w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors z-10" onclick="toggleFounder(3, event)">
+                                    <!-- <button class="founder-expand-btn absolute bottom-4 right-4 w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors z-10" onclick="toggleFounder(3, event)">
                                         <i class="fas fa-plus"></i>
                                         <i class="fas fa-minus"></i>
-                                    </button>
+                                    </button> -->
                                 </div>
                                 <!-- Expanded Content -->
                                 <div class="founder-expanded-content absolute inset-0 bg-white rounded-xl transform translate-y-full transition-transform duration-500 ease-in-out z-20">
                                     <div class="founder-expanded-inner h-full flex flex-col p-6 relative">
-                                        <button class="founder-close-btn absolute top-4 right-4 w-10 h-10 rounded-lg bg-ihc-dark text-white flex items-center justify-center hover:bg-ihc-accent transition-colors" onclick="toggleFounder(3, event)">
+                                        <!-- <button class="founder-close-btn absolute top-4 right-4 w-10 h-10 rounded-lg bg-ihc-dark text-white flex items-center justify-center hover:bg-ihc-accent transition-colors" onclick="toggleFounder(3, event)">
                                             <i class="fas fa-minus"></i>
-                                        </button>
+                                        </button> -->
                                         <div class="founder-expanded-image-wrapper mb-4 mt-12">
                                             <img src="images/sample-founder_2.jpg" alt="Founder 3" class="founder-expanded-image w-24 h-24 rounded-full object-cover mx-auto">
                                         </div>
                                         <h3 class="founder-expanded-name text-2xl font-bold text-ihc-dark mb-2 text-center">George Dell</h3>
                                         <p class="founder-expanded-role text-ihc-accent mb-4 text-center font-semibold uppercase text-sm">Executive Director</p>
                                         <p class="founder-expanded-description text-gray-600 leading-relaxed mb-4">
-                                            As Executive Director of MitonOptimal, overseeing strategic operations and delivering investment management services to financial advisers.
+                                            Executive Director of MitonOptimal, overseeing strategic operations and investment management for financial advisers.
                                         </p>
                                         <div class="founder-expanded-links flex justify-center gap-4 mt-auto">
-                                            <a href="#" class="founder-social-link w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors">
+                                            <!-- <a href="#" class="founder-social-link w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors">
                                                 <i class="fab fa-linkedin-in"></i>
-                                            </a>
+                                            </a> -->
                                         </div>
                                     </div>
                                 </div>
@@ -387,7 +393,10 @@
                         </div>
 
                         <!-- Founder Card 4 -->
-                        <div class="founder-card flex-shrink-0 w-full md:w-1/2 lg:w-1/3">
+                        <div class="founder-card flex-shrink-0 w-full md:w-1/2 lg:w-1/3 relative">
+                            <button class="founder-notch-action" onclick="toggleFounder(4, event)" aria-label="Toggle founder details">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
                             <div class="founder-card-inner bg-white rounded-xl overflow-hidden shadow-lg relative h-96">
                                 <div class="founder-image-wrapper rounded-xl overflow-hidden h-full">
                                     <img src="images/sample-founder_4.avif" alt="Founder 4" class="founder-image w-full h-full object-cover">
@@ -396,17 +405,17 @@
                                         <h3 class="founder-name text-xl font-bold mb-1">Founder Name 4</h3>
                                         <p class="founder-role text-sm text-gray-300 uppercase">Role/Title</p>
                                     </div>
-                                    <button class="founder-expand-btn absolute bottom-4 right-4 w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors z-10" onclick="toggleFounder(4, event)">
+                                    <!-- <button class="founder-expand-btn absolute bottom-4 right-4 w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors z-10" onclick="toggleFounder(4, event)">
                                         <i class="fas fa-plus"></i>
                                         <i class="fas fa-minus"></i>
-                                    </button>
+                                    </button> -->
                                 </div>
                                 <!-- Expanded Content -->
                                 <div class="founder-expanded-content absolute inset-0 bg-white rounded-xl transform translate-y-full transition-transform duration-500 ease-in-out z-20">
                                     <div class="founder-expanded-inner h-full flex flex-col p-6 relative">
-                                        <button class="founder-close-btn absolute top-4 right-4 w-10 h-10 rounded-lg bg-ihc-dark text-white flex items-center justify-center hover:bg-ihc-accent transition-colors" onclick="toggleFounder(4, event)">
+                                        <!-- <button class="founder-close-btn absolute top-4 right-4 w-10 h-10 rounded-lg bg-ihc-dark text-white flex items-center justify-center hover:bg-ihc-accent transition-colors" onclick="toggleFounder(4, event)">
                                             <i class="fas fa-minus"></i>
-                                        </button>
+                                        </button> -->
                                         <div class="founder-expanded-image-wrapper mb-4 mt-12">
                                             <img src="images/sample-founder_4.avif" alt="Founder 4" class="founder-expanded-image w-24 h-24 rounded-full object-cover mx-auto">
                                         </div>
@@ -416,9 +425,9 @@
                                             Detailed description about the founder, their background, expertise, and contribution to the company.
                                         </p>
                                         <div class="founder-expanded-links flex justify-center gap-4 mt-auto">
-                                            <a href="#" class="founder-social-link w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors">
+                                            <!-- <a href="#" class="founder-social-link w-10 h-10 rounded-lg bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors">
                                                 <i class="fab fa-linkedin-in"></i>
-                                            </a>
+                                            </a> -->
                                         </div>
                                     </div>
                                 </div>
@@ -426,9 +435,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Navigation Arrows -->
-                <button class="founders-nav-btn founders-nav-next absolute right-4 bottom-4 w-12 h-12 rounded-full bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors z-10" onclick="slideFounders('next')">
+            <!-- Navigation Arrows -->
+            <div class="founders-nav-container flex justify-end mt-6">
+                <button class="founders-nav-btn founders-nav-next w-12 h-12 rounded-full bg-ihc-accent text-white flex items-center justify-center hover:bg-ihc-dark transition-colors z-10" onclick="slideFounders('next')">
                     <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
@@ -484,7 +495,7 @@
                         <i class="vertical-card-icon vertical-card-icon-1 fas fa-hard-hat text-ihc-accent text-3xl mb-4"></i>
                         <h3 class="vertical-card-title vertical-card-title-1 text-xl font-bold text-white mb-2">Aroma International Building Contracting LLC</h3>
                         <p class="vertical-card-description vertical-card-description-1 text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
-                            Delivering large-scale infrastructure, commercial, and residential projects with precision and quality since 1998.
+                            Building large-scale infrastructure, commercial, and residential projects with precision since 1998.
                         </p>
                     </div>
                 </div>
@@ -497,7 +508,7 @@
                         <i class="vertical-card-icon vertical-card-icon-2 fas fa-concierge-bell text-ihc-accent text-3xl mb-4"></i>
                         <h3 class="vertical-card-title vertical-card-title-2 text-xl font-bold text-white mb-2">Fragrant Nature Hotels & Resorts</h3>
                         <p class="vertical-card-description vertical-card-description-2 text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
-                            Luxury 5-star experiences and boutique resorts that offer a perfect blend of nature and comfort.
+                            Luxury 5-star experiences and boutique resorts offering a perfect blend of nature and comfort.
                         </p>
                     </div>
                 </div>
@@ -523,7 +534,7 @@
                         <i class="vertical-card-icon vertical-card-icon-4 fas fa-utensils text-ihc-accent text-3xl mb-4"></i>
                         <h3 class="vertical-card-title vertical-card-title-4 text-xl font-bold text-white mb-2">Aroma Kitchen</h3>
                         <p class="vertical-card-description vertical-card-description-4 text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
-                            Culinary excellence delivering authentic flavors and premium dining experiences.
+                            Culinary excellence in delivering authentic flavors and unforgettable, premium dining experiences to all.
                         </p>
                     </div>
                 </div>
@@ -536,7 +547,7 @@
                         <i class="vertical-card-icon vertical-card-icon-5 fas fa-coffee text-ihc-accent text-3xl mb-4"></i>
                         <h3 class="vertical-card-title vertical-card-title-5 text-xl font-bold text-white mb-2">East India Street Café</h3>
                         <p class="vertical-card-description vertical-card-description-5 text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
-                            A premium café experience offering specialty coffee and authentic flavors in a welcoming atmosphere.
+                            A premium café serving specialty coffee and authentic flavors in a welcoming atmosphere.
                         </p>
                     </div>
                 </div>
@@ -575,7 +586,7 @@
                         <i class="vertical-card-icon vertical-card-icon-8 fas fa-building text-ihc-accent text-3xl mb-4"></i>
                         <h3 class="vertical-card-title vertical-card-title-8 text-xl font-bold text-white mb-2">LondonTyne (UK) Limited</h3>
                         <p class="vertical-card-description vertical-card-description-8 text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
-                            A discretionary investment management firm that provides model portfolio services to financial advisers and their clients.
+                            A Discretionary investment management offering model portfolios to advisers and clients.
                         </p>
                     </div>
                 </div>
@@ -762,7 +773,7 @@
                     <i class="fas fa-star text-ihc-accent"></i>
                     Testimonials</span>
                 <h2 class="testimonials-title text-4xl md:text-5xl font-serif font-bold text-white leading-tight">
-                    Don't just take our words,<br>listen to theirs.
+                    Clients worldwide <br> who love our services
                 </h2>
             </div>
 
@@ -1519,6 +1530,7 @@
             }
 
             const founderCard = document.querySelector(`.founder-card:nth-child(${index}) .founder-card-inner`);
+            const founderCardParent = document.querySelector(`.founder-card:nth-child(${index})`);
             
             if (!founderCard) return;
 
@@ -1526,11 +1538,16 @@
             document.querySelectorAll('.founder-card-inner').forEach((card, i) => {
                 if (card !== founderCard) {
                     card.classList.remove('expanded');
+                    const parent = card.closest('.founder-card');
+                    if (parent) parent.classList.remove('expanded');
                 }
             });
 
             // Toggle current founder card
             founderCard.classList.toggle('expanded');
+            if (founderCardParent) {
+                founderCardParent.classList.toggle('expanded');
+            }
         }
     </script>
 </body>
