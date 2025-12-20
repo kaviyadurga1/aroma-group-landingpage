@@ -4614,7 +4614,7 @@ nav#navbar .nav-dropdown-wrapper>.nav-link:hover::after,
 }
 
 .aroma-intro-hero-bg img {
-  margin-top: 88px;
+  margin-top: 85px;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -4624,6 +4624,7 @@ nav#navbar .nav-dropdown-wrapper>.nav-link:hover::after,
 }
 
 .aroma-intro-hero-content {
+  transform: translateY(85px);
   position: relative;
   z-index: 10;
 }
@@ -4686,29 +4687,16 @@ nav#navbar .nav-dropdown-wrapper>.nav-link:hover::after,
   margin-top: 3rem;
 }
 
-.aroma-intro-partner-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.aroma-intro-partner-item .w-16 {
-  background-color: #fed7aa;
-}
-
-.aroma-intro-partner-item i {
-  color: #ea580c;
-}
 
 .aroma-intro-hero-image {
   position: relative;
 }
 
 .aroma-intro-stats-card {
+  transform: translateY(-100px);
   background-color: #ffffff;
-  border-radius: 0.5rem;
-  padding: 1.5rem;
+  border-radius: 10.5rem;
+  padding: 0.5rem;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   z-index: 20;
   min-width: 200px;
@@ -4737,7 +4725,7 @@ nav#navbar .nav-dropdown-wrapper>.nav-link:hover::after,
 
 .aroma-intro-stats-number {
   color: #111827;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
