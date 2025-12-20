@@ -23,7 +23,7 @@
     </div>
 
     <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 nav-transparent top-8">
+    <nav id="navbar" class="navbar-main fixed w-full z-50 transition-all duration-300 nav-transparent top-8">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <!-- Logo -->
             <a href="#" class="navbar-logo-link flex items-center gap-2 group">
@@ -40,7 +40,22 @@
                 <div class="desktop-menu flex items-center space-x-8">
                     <a href="#" class="nav-link nav-link-home text-white text-sm font-medium uppercase tracking-wide">Home</a>
                     <a href="#about" class="nav-link nav-link-about text-white text-sm font-medium uppercase tracking-wide">About</a>
-                    <a href="#verticals" class="nav-link nav-link-divisions text-white text-sm font-medium uppercase tracking-wide">Divisions</a>
+                    <div class="nav-dropdown-wrapper relative">
+                        <button class="nav-link nav-link-divisions text-white text-sm font-medium uppercase tracking-wide flex items-center gap-2 cursor-pointer bg-transparent border-none" id="divisions-dropdown-btn">
+                            <span>Divisions</span>
+                            <i class="fas fa-chevron-down divisions-dropdown-icon text-xs transition-transform duration-300"></i>
+                        </button>
+                        <div class="nav-dropdown-menu absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg py-2 min-w-[380px] opacity-0 invisible transition-all duration-300 transform translate-y-2" id="divisions-dropdown">
+                            <a href="divisions/aroma-international-building-contracting.html" class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors">Aroma International Building Contracting</a>
+                            <a href="divisions/fragrant-nature-hotels-resorts.html" class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors">Fragrant Nature Hotels & Resorts</a>
+                            <a href="divisions/fragrant-nature-film-creations.html" class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors">Fragrant Nature Film Creations</a>
+                            <a href="divisions/aroma-kitchen.html" class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors">Aroma Kitchen</a>
+                            <a href="divisions/east-india-street-cafe.html" class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors">East India Street Café</a>
+                            <a href="divisions/mitonoptimal.html" class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors">MitonOptimal</a>
+                            <a href="divisions/aroma-developers.html" class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors">Aroma Developers</a>
+                            <a href="divisions/londontyne-uk-limited.html" class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors">LondonTyne (UK) Limited</a>
+                        </div>
+                    </div>
                     <!-- <a href="#projects" class="nav-link nav-link-projects text-white text-sm font-medium uppercase tracking-wide">Projects</a> -->
                     <a href="#media" class="nav-link nav-link-awards text-white text-sm font-medium uppercase tracking-wide">Awards</a>
                     <a href="#contact" class="nav-link nav-link-contact text-white text-sm font-medium uppercase tracking-wide">Contact</a>
@@ -486,6 +501,7 @@
                 <h2 class="verticals-title text-4xl font-serif font-bold text-ihc-dark">Business Divisions</h2>
             </div>
 
+            
             <div class="verticals-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- 1. Aroma International Building Contracting LLC -->
                 <div class="vertical-card vertical-card-1 group relative overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 h-96">
@@ -1096,6 +1112,12 @@
                     link.classList.add('text-ihc-dark');
                 });
                 
+                const divisionsDropdownBtn = document.getElementById('divisions-dropdown-btn');
+                if (divisionsDropdownBtn) {
+                    divisionsDropdownBtn.classList.remove('text-white');
+                    divisionsDropdownBtn.classList.add('text-ihc-dark');
+                }
+                
                 navIcons.forEach(icon => {
                     icon.classList.remove('text-white');
                     icon.classList.add('text-ihc-dark');
@@ -1120,7 +1142,13 @@
                     link.classList.add('text-white');
                     link.classList.remove('text-ihc-dark');
                 });
-
+                
+                const divisionsDropdownBtn = document.getElementById('divisions-dropdown-btn');
+                if (divisionsDropdownBtn) {
+                    divisionsDropdownBtn.classList.add('text-white');
+                    divisionsDropdownBtn.classList.remove('text-ihc-dark');
+                }
+                
                 navIcons.forEach(icon => {
                     icon.classList.add('text-white');
                     icon.classList.remove('text-ihc-dark');
@@ -1132,6 +1160,53 @@
                 }
             }
         });
+
+        // Divisions Dropdown Toggle
+        const divisionsDropdownBtn = document.getElementById('divisions-dropdown-btn');
+        const divisionsDropdown = document.getElementById('divisions-dropdown');
+        const divisionsDropdownIcon = document.querySelector('.divisions-dropdown-icon');
+
+        if (divisionsDropdownBtn && divisionsDropdown) {
+            divisionsDropdownBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = divisionsDropdown.classList.contains('opacity-100');
+                
+                if (isOpen) {
+                    divisionsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                    divisionsDropdown.classList.add('opacity-0', 'invisible', 'translate-y-2');
+                    if (divisionsDropdownIcon) {
+                        divisionsDropdownIcon.style.transform = 'rotate(0deg)';
+                    }
+                } else {
+                    divisionsDropdown.classList.remove('opacity-0', 'invisible', 'translate-y-2');
+                    divisionsDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
+                    if (divisionsDropdownIcon) {
+                        divisionsDropdownIcon.style.transform = 'rotate(180deg)';
+                    }
+                }
+            });
+
+            // Allow dropdown items to navigate normally
+            const dropdownItems = divisionsDropdown.querySelectorAll('.nav-dropdown-item');
+            dropdownItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    // Allow navigation - don't prevent default
+                    // The link will navigate naturally
+                });
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!divisionsDropdownBtn.contains(e.target) && !divisionsDropdown.contains(e.target)) {
+                    divisionsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                    divisionsDropdown.classList.add('opacity-0', 'invisible', 'translate-y-2');
+                    if (divisionsDropdownIcon) {
+                        divisionsDropdownIcon.style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
+        }
 
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragrant Nature Hotels & Resorts - Aroma Group</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+</head>
+<body class="font-sans text-gray-800 antialiased overflow-x-hidden">
+
+    <!-- News Ticker -->
+    <div class="ticker-wrap border-b border-gray-700">
+        <div class="ticker">
+            <div class="ticker__item"><span class="ticker-label font-bold text-ihc-accent">GLOBAL REACH</span><span class="ticker-content"> Dubai • London • Kochi</span></div>
+            <div class="ticker__item"><span class="ticker-label font-bold text-ihc-accent">PROJECT UPDATE</span><span class="ticker-content"> New Luxury Resort Development Initiated in Kerala</span></div>
+            <div class="ticker__item"><span class="ticker-label font-bold text-ihc-accent">MILESTONE</span><span class="ticker-content"> Celebrating 25+ Years of Excellence in Construction</span></div>
+            <div class="ticker__item"><span class="ticker-label font-bold text-ihc-accent">AWARD</span><span class="ticker-content"> Best Sustainable Developer 2024 Nominee</span></div>
+            <div class="ticker__item"><span class="ticker-label font-bold text-ihc-accent">FILMS</span><span class="ticker-content"> Fragrant Nature Films Releases New Production</span></div>
+            <div class="ticker__item"><span class="ticker-label font-bold text-ihc-accent">GLOBAL REACH</span><span class="ticker-content"> Dubai • London • Kochi</span></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar-division fixed w-full z-50 transition-all duration-300 nav-transparent top-8">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="../index.html" class="navbar-logo-link flex items-center gap-2 group">
+                <img src="../aroma-logo.svg" alt="Aroma Group Logo" class="navbar-logo-img h-8 sm:h-10 w-auto object-contain">
+                <div class="navbar-logo-text-wrapper flex flex-col">
+                    <span id="logo-text" class="logo-text-main text-xl sm:text-2xl font-bold tracking-tighter text-white transition-colors">AROMA</span>
+                    <span id="logo-sub" class="logo-sub-text text-[0.5rem] sm:text-[0.55rem] uppercase tracking-widest text-gray-300 transition-colors">Aroma Group Companies</span>
+                </div>
+            </a>
+
+            <div class="navbar-desktop-menu hidden lg:flex items-center space-x-8">
+                <div class="desktop-menu flex items-center space-x-8">
+                    <a href="../index.html" class="nav-link nav-link-home text-white text-sm font-medium uppercase tracking-wide">Home</a>
+                    <a href="../index.html#about" class="nav-link nav-link-about text-white text-sm font-medium uppercase tracking-wide">About</a>
+                    <div class="nav-dropdown-wrapper relative">
+                        <button class="nav-link nav-link-divisions text-white text-sm font-medium uppercase tracking-wide flex items-center gap-2 cursor-pointer bg-transparent border-none" id="divisions-dropdown-btn">
+                            <span>Divisions</span>
+                            <i class="fas fa-chevron-down divisions-dropdown-icon text-xs transition-transform duration-300"></i>
+                        </button>
+                        <div class="nav-dropdown-menu absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg py-2 min-w-[380px] opacity-0 invisible transition-all duration-300 transform translate-y-2" id="divisions-dropdown">
+                            <a href="aroma-international-building-contracting.html" class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors">Aroma International Building Contracting</a>
+                            <a href="fragrant-nature-hotels-resorts.html" class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors">Fragrant Nature Hotels & Resorts</a>
+                            <a href="fragrant-nature-film-creations.html" class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors">Fragrant Nature Film Creations</a>
+                            <a href="aroma-kitchen.html" class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors">Aroma Kitchen</a>
+                            <a href="east-india-street-cafe.html" class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors">East India Street Café</a>
+                            <a href="mitonoptimal.html" class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors">MitonOptimal</a>
+                            <a href="aroma-developers.html" class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors">Aroma Developers</a>
+                            <a href="londontyne-uk-limited.html" class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors">LondonTyne (UK) Limited</a>
+                        </div>
+                    </div>
+                    <a href="../index.html#media" class="nav-link nav-link-awards text-white text-sm font-medium uppercase tracking-wide">Awards</a>
+                    <a href="../index.html#contact" class="nav-link nav-link-contact text-white text-sm font-medium uppercase tracking-wide">Contact</a>
+                </div>
+                <div class="navbar-utility-icons flex items-center space-x-5">
+                    <button class="navbar-search-btn text-white hover:text-ihc-accent transition-colors nav-icon bg-transparent border-none p-0"><i class="navbar-search-icon fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <button id="mobile-menu-btn" class="mobile-menu-btn lg:hidden text-white focus:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center">
+                <i class="mobile-menu-icon fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu-overlay fixed inset-0 bg-ihc-dark transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col pt-24 sm:pt-28 px-6 sm:px-8">
+            <button id="close-menu" class="mobile-menu-close-btn absolute top-3 right-4 sm:top-5 sm:right-6 bg-white text-black text-3xl min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full hover:bg-gray-200 transition-colors">&times;</button>
+            <a href="../index.html" class="mobile-menu-link mobile-menu-link-home text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center mt-12">Home</a>
+            <a href="../index.html#about" class="mobile-menu-link mobile-menu-link-about text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">About</a>
+            <a href="../index.html#verticals" class="mobile-menu-link mobile-menu-link-divisions text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">Divisions</a>
+            <a href="../index.html#media" class="mobile-menu-link mobile-menu-link-awards text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">Awards</a>
+            <a href="../index.html#contact" class="mobile-menu-link mobile-menu-link-contact text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-6 py-20 mt-32">
+        <h1 class="text-4xl font-bold text-ihc-dark mb-4">Fragrant Nature Hotels & Resorts</h1>
+        <p class="text-lg text-gray-600">Content for this division will be added here.</p>
+    </div>
+
+    <script src="../js/navbar.js"></script>
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        const logoText = document.getElementById('logo-text');
+        const logoSub = document.getElementById('logo-sub');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const navIcons = document.querySelectorAll('.nav-icon');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.remove('nav-transparent', 'top-8');
+                navbar.classList.add('nav-scrolled', 'top-0');
+                logoText.classList.remove('text-white');
+                logoText.classList.add('text-ihc-dark');
+                logoSub.classList.remove('text-gray-300');
+                logoSub.classList.add('text-gray-500');
+                navLinks.forEach(link => {
+                    link.classList.remove('text-white');
+                    link.classList.add('text-ihc-dark');
+                });
+                const divisionsDropdownBtn = document.getElementById('divisions-dropdown-btn');
+                if (divisionsDropdownBtn) {
+                    divisionsDropdownBtn.classList.remove('text-white');
+                    divisionsDropdownBtn.classList.add('text-ihc-dark');
+                }
+                navIcons.forEach(icon => {
+                    icon.classList.remove('text-white');
+                    icon.classList.add('text-ihc-dark');
+                });
+            } else {
+                navbar.classList.add('nav-transparent', 'top-8');
+                navbar.classList.remove('nav-scrolled', 'top-0');
+                logoText.classList.add('text-white');
+                logoText.classList.remove('text-ihc-dark');
+                logoSub.classList.add('text-gray-300');
+                logoSub.classList.remove('text-gray-500');
+                navLinks.forEach(link => {
+                    link.classList.add('text-white');
+                    link.classList.remove('text-ihc-dark');
+                });
+                const divisionsDropdownBtn = document.getElementById('divisions-dropdown-btn');
+                if (divisionsDropdownBtn) {
+                    divisionsDropdownBtn.classList.add('text-white');
+                    divisionsDropdownBtn.classList.remove('text-ihc-dark');
+                }
+                navIcons.forEach(icon => {
+                    icon.classList.add('text-white');
+                    icon.classList.remove('text-ihc-dark');
+                });
+            }
+        });
+
+        // Divisions Dropdown Toggle
+        const divisionsDropdownBtn = document.getElementById('divisions-dropdown-btn');
+        const divisionsDropdown = document.getElementById('divisions-dropdown');
+        const divisionsDropdownIcon = document.querySelector('.divisions-dropdown-icon');
+
+        if (divisionsDropdownBtn && divisionsDropdown) {
+            divisionsDropdownBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = divisionsDropdown.classList.contains('opacity-100');
+                if (isOpen) {
+                    divisionsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                    divisionsDropdown.classList.add('opacity-0', 'invisible', 'translate-y-2');
+                    if (divisionsDropdownIcon) {
+                        divisionsDropdownIcon.style.transform = 'rotate(0deg)';
+                    }
+                } else {
+                    divisionsDropdown.classList.remove('opacity-0', 'invisible', 'translate-y-2');
+                    divisionsDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
+                    if (divisionsDropdownIcon) {
+                        divisionsDropdownIcon.style.transform = 'rotate(180deg)';
+                    }
+                }
+            });
+            document.addEventListener('click', (e) => {
+                if (!divisionsDropdownBtn.contains(e.target) && !divisionsDropdown.contains(e.target)) {
+                    divisionsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                    divisionsDropdown.classList.add('opacity-0', 'invisible', 'translate-y-2');
+                    if (divisionsDropdownIcon) {
+                        divisionsDropdownIcon.style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('translate-x-full');
+            });
+        }
+        if (closeMenu && mobileMenu) {
+            closeMenu.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+        }
+        if (mobileMenu) {
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('translate-x-full');
+                });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aroma International Building Contracting - Aroma Group</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../styles.css" rel="stylesheet" />
+  </head>
+  <body class="font-sans text-gray-800 antialiased overflow-x-hidden">
+    <!-- News Ticker (Replaces Stock Ticker) -->
+    <div class="ticker-wrap border-b border-gray-700">
+      <div class="ticker">
+        <div class="ticker__item">
+          <span class="ticker-label font-bold text-ihc-accent"
+            >GLOBAL REACH</span
+          ><span class="ticker-content"> Dubai • London • Kochi</span>
+        </div>
+        <div class="ticker__item">
+          <span class="ticker-label font-bold text-ihc-accent"
+            >PROJECT UPDATE</span
+          ><span class="ticker-content">
+            New Luxury Resort Development Initiated in Kerala</span
+          >
+        </div>
+        <div class="ticker__item">
+          <span class="ticker-label font-bold text-ihc-accent">MILESTONE</span
+          ><span class="ticker-content">
+            Celebrating 25+ Years of Excellence in Construction</span
+          >
+        </div>
+        <div class="ticker__item">
+          <span class="ticker-label font-bold text-ihc-accent">AWARD</span
+          ><span class="ticker-content">
+            Best Sustainable Developer 2024 Nominee</span
+          >
+        </div>
+        <div class="ticker__item">
+          <span class="ticker-label font-bold text-ihc-accent">FILMS</span
+          ><span class="ticker-content">
+            Fragrant Nature Films Releases New Production</span
+          >
+        </div>
+        <div class="ticker__item">
+          <span class="ticker-label font-bold text-ihc-accent"
+            >GLOBAL REACH</span
+          ><span class="ticker-content"> Dubai • London • Kochi</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+      id="navbar"
+      class="navbar-division navbar-aroma-international fixed w-full z-50 transition-all duration-300 nav-transparent top-8"
+    >
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <!-- Logo -->
+        <a
+          href="../index.html"
+          class="navbar-logo-link flex items-center gap-2 group"
+        >
+          <!-- Aroma Logo -->
+          <img
+            src="../aroma-logo.svg"
+            alt="Aroma Group Logo"
+            class="navbar-logo-img h-8 sm:h-10 w-auto object-contain"
+          />
+          <div class="navbar-logo-text-wrapper flex flex-col">
+            <span
+              id="logo-text"
+              class="logo-text-main text-xl sm:text-2xl font-bold tracking-tighter text-white transition-colors"
+              >AROMA</span
+            >
+            <span
+              id="logo-sub"
+              class="logo-sub-text text-[0.5rem] sm:text-[0.55rem] uppercase tracking-widest text-gray-300 transition-colors"
+              >Aroma Group Companies</span
+            >
+          </div>
+        </a>
+
+        <!-- Desktop Menu and Search -->
+        <div class="navbar-desktop-menu hidden lg:flex items-center space-x-8">
+          <div class="desktop-menu flex items-center space-x-8">
+            <a
+              href="../index.html"
+              class="nav-link nav-link-home text-white text-sm font-medium uppercase tracking-wide"
+              >Home</a
+            >
+            <a
+              href="../index.html#about"
+              class="nav-link nav-link-about text-white text-sm font-medium uppercase tracking-wide"
+              >About</a
+            >
+            <div class="nav-dropdown-wrapper relative">
+              <button
+                class="nav-link nav-link-divisions text-white text-sm font-medium uppercase tracking-wide flex items-center gap-2 cursor-pointer bg-transparent border-none"
+                id="divisions-dropdown-btn"
+              >
+                <span>Divisions</span>
+                <i
+                  class="fas fa-chevron-down divisions-dropdown-icon text-xs transition-transform duration-300"
+                ></i>
+              </button>
+              <div
+                class="nav-dropdown-menu absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg py-2 min-w-[380px] opacity-0 invisible transition-all duration-300 transform translate-y-2"
+                id="divisions-dropdown"
+              >
+                <a
+                  href="aroma-international-building-contracting.html"
+                  class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors"
+                  >Aroma International Building Contracting</a
+                >
+                <a
+                  href="fragrant-nature-hotels-resorts.html"
+                  class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors"
+                  >Fragrant Nature Hotels & Resorts</a
+                >
+                <a
+                  href="fragrant-nature-film-creations.html"
+                  class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors"
+                  >Fragrant Nature Film Creations</a
+                >
+                <a
+                  href="aroma-kitchen.html"
+                  class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors"
+                  >Aroma Kitchen</a
+                >
+                <a
+                  href="east-india-street-cafe.html"
+                  class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors"
+                  >East India Street Café</a
+                >
+                <a
+                  href="mitonoptimal.html"
+                  class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors"
+                  >MitonOptimal</a
+                >
+                <a
+                  href="aroma-developers.html"
+                  class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors"
+                  >Aroma Developers</a
+                >
+                <a
+                  href="londontyne-uk-limited.html"
+                  class="nav-dropdown-item block px-4 py-3 text-sm text-ihc-dark hover:bg-gray-100 hover:text-ihc-accent transition-colors"
+                  >LondonTyne (UK) Limited</a
+                >
+              </div>
+            </div>
+            <a
+              href="../index.html#media"
+              class="nav-link nav-link-awards text-white text-sm font-medium uppercase tracking-wide"
+              >Awards</a
+            >
+            <a
+              href="../index.html#contact"
+              class="nav-link nav-link-contact text-white text-sm font-medium uppercase tracking-wide"
+              >Contact</a
+            >
+          </div>
+          <!-- Utility Icons -->
+          <div class="navbar-utility-icons flex items-center space-x-5">
+            <button
+              class="navbar-search-btn text-white hover:text-ihc-accent transition-colors nav-icon bg-transparent border-none p-0"
+            >
+              <i class="navbar-search-icon fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-btn"
+          class="mobile-menu-btn lg:hidden text-white focus:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center"
+        >
+          <i class="mobile-menu-icon fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Overlay -->
+      <div
+        id="mobile-menu"
+        class="mobile-menu-overlay fixed inset-0 bg-ihc-dark transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col pt-24 sm:pt-28 px-6 sm:px-8"
+      >
+        <button
+          id="close-menu"
+          class="mobile-menu-close-btn absolute top-3 right-4 sm:top-5 sm:right-6 bg-white text-black text-3xl min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full hover:bg-gray-200 transition-colors"
+        >
+          &times;
+        </button>
+        <a
+          href="../index.html"
+          class="mobile-menu-link mobile-menu-link-home text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center mt-12"
+          >Home</a
+        >
+        <a
+          href="../index.html#about"
+          class="mobile-menu-link mobile-menu-link-about text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center"
+          >About</a
+        >
+        <a
+          href="../index.html#verticals"
+          class="mobile-menu-link mobile-menu-link-divisions text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center"
+          >Divisions</a
+        >
+        <a
+          href="../index.html#media"
+          class="mobile-menu-link mobile-menu-link-awards text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center"
+          >Awards</a
+        >
+        <a
+          href="../index.html#contact"
+          class="mobile-menu-link mobile-menu-link-contact text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center"
+          >Contact</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="aroma-intro-hero relative min-h-screen flex items-center overflow-hidden mt-20"
+    >
+      <div class="aroma-intro-hero-bg absolute inset-0 z-0">
+        <img
+          src="../assets/aroma_international/site-engineer-bg.png"
+          alt="Site Engineer Background"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Left Side - Content -->
+          <div class="aroma-intro-hero-content">
+            <h1
+              class="aroma-intro-hero-title text-5xl md:text-6xl font-bold mb-6 leading-tight text-gray-900"
+            >
+              Building Your Dream Space
+            </h1>
+            <p
+              class="aroma-intro-hero-description text-lg md:text-xl mb-8 text-gray-700 leading-relaxed"
+            >
+              Construction is more than just bricks and mortar; it's about
+              transforming ideas into reality. It's about creating spaces that
+              inspire, connect, and uplift.
+            </p>
+            <div
+              class="aroma-intro-hero-buttons flex flex-col sm:flex-row gap-4 mb-12"
+            >
+              <a
+                href="tel:+1234567890"
+                class="aroma-intro-btn-secondary px-8 py-4 bg-orange-200 text-white font-bold rounded-lg hover:bg-orange-300 transition-colors text-center flex items-center justify-center gap-2 shadow-md"
+              >
+                <i class="fas fa-phone text-orange-600"></i>
+                Call Us Now
+              </a>
+            </div>
+            <div class="aroma-intro-partners">
+              <div class="flex flex-wrap gap-8">
+                <div
+                  class="aroma-intro-partner-item flex flex-col items-center"
+                >
+                  <div
+                    class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-2"
+                  >
+                    <i class="fas fa-building text-2xl text-orange-600"></i>
+                  </div>
+                  <span class="text-sm font-medium text-orange-600"
+                    >ARCHITECTURE</span
+                  >
+                </div>
+                <div
+                  class="aroma-intro-partner-item flex flex-col items-center"
+                >
+                  <div
+                    class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-2"
+                  >
+                    <i class="fas fa-home text-2xl text-orange-600"></i>
+                  </div>
+                  <span class="text-sm font-medium text-orange-600"
+                    >TRUSTESTATE</span
+                  >
+                </div>
+                <div
+                  class="aroma-intro-partner-item flex flex-col items-center"
+                >
+                  <div
+                    class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-2"
+                  >
+                    <i class="fas fa-city text-2xl text-orange-600"></i>
+                  </div>
+                  <span class="text-sm font-medium text-orange-600"
+                    >REAL ESTATE</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side - Stats Card -->
+          <div
+            class="aroma-intro-hero-image relative flex justify-end items-end"
+          >
+            <div
+              class="aroma-intro-stats-card bg-white rounded-lg shadow-xl p-6 z-20"
+            >
+              <div class="flex items-center gap-3 mb-2">
+                <div
+                  class="w-8 h-8 bg-orange-600 rounded flex items-center justify-center"
+                >
+                  <i class="fas fa-home text-white text-sm"></i>
+                </div>
+              </div>
+              <div class="text-center">
+                <div
+                  class="aroma-intro-stats-number text-4xl font-bold text-gray-900 mb-2"
+                >
+                  6,738+
+                </div>
+                <div class="aroma-intro-stats-label text-gray-600 font-medium">
+                  Total Buildings
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="aroma-intro-about py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Left Side - Image -->
+          <div class="aroma-intro-about-image relative">
+            <img
+              src="../assets/aroma_international/drawing.jpg"
+              alt="Construction Team"
+              class="w-full rounded-lg shadow-lg"
+            />
+            <div
+              class="aroma-intro-experience-badge absolute -bottom-6 -right-6 bg-orange-600 text-white p-6 rounded-lg shadow-xl"
+            >
+              <div class="text-3xl font-bold mb-1">25+</div>
+              <div class="text-sm font-medium">Years Of Experience</div>
+            </div>
+          </div>
+
+          <!-- Right Side - Content -->
+          <div class="aroma-intro-about-content">
+            <h2
+              class="aroma-intro-about-title text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+            >
+              Our Reputation is as Solid as Concrete
+            </h2>
+            <p
+              class="aroma-intro-about-description text-lg text-gray-600 mb-8 leading-relaxed"
+            >
+              We understand that every project has a timeline, and we're
+              committed to delivering excellence on schedule. Our track record
+              speaks for itself.
+            </p>
+            <div class="aroma-intro-features space-y-6">
+              <div class="aroma-intro-feature-item flex items-start gap-4">
+                <div
+                  class="aroma-intro-feature-icon w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fas fa-chart-line text-orange-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3
+                    class="aroma-intro-feature-title font-bold text-xl text-gray-900 mb-2"
+                  >
+                    Results For You
+                  </h3>
+                  <p class="aroma-intro-feature-description text-gray-600">
+                    We deliver measurable results that exceed expectations and
+                    drive success.
+                  </p>
+                </div>
+              </div>
+              <div class="aroma-intro-feature-item flex items-start gap-4">
+                <div
+                  class="aroma-intro-feature-icon w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fas fa-file-contract text-orange-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3
+                    class="aroma-intro-feature-title font-bold text-xl text-gray-900 mb-2"
+                  >
+                    Real Estate Gets Real
+                  </h3>
+                  <p class="aroma-intro-feature-description text-gray-600">
+                    Transforming visions into tangible, valuable real estate
+                    assets.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section class="aroma-intro-services py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="aroma-intro-services-header text-center mb-16">
+          <span
+            class="aroma-intro-services-label inline-block px-4 py-2 bg-orange-100 text-orange-600 rounded-full text-sm font-semibold mb-4"
+          >
+            Our Services
+          </span>
+          <h2
+            class="aroma-intro-services-title text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+          >
+            Constructing Your Vision
+          </h2>
+          <p
+            class="aroma-intro-services-description text-lg text-gray-600 max-w-2xl mx-auto"
+          >
+            Creating best quality urban lifestyles building stronger communities
+            person by the company they keep.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Service Card 1 -->
+          <div
+            class="aroma-intro-service-card bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+          >
+            <div
+              class="aroma-intro-service-icon w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-drafting-compass text-orange-600 text-2xl"></i>
+            </div>
+            <h3
+              class="aroma-intro-service-title text-2xl font-bold text-gray-900 mb-4"
+            >
+              Project Planning
+            </h3>
+            <p class="aroma-intro-service-description text-gray-600 mb-6">
+              Comprehensive planning and design services to ensure your project
+              starts on the right foundation.
+            </p>
+            <a
+              href="#"
+              class="aroma-intro-service-link text-orange-600 font-semibold hover:text-orange-700 flex items-center gap-2"
+            >
+              Explore Now <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div
+            class="aroma-intro-service-card bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+          >
+            <div
+              class="aroma-intro-service-icon w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-hard-hat text-orange-600 text-2xl"></i>
+            </div>
+            <h3
+              class="aroma-intro-service-title text-2xl font-bold text-gray-900 mb-4"
+            >
+              Superior Craft
+            </h3>
+            <p class="aroma-intro-service-description text-gray-600 mb-6">
+              Expert craftsmanship and attention to detail in every aspect of
+              construction and finishing.
+            </p>
+            <a
+              href="#"
+              class="aroma-intro-service-link text-orange-600 font-semibold hover:text-orange-700 flex items-center gap-2"
+            >
+              Explore Now <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div
+            class="aroma-intro-service-card bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+          >
+            <div
+              class="aroma-intro-service-icon w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-tools text-orange-600 text-2xl"></i>
+            </div>
+            <h3
+              class="aroma-intro-service-title text-2xl font-bold text-gray-900 mb-4"
+            >
+              Estate Construction
+            </h3>
+            <p class="aroma-intro-service-description text-gray-600 mb-6">
+              Full-service construction management for residential and
+              commercial estate developments.
+            </p>
+            <a
+              href="#"
+              class="aroma-intro-service-link text-orange-600 font-semibold hover:text-orange-700 flex items-center gap-2"
+            >
+              Explore Now <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Recent Projects Section -->
+    <section class="aroma-intro-projects py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="aroma-intro-projects-header text-center mb-16">
+          <span
+            class="aroma-intro-projects-label inline-block px-4 py-2 bg-orange-100 text-orange-600 rounded-full text-sm font-semibold mb-4"
+          >
+            Our Recent Projects
+          </span>
+          <h2
+            class="aroma-intro-projects-title text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+          >
+            Shaping Skylines Building Dreams
+          </h2>
+        </div>
+
+        <div class="aroma-intro-projects-carousel overflow-x-auto pb-6">
+          <div class="flex gap-6" style="min-width: max-content">
+            <!-- Project Card 1 -->
+            <div
+              class="aroma-intro-project-card flex-shrink-0 w-80 bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+            >
+              <div class="aroma-intro-project-image h-48 overflow-hidden">
+                <img
+                  src="../assets/aroma_international/site.jpg"
+                  alt="Coastal Retreat"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="aroma-intro-project-content p-6">
+                <h3
+                  class="aroma-intro-project-title text-xl font-bold text-gray-900 mb-2"
+                >
+                  Coastal Retreat
+                </h3>
+                <p class="aroma-intro-project-description text-gray-600">
+                  Luxury residential development with ocean views.
+                </p>
+              </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div
+              class="aroma-intro-project-card flex-shrink-0 w-80 bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+            >
+              <div class="aroma-intro-project-image h-48 overflow-hidden">
+                <img
+                  src="../assets/aroma_international/pillor_work.jpg"
+                  alt="Skyline Vision"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="aroma-intro-project-content p-6">
+                <h3
+                  class="aroma-intro-project-title text-xl font-bold text-gray-900 mb-2"
+                >
+                  Skyline Vision
+                </h3>
+                <p class="aroma-intro-project-description text-gray-600">
+                  Modern commercial complex in the heart of the city.
+                </p>
+              </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div
+              class="aroma-intro-project-card flex-shrink-0 w-80 bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+            >
+              <div class="aroma-intro-project-image h-48 overflow-hidden">
+                <img
+                  src="../assets/aroma_international/velding.jpg"
+                  alt="Skyline Collection"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="aroma-intro-project-content p-6">
+                <h3
+                  class="aroma-intro-project-title text-xl font-bold text-gray-900 mb-2"
+                >
+                  Skyline Collection
+                </h3>
+                <p class="aroma-intro-project-description text-gray-600">
+                  Premium mixed-use development project.
+                </p>
+              </div>
+            </div>
+
+            <!-- Project Card 4 -->
+            <div
+              class="aroma-intro-project-card flex-shrink-0 w-80 bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+            >
+              <div class="aroma-intro-project-image h-48 overflow-hidden">
+                <img
+                  src="../assets/aroma_international/site-sunset.jpg"
+                  alt="Modern Complex"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="aroma-intro-project-content p-6">
+                <h3
+                  class="aroma-intro-project-title text-xl font-bold text-gray-900 mb-2"
+                >
+                  Modern Complex
+                </h3>
+                <p class="aroma-intro-project-description text-gray-600">
+                  State-of-the-art infrastructure development.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Skills Section -->
+    <section class="aroma-intro-skills py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Left Side - Skills -->
+          <div class="aroma-intro-skills-content">
+            <h2
+              class="aroma-intro-skills-title text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+            >
+              Our Skills is as Solid as Concrete
+            </h2>
+            <p
+              class="aroma-intro-skills-description text-lg text-gray-600 mb-8 leading-relaxed"
+            >
+              We stand behind our work with comprehensive warranties and ongoing
+              support. Your investment is protected.
+            </p>
+            <div class="aroma-intro-skills-bars space-y-6">
+              <!-- Skill Bar 1 -->
+              <div class="aroma-intro-skill-item">
+                <div class="flex justify-between mb-2">
+                  <span
+                    class="aroma-intro-skill-name font-semibold text-gray-900"
+                    >Architecture</span
+                  >
+                  <span
+                    class="aroma-intro-skill-percent font-semibold text-orange-600"
+                    >70%</span
+                  >
+                </div>
+                <div
+                  class="aroma-intro-skill-bar bg-gray-200 rounded-full h-3 overflow-hidden"
+                >
+                  <div
+                    class="aroma-intro-skill-fill bg-orange-600 h-full rounded-full"
+                    style="width: 70%"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- Skill Bar 2 -->
+              <div class="aroma-intro-skill-item">
+                <div class="flex justify-between mb-2">
+                  <span
+                    class="aroma-intro-skill-name font-semibold text-gray-900"
+                    >Project Management</span
+                  >
+                  <span
+                    class="aroma-intro-skill-percent font-semibold text-orange-600"
+                    >90%</span
+                  >
+                </div>
+                <div
+                  class="aroma-intro-skill-bar bg-gray-200 rounded-full h-3 overflow-hidden"
+                >
+                  <div
+                    class="aroma-intro-skill-fill bg-orange-600 h-full rounded-full"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- Skill Bar 3 -->
+              <div class="aroma-intro-skill-item">
+                <div class="flex justify-between mb-2">
+                  <span
+                    class="aroma-intro-skill-name font-semibold text-gray-900"
+                    >Interior Design</span
+                  >
+                  <span
+                    class="aroma-intro-skill-percent font-semibold text-orange-600"
+                    >52%</span
+                  >
+                </div>
+                <div
+                  class="aroma-intro-skill-bar bg-gray-200 rounded-full h-3 overflow-hidden"
+                >
+                  <div
+                    class="aroma-intro-skill-fill bg-orange-600 h-full rounded-full"
+                    style="width: 52%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side - Images -->
+          <div class="aroma-intro-skills-images grid grid-cols-2 gap-4">
+            <div class="aroma-intro-skill-image">
+              <img
+                src="../assets/aroma_international/work.jpg"
+                alt="Construction Work"
+                class="w-full h-64 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+            <div class="aroma-intro-skill-image">
+              <img
+                src="../assets/aroma_international/drawing.jpg"
+                alt="Team Collaboration"
+                class="w-full h-64 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+            <div class="aroma-intro-skill-image col-span-2">
+              <img
+                src="../assets/aroma_international/site.jpg"
+                alt="Construction Site"
+                class="w-full h-48 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Navbar scroll effect
+      const navbar = document.getElementById("navbar");
+      const logoText = document.getElementById("logo-text");
+      const logoSub = document.getElementById("logo-sub");
+      const navLinks = document.querySelectorAll(".nav-link");
+      const navIcons = document.querySelectorAll(".nav-icon");
+      const navDivider = document.querySelector(".nav-divider");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.remove("nav-transparent", "top-8");
+          navbar.classList.add("nav-scrolled", "top-0");
+
+          logoText.classList.remove("text-white");
+          logoText.classList.add("text-ihc-dark");
+
+          logoSub.classList.remove("text-gray-300");
+          logoSub.classList.add("text-gray-500");
+
+          navLinks.forEach((link) => {
+            link.classList.remove("text-white");
+            link.classList.add("text-ihc-dark");
+          });
+
+          const divisionsDropdownBtn = document.getElementById(
+            "divisions-dropdown-btn"
+          );
+          if (divisionsDropdownBtn) {
+            divisionsDropdownBtn.classList.remove("text-white");
+            divisionsDropdownBtn.classList.add("text-ihc-dark");
+          }
+
+          navIcons.forEach((icon) => {
+            icon.classList.remove("text-white");
+            icon.classList.add("text-ihc-dark");
+          });
+
+          if (navDivider) {
+            navDivider.classList.remove("text-gray-400");
+            navDivider.classList.add("text-gray-300");
+          }
+        } else {
+          navbar.classList.add("nav-transparent", "top-8");
+          navbar.classList.remove("nav-scrolled", "top-0");
+
+          logoText.classList.add("text-white");
+          logoText.classList.remove("text-ihc-dark");
+
+          logoSub.classList.add("text-gray-300");
+          logoSub.classList.remove("text-gray-500");
+
+          navLinks.forEach((link) => {
+            link.classList.add("text-white");
+            link.classList.remove("text-ihc-dark");
+          });
+
+          const divisionsDropdownBtn = document.getElementById(
+            "divisions-dropdown-btn"
+          );
+          if (divisionsDropdownBtn) {
+            divisionsDropdownBtn.classList.add("text-white");
+            divisionsDropdownBtn.classList.remove("text-ihc-dark");
+          }
+
+          navIcons.forEach((icon) => {
+            icon.classList.add("text-white");
+            icon.classList.remove("text-ihc-dark");
+          });
+
+          if (navDivider) {
+            navDivider.classList.add("text-gray-400");
+            navDivider.classList.remove("text-gray-300");
+          }
+        }
+      });
+
+      // Divisions Dropdown Toggle
+      const divisionsDropdownBtn = document.getElementById(
+        "divisions-dropdown-btn"
+      );
+      const divisionsDropdown = document.getElementById("divisions-dropdown");
+      const divisionsDropdownIcon = document.querySelector(
+        ".divisions-dropdown-icon"
+      );
+
+      if (divisionsDropdownBtn && divisionsDropdown) {
+        divisionsDropdownBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const isOpen = divisionsDropdown.classList.contains("opacity-100");
+
+          if (isOpen) {
+            divisionsDropdown.classList.remove(
+              "opacity-100",
+              "visible",
+              "translate-y-0"
+            );
+            divisionsDropdown.classList.add(
+              "opacity-0",
+              "invisible",
+              "translate-y-2"
+            );
+            if (divisionsDropdownIcon) {
+              divisionsDropdownIcon.style.transform = "rotate(0deg)";
+            }
+          } else {
+            divisionsDropdown.classList.remove(
+              "opacity-0",
+              "invisible",
+              "translate-y-2"
+            );
+            divisionsDropdown.classList.add(
+              "opacity-100",
+              "visible",
+              "translate-y-0"
+            );
+            if (divisionsDropdownIcon) {
+              divisionsDropdownIcon.style.transform = "rotate(180deg)";
+            }
+          }
+        });
+
+        // Allow dropdown items to navigate normally
+        const dropdownItems =
+          divisionsDropdown.querySelectorAll(".nav-dropdown-item");
+        dropdownItems.forEach((item) => {
+          item.addEventListener("click", (e) => {
+            // Allow navigation - don't prevent default
+            // The link will navigate naturally
+          });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener("click", (e) => {
+          if (
+            !divisionsDropdownBtn.contains(e.target) &&
+            !divisionsDropdown.contains(e.target)
+          ) {
+            divisionsDropdown.classList.remove(
+              "opacity-100",
+              "visible",
+              "translate-y-0"
+            );
+            divisionsDropdown.classList.add(
+              "opacity-0",
+              "invisible",
+              "translate-y-2"
+            );
+            if (divisionsDropdownIcon) {
+              divisionsDropdownIcon.style.transform = "rotate(0deg)";
+            }
+          }
+        });
+      }
+
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const closeMenu = document.getElementById("close-menu");
+
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener("click", () => {
+          mobileMenu.classList.remove("translate-x-full");
+        });
+      }
+
+      if (closeMenu && mobileMenu) {
+        closeMenu.addEventListener("click", () => {
+          mobileMenu.classList.add("translate-x-full");
+        });
+      }
+
+      if (mobileMenu) {
+        document.querySelectorAll("#mobile-menu a").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("translate-x-full");
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
