@@ -82,7 +82,64 @@
             <button id="close-menu" class="mobile-menu-close-btn absolute top-3 right-4 sm:top-5 sm:right-6 bg-white text-black text-3xl min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full hover:bg-gray-200 transition-colors">&times;</button>
             <a href="#" class="mobile-menu-link mobile-menu-link-home text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center mt-12">Home</a>
             <a href="#about" class="mobile-menu-link mobile-menu-link-about text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">About</a>
-            <a href="#verticals" class="mobile-menu-link mobile-menu-link-divisions text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">Divisions</a>
+            
+            <!-- Divisions Dropdown in Mobile Menu -->
+            <div class="mobile-menu-divisions-wrapper">
+              <button
+                class="mobile-menu-link mobile-menu-link-divisions mobile-menu-divisions-btn text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center justify-between w-full text-left bg-transparent border-none cursor-pointer"
+                id="mobile-divisions-dropdown-btn"
+              >
+                <span>Divisions</span>
+                <i class="fas fa-chevron-down mobile-divisions-dropdown-icon" style="margin-left: 8px; font-size: 0.875rem; transition: transform 0.3s;"></i>
+              </button>
+              <div
+                class="mobile-menu-divisions-dropdown"
+                id="mobile-divisions-dropdown"
+                style="display: none; padding-left: 1.5rem;"
+              >
+                <a
+                  href="divisions/aroma-international-building-contracting.html"
+                  class="mobile-menu-link mobile-menu-divisions-item text-lg sm:text-xl font-light text-white border-b border-gray-700 py-3 hover:text-ihc-accent min-h-[44px] flex items-center"
+                  >Aroma International Building Contracting</a
+                >
+                <a
+                  href="divisions/fragrant-nature-hotels-resorts.html"
+                  class="mobile-menu-link mobile-menu-divisions-item text-lg sm:text-xl font-light text-white border-b border-gray-700 py-3 hover:text-ihc-accent min-h-[44px] flex items-center"
+                  >Fragrant Nature Hotels & Resorts</a
+                >
+                <a
+                  href="divisions/fragrant-nature-film-creations.html"
+                  class="mobile-menu-link mobile-menu-divisions-item text-lg sm:text-xl font-light text-white border-b border-gray-700 py-3 hover:text-ihc-accent min-h-[44px] flex items-center"
+                  >Fragrant Nature Film Creations</a
+                >
+                <a
+                  href="divisions/aroma-kitchen.html"
+                  class="mobile-menu-link mobile-menu-divisions-item text-lg sm:text-xl font-light text-white border-b border-gray-700 py-3 hover:text-ihc-accent min-h-[44px] flex items-center"
+                  >Aroma Kitchen</a
+                >
+                <a
+                  href="divisions/east-india-street-cafe.html"
+                  class="mobile-menu-link mobile-menu-divisions-item text-lg sm:text-xl font-light text-white border-b border-gray-700 py-3 hover:text-ihc-accent min-h-[44px] flex items-center"
+                  >East India Street Café</a
+                >
+                <a
+                  href="divisions/mitonoptimal.html"
+                  class="mobile-menu-link mobile-menu-divisions-item text-lg sm:text-xl font-light text-white border-b border-gray-700 py-3 hover:text-ihc-accent min-h-[44px] flex items-center"
+                  >MitonOptimal</a
+                >
+                <a
+                  href="divisions/aroma-developers.html"
+                  class="mobile-menu-link mobile-menu-divisions-item text-lg sm:text-xl font-light text-white border-b border-gray-700 py-3 hover:text-ihc-accent min-h-[44px] flex items-center"
+                  >Aroma Developers</a
+                >
+                <a
+                  href="divisions/londontyne-uk-limited.html"
+                  class="mobile-menu-link mobile-menu-divisions-item text-lg sm:text-xl font-light text-white border-b border-gray-700 py-3 hover:text-ihc-accent min-h-[44px] flex items-center"
+                  >LondonTyne (UK) Limited</a
+                >
+              </div>
+            </div>
+            
             <a href="#media" class="mobile-menu-link mobile-menu-link-awards text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">Awards</a>
             <a href="#faq" class="mobile-menu-link mobile-menu-link-faq text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">FAQ</a>
             <a href="#contact" class="mobile-menu-link mobile-menu-link-contact text-xl sm:text-2xl font-light text-white border-b border-gray-700 py-4 hover:text-ihc-accent min-h-[44px] flex items-center">Contact</a>
@@ -1100,6 +1157,15 @@
     </footer>
 
     <script>
+        // Ensure mobile menu is hidden on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu) {
+                mobileMenu.classList.add('translate-x-full');
+                mobileMenu.style.setProperty('transform', 'translateX(100%)', 'important');
+            }
+        });
+
         // Navbar scroll effect
         const navbar = document.getElementById('navbar');
         const logoText = document.getElementById('logo-text');
@@ -1225,18 +1291,62 @@
         const mobileMenu = document.getElementById('mobile-menu');
         const closeMenu = document.getElementById('close-menu');
 
-        mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
             mobileMenu.classList.remove('translate-x-full');
+            // Remove the inline style to allow the menu to open
+            mobileMenu.style.removeProperty('transform');
+            // Explicitly set transform to show menu
+            mobileMenu.style.setProperty('transform', 'translateX(0)', 'important');
         });
 
         closeMenu.addEventListener('click', () => {
             mobileMenu.classList.add('translate-x-full');
+            mobileMenu.style.setProperty('transform', 'translateX(100%)', 'important');
         });
-        
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('translate-x-full');
+
+        // Mobile Divisions Dropdown Toggle
+        const mobileDivisionsBtn = document.getElementById('mobile-divisions-dropdown-btn');
+        const mobileDivisionsDropdown = document.getElementById('mobile-divisions-dropdown');
+        const mobileDivisionsIcon = document.querySelector('.mobile-divisions-dropdown-icon');
+
+        if (mobileDivisionsBtn && mobileDivisionsDropdown) {
+            mobileDivisionsBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = mobileDivisionsDropdown.style.display === 'block';
+
+                if (isOpen) {
+                    mobileDivisionsDropdown.style.display = 'none';
+                    if (mobileDivisionsIcon) {
+                        mobileDivisionsIcon.style.transform = 'rotate(0deg)';
+                    }
+                } else {
+                    mobileDivisionsDropdown.style.display = 'block';
+                    if (mobileDivisionsIcon) {
+                        mobileDivisionsIcon.style.transform = 'rotate(180deg)';
+                    }
+                }
             });
+
+            // Close dropdown when clicking on a division link
+            const divisionLinks = mobileDivisionsDropdown.querySelectorAll('.mobile-menu-divisions-item');
+            divisionLinks.forEach((link) => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('translate-x-full');
+                });
+            });
+        }
+        
+        // Close menu when clicking other links (not division dropdown items)
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            // Skip division dropdown items (they're handled above)
+            if (!link.classList.contains('mobile-menu-divisions-item')) {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('translate-x-full');
+                });
+            }
         });
 
         // Number Counter Animation with custom speeds

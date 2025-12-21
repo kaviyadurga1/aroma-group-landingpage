@@ -50,8 +50,14 @@
   transition: transform 300ms ease !important;
 }
 
+/* Mobile menu should be hidden by default - only show when translate-x-full is removed */
+#mobile-menu.translate-x-full {
+  transform: translateX(100%) !important;
+}
+
+/* When translate-x-full is removed, show the menu (but don't use !important to allow inline styles to override) */
 #mobile-menu:not(.translate-x-full) {
-  transform: translateX(0) !important;
+  transform: translateX(0);
 }
 
 /* Ensure mobile menu links are always visible */
@@ -1354,8 +1360,8 @@ a:active {
 }
 
 /* Mobile menu - hidden by default, shown when translate-x-full is removed */
-#mobile-menu.mobile-menu-overlay {
-  transform: translateX(100%);
+#mobile-menu.mobile-menu-overlay.translate-x-full {
+  transform: translateX(100%) !important;
 }
 
 #mobile-menu.mobile-menu-overlay:not(.translate-x-full) {
@@ -2986,6 +2992,80 @@ nav#navbar .nav-dropdown-wrapper>.nav-link:hover::after,
 
 .mobile-menu-link-home {
   margin-top: 3rem;
+}
+
+/* Mobile Divisions Dropdown Styles */
+.mobile-menu-divisions-btn {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #ffffff;
+  border-bottom: 1px solid var(--gray-700);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  min-height: 44px;
+  transition: color 0.3s;
+}
+
+@media (min-width: 640px) {
+  .mobile-menu-divisions-btn {
+    font-size: 1.5rem;
+  }
+}
+
+.mobile-menu-divisions-btn:hover {
+  color: var(--ihc-accent);
+}
+
+.mobile-menu-divisions-dropdown {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0;
+  position: relative;
+  z-index: 10;
+  overflow: visible;
+}
+
+.mobile-menu-divisions-item {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: block;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  z-index: 11;
+}
+
+@media (min-width: 640px) {
+  .mobile-menu-divisions-item {
+    font-size: 1.125rem;
+  }
+}
+
+.mobile-menu-divisions-item:last-child {
+  border-bottom: none;
+}
+
+.mobile-menu-divisions-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--ihc-accent);
+}
+
+.mobile-menu-divisions-dropdown[style*="display: block"] {
+  display: block !important;
 }
 
 /* Hero section classes */

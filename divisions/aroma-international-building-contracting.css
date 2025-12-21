@@ -29,9 +29,9 @@
 
 /* Navigation Styles */
 .aroma-intro-navbar {
-    transform: translateY(-12px);
-    padding: 20px;
-    height: 80px;
+  transform: translateY(-12px);
+  padding: 20px;
+  height: 80px;
   position: fixed;
   width: 100%;
   z-index: 50;
@@ -49,7 +49,19 @@
 .aroma-intro-container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .aroma-intro-container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .aroma-intro-container {
+    padding: 0 2rem;
+  }
 }
 
 .aroma-intro-navbar-container {
@@ -176,7 +188,7 @@
 }
 
 .aroma-intro-mobile-menu-overlay-open {
-  transform: translateX(0);
+  transform: translateX(0) !important;
 }
 
 .aroma-intro-nav-dropdown-item {
@@ -242,6 +254,13 @@
   padding-top: 6rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  z-index: 9999;
+  overflow-y: auto;
+}
+
+/* Ensure menu is hidden by default on page load */
+.aroma-intro-mobile-menu-overlay:not(.aroma-intro-mobile-menu-overlay-open):not([style*="translateX(0)"]) {
+  transform: translateX(100%);
 }
 
 @media (min-width: 640px) {
@@ -259,7 +278,7 @@
 }
 
 .aroma-intro-mobile-menu-overlay-open {
-  transform: translateX(0);
+  transform: translateX(0) !important;
 }
 
 .aroma-intro-mobile-menu-close-btn {
@@ -276,6 +295,9 @@
   justify-content: center;
   border-radius: 9999px;
   transition: background 0.3s;
+  z-index: 100;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 @media (min-width: 640px) {
@@ -307,6 +329,78 @@
   }
 }
 
+.mobile-menu-divisions-btn {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: white;
+  border-bottom: 1px solid #374151;
+  padding: 1rem 0;
+  min-height: 44px;
+  transition: color 0.3s;
+}
+
+@media (min-width: 640px) {
+  .mobile-menu-divisions-btn {
+    font-size: 1.5rem;
+  }
+}
+
+.mobile-menu-divisions-btn:hover {
+  color: var(--ihc-accent);
+}
+
+.mobile-menu-divisions-dropdown {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0;
+  position: relative;
+  z-index: 10;
+  overflow: visible;
+}
+
+.mobile-menu-divisions-dropdown[style*="display: block"] {
+  display: block !important;
+}
+
+.mobile-menu-divisions-item {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: block;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  z-index: 11;
+}
+
+@media (min-width: 640px) {
+  .mobile-menu-divisions-item {
+    font-size: 1.125rem;
+  }
+}
+
+.mobile-menu-divisions-item:last-child {
+  border-bottom: none;
+}
+
+.mobile-menu-divisions-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--ihc-accent);
+}
+
 .aroma-intro-mobile-menu-link:hover {
   color: #e31f26;
 }
@@ -325,6 +419,14 @@
   margin-top: 5rem;
 }
 
+@media (max-width: 767px) {
+  .aroma-intro-hero {
+    min-height: auto;
+    padding: 2rem 0;
+    margin-top: 4rem;
+  }
+}
+
 .aroma-intro-hero-bg {
   position: absolute;
   inset: 0;
@@ -334,7 +436,7 @@
 .aroma-intro-hero-bg img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .aroma-intro-hero-container {
@@ -355,449 +457,769 @@
 }
 
 .aroma-intro-hero-title {
-    transform: translateY(-150px);
-  font-size: 3rem;
+  transform: translateY(-150px);
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.1;
   color: #111827;
 }
 
+@media (min-width: 640px) {
+  .aroma-intro-hero-title {
+    font-size: 2rem;
+    transform: translateY(-120px);
+  }
+}
+
 @media (min-width: 768px) {
   .aroma-intro-hero-title {
-    font-size: 3.75rem;
+    /* width: 400px; */
+    font-size: 2.75rem;
+    transform: translate(-100px, -170px);
   }
-}
 
-.aroma-intro-hero-description {
-  transform: translateY(-130px);
-  font-size: 1.125rem;
-  margin-bottom: 2rem;
-  color: #374151;
-  line-height: 1.625;
-}
-
-@media (min-width: 768px) {
   .aroma-intro-hero-description {
+    transform: translateY(-130px);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #374151;
+    line-height: 1.625;
+  }
+
+  @media (min-width: 640px) {
+    .aroma-intro-hero-description {
+      width: 550px;
+      font-size: 1.125rem;
+      transform: translateY(-60px);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .aroma-intro-hero-description {
+      transform: translate(-100px, -144px);
+      /* width: 450px; */
+      font-size: 1.25rem;
+    }
+  }
+
+  .aroma-intro-hero-buttons {
+    width: 350px;
+    transform: translateY(-60px);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  @media (min-width: 640px) {
+    .aroma-intro-hero-buttons {
+      flex-direction: row;
+    }
+  }
+
+  .aroma-intro-btn-secondary {
+    padding: 1rem 2rem;
+    background: white;
+    color: var(--ihc-accent);
+    font-weight: 700;
+    border-radius: 0.5rem;
+    transition: background 0.3s;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .aroma-intro-btn-secondary:hover {
+    background: #fdba74;
+  }
+
+  .aroma-intro-btn-secondary i {
+    color: #ea580c;
+  }
+
+  .aroma-intro-expertise-title {
+    transform: translateY(-70px);
+    font-weight: 600;
+    color: rgb(49, 49, 49);
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .aroma-intro-expertise-title {
+      font-size: 22px;
+      transform: translateY(-60px);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .aroma-intro-expertise-title {
+      font-size: 24px;
+      transform: translate(-100px, -80px);
+    }
+  }
+
+  .aroma-intro-partners {
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 767px) {
+    .aroma-intro-partners {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .aroma-intro-partners-grid {
+    transform: translate(-200px, -90px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  @media (max-width: 767px) {
+    .aroma-intro-partners-grid {
+      transform: translate(0, -80px);
+      gap: 1.5rem;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .aroma-intro-partners-grid {
+      transform: translate(0, -60px);
+      gap: 0.75rem;
+    }
+
+    .aroma-intro-partner-item {
+      flex: 0 0 auto;
+      min-width: auto;
+    }
+  }
+
+  .aroma-intro-partner-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aroma-intro-partner-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .aroma-intro-partner-icon i {
+    font-size: 1.5rem;
+    color: #ea580c;
+  }
+
+  .aroma-intro-partner-icon img {
+    transform: translateY(10px);
+    width: 100px;
+    height: 50px;
+    object-fit: contain;
+  }
+
+  @media (max-width: 640px) {
+    .aroma-intro-partner-icon img {
+      width: 40px !important;
+      height: 40px !important;
+      transform: translateY(5px);
+    }
+  }
+
+  .aroma-intro-partner-label {
+    margin-top: 15px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: black;
+  }
+
+  @media (max-width: 640px) {
+    .aroma-intro-partner-label {
+      margin-top: 10px;
+      font-size: 0.75rem;
+    }
+  }
+
+  .aroma-intro-hero-image {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    .aroma-intro-hero-image {
+      margin-top: 0;
+    }
+  }
+
+  .aroma-intro-stats-card {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    z-index: 20;
+    width: 100%;
+    max-width: 280px;
+    transform: translate(80px, -300px);
+  }
+
+  @media (min-width: 640px) {
+    .aroma-intro-stats-card {
+      /* transform: translate(80px, -300px); */
+      /* transform: translate(80px, -800px); */
+      padding: 1.5rem;
+      max-width: 320px;
+    }
+  }
+
+  .aroma-intro-stats-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .aroma-intro-stats-content {
+    text-align: center;
+  }
+
+  .aroma-intro-stats-number {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .aroma-intro-stats-number {
+      font-size: 2.25rem;
+    }
+  }
+
+  .aroma-intro-stats-label {
+    color: #4b5563;
+    font-weight: 500;
+  }
+
+  /* About Section */
+  .aroma-intro-about {
+    padding: 5rem 0;
+    background: white;
+  }
+
+  @media (max-width: 640px) {
+    .aroma-intro-about {
+      padding: 3rem 0;
+    }
+  }
+
+  .aroma-intro-about-grid {
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  @media (max-width: 640px) {
+    .aroma-intro-about-grid {
+      gap: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .aroma-intro-about-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .aroma-intro-about-image {
+    position: relative;
+  }
+
+  .aroma-intro-about-image img {
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 640px) {
+    .aroma-intro-about-image img {
+      height: 8rem !important;
+      max-height: 8rem !important;
+      min-height: 8rem !important;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .aroma-intro-about-image {
+      max-height: 8rem;
+      overflow: hidden;
+      height: 8rem;
+    }
+  }
+
+  .aroma-intro-experience-badge {
+    position: absolute;
+    bottom: -1.5rem;
+    right: -1.5rem;
+    background: #ea580c;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 640px) {
+    .aroma-intro-experience-badge {
+      padding: 1rem;
+      bottom: -1rem;
+      right: -1rem;
+    }
+
+    .aroma-intro-experience-number {
+      font-size: 1.5rem;
+    }
+
+    .aroma-intro-experience-text {
+      font-size: 0.75rem;
+    }
+  }
+
+  .aroma-intro-experience-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .aroma-intro-about-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 640px) {
+    .aroma-intro-about-title {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .aroma-intro-about-title {
+      font-size: 3rem;
+    }
+  }
+
+  .aroma-intro-about-description {
+    font-size: 1.125rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+    line-height: 1.625;
+  }
+
+  @media (max-width: 640px) {
+    .aroma-intro-about-description {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+  }
+
+  .aroma-intro-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .aroma-intro-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .aroma-intro-feature-icon {
+    width: 3rem;
+    height: 3rem;
+    background: #ffedd5;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .aroma-intro-feature-icon i {
+    color: #ea580c;
     font-size: 1.25rem;
   }
-}
 
-.aroma-intro-hero-buttons {
-    transform: translateY(-140px);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 3rem;
-}
-
-@media (min-width: 640px) {
-  .aroma-intro-hero-buttons {
-    flex-direction: row;
+  .aroma-intro-feature-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #111827;
+    margin-bottom: 0.5rem;
   }
-}
 
-.aroma-intro-btn-secondary {
-  padding: 1rem 2rem;
-  background: white;
-  color:var(--ihc-accent);
-  font-weight: 700;
-  border-radius: 0.5rem;
-  transition: background 0.3s;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-.aroma-intro-btn-secondary:hover {
-  background: #fdba74;
-}
-
-.aroma-intro-btn-secondary i {
-  color: #ea580c;
-}
-
-.aroma-intro-partners {
-  margin-top: 2rem;
-}
-
-.aroma-intro-partners-grid {
-  transform: translateY(-80px);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.aroma-intro-partner-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.aroma-intro-partner-icon {
-  width: 4rem;
-  height: 4rem;
-  background: white;
-  border-radius: 9999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0.5rem;
-}
-
-.aroma-intro-partner-icon i {
-  font-size: 1.5rem;
-  color: #ea580c;
-}
-
-.aroma-intro-partner-label {
-    margin-top: 15px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: black;
-}
-
-.aroma-intro-hero-image {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.aroma-intro-stats-card {
-  background: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  z-index: 20;
-}
-
-.aroma-intro-stats-card-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.5rem;
-}
-
-.aroma-intro-stats-content {
-  text-align: center;
-}
-
-.aroma-intro-stats-number {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 0.5rem;
-}
-
-.aroma-intro-stats-label {
-  color: #4b5563;
-  font-weight: 500;
-}
-
-/* About Section */
-.aroma-intro-about {
-  padding: 5rem 0;
-  background: white;
-}
-
-.aroma-intro-about-grid {
-  display: grid;
-  gap: 3rem;
-  align-items: center;
-}
-
-@media (min-width: 1024px) {
-  .aroma-intro-about-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .aroma-intro-feature-description {
+    color: #4b5563;
   }
-}
 
-.aroma-intro-about-image {
-  position: relative;
-}
-
-.aroma-intro-about-image img {
-  width: 100%;
-  height: 16rem;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-.aroma-intro-experience-badge {
-  position: absolute;
-  bottom: -1.5rem;
-  right: -1.5rem;
-  background: #ea580c;
-  color: white;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
-
-.aroma-intro-experience-number {
-  font-size: 1.875rem;
-  font-weight: 700;
-  margin-bottom: 0.25rem;
-}
-
-.aroma-intro-experience-text {
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.aroma-intro-about-title {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  .aroma-intro-about-title {
-    font-size: 3rem;
+  /* Services Section */
+  .aroma-intro-services {
+    padding: 5rem 0;
+    background: #f9fafb;
   }
-}
 
-.aroma-intro-about-description {
-  font-size: 1.125rem;
-  color: #4b5563;
-  margin-bottom: 2rem;
-  line-height: 1.625;
-}
+  .aroma-intro-services-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
 
-.aroma-intro-features {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
+  .aroma-intro-services-label {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #ffedd5;
+    color: #ea580c;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
 
-.aroma-intro-feature-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.aroma-intro-feature-icon {
-  width: 3rem;
-  height: 3rem;
-  background: #ffedd5;
-  border-radius: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.aroma-intro-feature-icon i {
-  color: #ea580c;
-  font-size: 1.25rem;
-}
-
-.aroma-intro-feature-title {
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: #111827;
-  margin-bottom: 0.5rem;
-}
-
-.aroma-intro-feature-description {
-  color: #4b5563;
-}
-
-/* Services Section */
-.aroma-intro-services {
-  padding: 5rem 0;
-  background: #f9fafb;
-}
-
-.aroma-intro-services-header {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.aroma-intro-services-label {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: #ffedd5;
-  color: #ea580c;
-  border-radius: 9999px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.aroma-intro-services-title {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 1rem;
-}
-
-@media (min-width: 768px) {
   .aroma-intro-services-title {
-    font-size: 3rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
   }
-}
 
-.aroma-intro-services-description {
-  font-size: 1.125rem;
-  color: #4b5563;
-  max-width: 42rem;
-  margin: 0 auto;
-}
-
-.aroma-intro-services-grid {
-  display: grid;
-  gap: 2rem;
-}
-
-@media (min-width: 768px) {
-  .aroma-intro-services-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  @media (min-width: 768px) {
+    .aroma-intro-services-title {
+      font-size: 3rem;
+    }
   }
-}
 
-.aroma-intro-service-card {
-  background: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  transition: box-shadow 0.3s;
-}
+  .aroma-intro-services-description {
+    font-size: 1.125rem;
+    color: #4b5563;
+    max-width: 42rem;
+    margin: 0 auto;
+  }
 
-.aroma-intro-service-card:hover {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
+  /* Timeline Layout */
+  .aroma-intro-timeline {
+    position: relative;
+    margin-top: 4rem;
+    padding-left: 0;
+  }
 
-.aroma-intro-service-icon {
-  width: 4rem;
-  height: 4rem;
-  background: #ffedd5;
-  border-radius: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-}
+  @media (min-width: 768px) {
+    .aroma-intro-timeline {
+      padding-left: 120px;
+    }
+  }
 
-.aroma-intro-service-icon i {
-  color: #ea580c;
-  font-size: 1.5rem;
-}
+  .aroma-intro-timeline-step {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+    min-height: 150px;
+  }
 
-.aroma-intro-service-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 1rem;
-}
+  @media (min-width: 768px) {
+    .aroma-intro-timeline-step {
+      margin-bottom: 6rem;
+      min-height: 200px;
+    }
+  }
 
-.aroma-intro-service-description {
-  color: #4b5563;
-  margin-bottom: 1.5rem;
-}
+  .aroma-intro-timeline-step:last-child {
+    margin-bottom: 0;
+  }
 
-.aroma-intro-service-link {
-  color: #ea580c;
-  font-weight: 600;
-  transition: color 0.3s;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
+  .aroma-intro-timeline-number {
+    position: absolute;
+    left: -120px;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--ihc-accent);
+    line-height: 1;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+  }
 
-.aroma-intro-service-link:hover {
-  color: #c2410c;
-}
+  @media (max-width: 767px) {
+    .aroma-intro-timeline-number {
+      position: static;
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      opacity: 0.2;
+    }
+  }
 
-/* Projects Section */
-.aroma-intro-projects {
-  padding: 5rem 0;
-  background: white;
-}
+  .aroma-intro-timeline-step.active .aroma-intro-timeline-number {
+    opacity: 1;
+  }
 
-.aroma-intro-projects-header {
-  text-align: center;
-  margin-bottom: 4rem;
-}
+  .aroma-intro-timeline-number-next {
+    position: absolute;
+    left: -120px;
+    bottom: 0;
+    font-size: 8rem;
+    font-weight: 700;
+    color: var(--ihs-accent);
+    line-height: 1;
+    opacity: 0.1;
+  }
 
-.aroma-intro-projects-label {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: #ffedd5;
-  color: #ea580c;
-  border-radius: 9999px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
+  @media (max-width: 767px) {
+    .aroma-intro-timeline-number-next {
+      display: none;
+    }
+  }
 
-.aroma-intro-projects-title {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 1rem;
-}
+  .aroma-intro-timeline-line {
+    position: absolute;
+    left: -60px;
+    top: 0;
+    width: 6px;
+    height: 0;
+    background-color: var(--ihc-accent);
+    transform-origin: top;
+    transition: height 0.8s ease;
+    z-index: 1;
+  }
 
-@media (min-width: 768px) {
+  @media (max-width: 767px) {
+    .aroma-intro-timeline-line {
+      display: block;
+      left: 50%;
+      margin-left: -2px;
+      width: 4px;
+      transform: none;
+    }
+  }
+
+  /* Lines will be animated via JavaScript based on scroll position */
+
+  .aroma-intro-timeline-content {
+    flex: 1;
+    max-width: 600px;
+  }
+
+  .aroma-intro-timeline-tag {
+    display: inline-block;
+    padding: 0.375rem 1rem;
+    background-color: #9333ea;
+    color: white;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .aroma-intro-timeline-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 768px) {
+    .aroma-intro-timeline-title {
+      font-size: 2.5rem;
+    }
+  }
+
+  .aroma-intro-timeline-description {
+    font-size: 1rem;
+    color: #6b7280;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .aroma-intro-timeline-description {
+      font-size: 1.125rem;
+    }
+  }
+
+  .aroma-intro-timeline-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    background-color: #111827;
+    color: white;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .aroma-intro-timeline-button:hover {
+    background-color: #1f2937;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .aroma-intro-timeline-button i {
+    font-size: 0.875rem;
+  }
+
+  /* Projects Section */
+  .aroma-intro-projects {
+    padding: 3rem 0;
+    background: white;
+  }
+
+  @media (min-width: 768px) {
+    .aroma-intro-projects {
+      padding: 5rem 0;
+    }
+  }
+
+  .aroma-intro-projects-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .aroma-intro-projects-header {
+      margin-bottom: 4rem;
+    }
+  }
+
+  .aroma-intro-projects-label {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #ffedd5;
+    color: #ea580c;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
   .aroma-intro-projects-title {
-    font-size: 3rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .aroma-intro-projects-title {
+      font-size: 3rem;
+    }
+  }
+
+  .aroma-intro-projects-carousel {
+    overflow-x: auto;
+    padding-bottom: 1.5rem;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+  }
+
+  .aroma-intro-projects-carousel::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+  }
+
+  .aroma-intro-projects-carousel-inner {
+    display: flex;
+    gap: 1.5rem;
+    min-width: max-content;
+  }
+
+  .aroma-intro-project-card {
+    flex-shrink: 0;
+    width: 18rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+  }
+
+  @media (min-width: 640px) {
+    .aroma-intro-project-card {
+      width: 20rem;
+    }
+  }
+
+  .aroma-intro-project-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  .aroma-intro-project-image {
+    height: 12rem;
+    overflow: hidden;
+  }
+
+  .aroma-intro-project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .aroma-intro-project-content {
+    padding: 1.5rem;
+  }
+
+  .aroma-intro-project-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+  }
+
+  .aroma-intro-project-description {
+    color: #4b5563;
+  }
+
+  .aroma-intro-projects-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .aroma-intro-projects-arrow-btn {
+    transform: translateX(550px);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ea580c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .aroma-intro-projects-arrow-btn:hover {
+    background-color: #c2410c;
+    box-shadow: 0 6px 12px -1px rgba(0, 0, 0, 0.15);
   }
 }
-
-.aroma-intro-projects-carousel {
-  overflow-x: auto;
-  padding-bottom: 1.5rem;
-}
-
-.aroma-intro-projects-carousel-inner {
-  display: flex;
-  gap: 1.5rem;
-  min-width: max-content;
-}
-
-.aroma-intro-project-card {
-  flex-shrink: 0;
-  width: 20rem;
-  background: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: box-shadow 0.3s;
-}
-
-.aroma-intro-project-card:hover {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
-
-.aroma-intro-project-image {
-  height: 12rem;
-  overflow: hidden;
-}
-
-.aroma-intro-project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.aroma-intro-project-content {
-  padding: 1.5rem;
-}
-
-.aroma-intro-project-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 0.5rem;
-}
-
-.aroma-intro-project-description {
-  color: #4b5563;
-}
-
