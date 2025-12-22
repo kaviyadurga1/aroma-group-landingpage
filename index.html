@@ -1242,9 +1242,11 @@
         // Divisions Dropdown Toggle
         const divisionsDropdownBtn = document.getElementById('divisions-dropdown-btn');
         const divisionsDropdown = document.getElementById('divisions-dropdown');
+        const divisionsDropdownWrapper = document.querySelector('.nav-dropdown-wrapper');
         const divisionsDropdownIcon = document.querySelector('.divisions-dropdown-icon');
 
-        if (divisionsDropdownBtn && divisionsDropdown) {
+        if (divisionsDropdownBtn && divisionsDropdown && divisionsDropdownWrapper) {
+            // Click functionality (for mobile/touch devices)
             divisionsDropdownBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
@@ -1263,6 +1265,43 @@
                         divisionsDropdownIcon.style.transform = 'rotate(180deg)';
                     }
                 }
+            });
+
+            // Hover functionality (for desktop) - smooth opening
+            let hoverTimeout;
+            
+            divisionsDropdownWrapper.addEventListener('mouseenter', () => {
+                clearTimeout(hoverTimeout);
+                divisionsDropdown.classList.remove('opacity-0', 'invisible', 'translate-y-2');
+                divisionsDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
+                if (divisionsDropdownIcon) {
+                    divisionsDropdownIcon.style.transform = 'rotate(180deg)';
+                }
+            });
+
+            divisionsDropdownWrapper.addEventListener('mouseleave', () => {
+                hoverTimeout = setTimeout(() => {
+                    divisionsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                    divisionsDropdown.classList.add('opacity-0', 'invisible', 'translate-y-2');
+                    if (divisionsDropdownIcon) {
+                        divisionsDropdownIcon.style.transform = 'rotate(0deg)';
+                    }
+                }, 200); // Small delay to allow moving mouse to dropdown
+            });
+
+            // Keep dropdown open when hovering over the menu itself
+            divisionsDropdown.addEventListener('mouseenter', () => {
+                clearTimeout(hoverTimeout);
+            });
+
+            divisionsDropdown.addEventListener('mouseleave', () => {
+                hoverTimeout = setTimeout(() => {
+                    divisionsDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                    divisionsDropdown.classList.add('opacity-0', 'invisible', 'translate-y-2');
+                    if (divisionsDropdownIcon) {
+                        divisionsDropdownIcon.style.transform = 'rotate(0deg)';
+                    }
+                }, 200);
             });
 
             // Allow dropdown items to navigate normally

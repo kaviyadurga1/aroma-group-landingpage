@@ -425,10 +425,10 @@
         <div class="aroma-intro-services-header">
           <span class="aroma-intro-services-label"> Our Services </span>
           <h2 class="aroma-intro-services-title">Constructing Your Vision</h2>
-          <p class="aroma-intro-services-description">
+          <!-- <p class="aroma-intro-services-description">
             Building vibrant urban communities by creating exceptional living
             spaces and fostering meaningful connections
-          </p>
+          </p> -->
         </div>
 
         <div class="aroma-intro-timeline">
@@ -473,7 +473,7 @@
             <div class="aroma-intro-timeline-number">03</div>
             <div class="aroma-intro-timeline-content">
               
-              <h3 class="aroma-intro-timeline-title">Estate Construction</h3>
+              <h3 class="aroma-intro-timeline-title">Project Execution</h3>
               <p class="aroma-intro-timeline-description">
                 Full-service construction management for residential and
                 commercial estate developments.
@@ -510,7 +510,7 @@
               <div class="aroma-intro-project-content">
                 <h3 class="aroma-intro-project-title">Coastal Retreat</h3>
                 <p class="aroma-intro-project-description">
-                  Luxury residential development with ocean views.
+                  Luxury residential development with ocean views
                 </p>
               </div>
             </div>
@@ -526,7 +526,7 @@
               <div class="aroma-intro-project-content">
                 <h3 class="aroma-intro-project-title">Hospitality Projects</h3>
                 <p class="aroma-intro-project-description">
-                  Designed for comfort, built for experience.
+                  Designed for comfort, built for experience
                 </p>
               </div>
             </div>
@@ -542,7 +542,7 @@
               <div class="aroma-intro-project-content">
                 <h3 class="aroma-intro-project-title">Skyline Collection</h3>
                 <p class="aroma-intro-project-description">
-                  State-of-the-art infrastructure development.
+                  State-of-the-art infrastructure development
                 </p>
               </div>
             </div>
@@ -558,17 +558,51 @@
               <div class="aroma-intro-project-content">
                 <h3 class="aroma-intro-project-title">Modern Complex</h3>
                 <p class="aroma-intro-project-description">
-                  Commercial complex in the heart of the city.
+                  Commercial complex in the heart of the city
                 </p>
               </div>
             </div>
+
+
+            <!-- Project Card 5 -->
+            <div class="aroma-intro-project-card">
+              <div class="aroma-intro-project-image">
+                <img
+                  src="../assets/aroma_international/industrial_projects.jpg"
+                  alt="Modern Complex"
+                />
+              </div>
+              <div class="aroma-intro-project-content">
+                <h3 class="aroma-intro-project-title">Industrial projects</h3>
+                <p class="aroma-intro-project-description">
+                  Robust industrial spaces engineered for growth
+                </p>
+              </div>
+            </div>
+
+            <!-- Project Card 6 -->
+            <div class="aroma-intro-project-card">
+              <div class="aroma-intro-project-image">
+                <img
+                  src="../assets/aroma_international/government_projects.jpg"
+                  alt="Coastal Retreat"
+                />
+              </div>
+              <div class="aroma-intro-project-content">
+                <h3 class="aroma-intro-project-title">Government projects</h3>
+                <p class="aroma-intro-project-description">
+                  Public infrastructure built to serve communities
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
         
-        <!-- Right Arrow Button -->
+        <!-- Navigation Arrows -->
         <div class="aroma-intro-projects-nav">
-          <button class="aroma-intro-projects-arrow-btn" id="projects-scroll-right" aria-label="Scroll projects right">
-            <i class="fas fa-arrow-right"></i>
+          <button class="aroma-intro-projects-arrow-btn" id="projects-scroll-right">
+              <i class="fas fa-chevron-right"></i>
           </button>
         </div>
       </div>
@@ -609,11 +643,15 @@
         "divisions-dropdown-btn"
       );
       const divisionsDropdown = document.getElementById("divisions-dropdown");
+      const divisionsDropdownWrapper = document.querySelector(
+        ".aroma-intro-nav-dropdown-wrapper"
+      );
       const divisionsDropdownIcon = document.querySelector(
         ".divisions-dropdown-icon"
       );
 
-      if (divisionsDropdownBtn && divisionsDropdown) {
+      if (divisionsDropdownBtn && divisionsDropdown && divisionsDropdownWrapper) {
+        // Click functionality (for mobile/touch devices)
         divisionsDropdownBtn.addEventListener("click", (e) => {
           e.preventDefault();
           e.stopPropagation();
@@ -636,6 +674,40 @@
               divisionsDropdownIcon.style.transform = "rotate(180deg)";
             }
           }
+        });
+
+        // Hover functionality (for desktop) - smooth opening
+        let hoverTimeout;
+        
+        divisionsDropdownWrapper.addEventListener("mouseenter", () => {
+          clearTimeout(hoverTimeout);
+          divisionsDropdown.classList.add("aroma-intro-nav-dropdown-menu-open");
+          if (divisionsDropdownIcon) {
+            divisionsDropdownIcon.style.transform = "rotate(180deg)";
+          }
+        });
+
+        divisionsDropdownWrapper.addEventListener("mouseleave", () => {
+          hoverTimeout = setTimeout(() => {
+            divisionsDropdown.classList.remove("aroma-intro-nav-dropdown-menu-open");
+            if (divisionsDropdownIcon) {
+              divisionsDropdownIcon.style.transform = "rotate(0deg)";
+            }
+          }, 200); // Small delay to allow moving mouse to dropdown
+        });
+
+        // Keep dropdown open when hovering over the menu itself
+        divisionsDropdown.addEventListener("mouseenter", () => {
+          clearTimeout(hoverTimeout);
+        });
+
+        divisionsDropdown.addEventListener("mouseleave", () => {
+          hoverTimeout = setTimeout(() => {
+            divisionsDropdown.classList.remove("aroma-intro-nav-dropdown-menu-open");
+            if (divisionsDropdownIcon) {
+              divisionsDropdownIcon.style.transform = "rotate(0deg)";
+            }
+          }, 200);
         });
 
         // Allow dropdown items to navigate normally
@@ -786,17 +858,37 @@
         });
       }
 
-      // Projects Carousel Scroll
+      // Projects Carousel Scroll with Loop
       const projectsCarousel = document.querySelector(".aroma-intro-projects-carousel");
       const projectsScrollRightBtn = document.getElementById("projects-scroll-right");
 
       if (projectsScrollRightBtn && projectsCarousel) {
         projectsScrollRightBtn.addEventListener("click", () => {
-          const scrollAmount = 320; // Width of card (20rem) + gap (1.5rem) = ~320px
-          projectsCarousel.scrollBy({
-            left: scrollAmount,
-            behavior: "smooth"
-          });
+          // Calculate scroll amount based on card width + gap
+          // Card width: 18rem (288px) on mobile, 20rem (320px) on desktop
+          // Gap: 1.5rem (24px)
+          const cardWidth = window.innerWidth >= 640 ? 320 : 288; // 20rem or 18rem
+          const gap = 24; // 1.5rem
+          const scrollAmount = cardWidth + gap;
+          
+          // Get current scroll position and max scroll
+          const currentScroll = projectsCarousel.scrollLeft;
+          const maxScroll = projectsCarousel.scrollWidth - projectsCarousel.clientWidth;
+          
+          // Check if we're at or near the end (within 10px tolerance)
+          if (currentScroll >= maxScroll - 10) {
+            // Loop back to the beginning
+            projectsCarousel.scrollTo({
+              left: 0,
+              behavior: "smooth"
+            });
+          } else {
+            // Scroll forward
+            projectsCarousel.scrollBy({
+              left: scrollAmount,
+              behavior: "smooth"
+            });
+          }
         });
       }
 

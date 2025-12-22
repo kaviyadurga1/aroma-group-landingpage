@@ -60,7 +60,29 @@
 
 @media (min-width: 1024px) {
   .aroma-intro-container {
+    max-width: 1400px;
     padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .aroma-intro-container {
+    max-width: 1600px;
+    padding: 0 2.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .aroma-intro-container {
+    max-width: 1800px;
+    padding: 0 3rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .aroma-intro-container {
+    max-width: 2000px;
+    padding: 0 4rem;
   }
 }
 
@@ -68,6 +90,38 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .aroma-intro-navbar-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .aroma-intro-navbar-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .aroma-intro-navbar-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .aroma-intro-navbar-container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
 
 .aroma-intro-navbar-logo-link {
@@ -151,6 +205,24 @@
   position: relative;
 }
 
+/* Hover state - open dropdown smoothly */
+.aroma-intro-nav-dropdown-wrapper:hover .aroma-intro-nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.aroma-intro-nav-dropdown-wrapper:hover .aroma-intro-divisions-dropdown-icon {
+  transform: rotate(180deg);
+}
+
+/* Keep dropdown open when hovering over the menu itself */
+.aroma-intro-nav-dropdown-menu:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 .aroma-intro-nav-dropdown-btn {
   display: flex;
   align-items: center;
@@ -162,7 +234,7 @@
 
 .aroma-intro-divisions-dropdown-icon {
   font-size: 0.75rem;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .aroma-intro-nav-dropdown-menu {
@@ -177,7 +249,7 @@
   min-width: 380px;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
   transform: translateY(0.5rem);
 }
 
@@ -747,7 +819,7 @@
 
   .aroma-intro-about-image img {
     width: 100%;
-    height: 16rem;
+    height: 26rem;
     object-fit: cover;
     border-radius: 0.5rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -1202,7 +1274,7 @@
   }
 
   .aroma-intro-projects-arrow-btn {
-    transform: translateX(550px);
+    transform: translateX(750px);
     width: 50px;
     height: 50px;
     border-radius: 50%;
